@@ -19,11 +19,9 @@ p {
   z-index: 1;
 }
 
-.showSonnbergZirbn, .showPanorama, .showRestaurant, .showWintergarten, .showAlle {
+.showRoterSalon, .showPanorama, .showBlauerSalon, .showTurm, .showAlle, .showAndreasSaal {
   padding: 10px;
 }
-
-
 
 .col-xs-3 {
   width: 35%;

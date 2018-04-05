@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SonnbergZirbnComponent } from './sonnberg-zirbn.component';
+import { RoterSalonComponent } from './.component';
 
-describe('SonnbergZirbnComponent', () => {
-  let component: SonnbergZirbnComponent;
-  let fixture: ComponentFixture<SonnbergZirbnComponent>;
+describe('RoterSalonComponent', () => {
+  let component: RoterSalonComponent;
+  let fixture: ComponentFixture<RoterSalonComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SonnbergZirbnComponent ]
+      declarations: [ RoterSalonComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SonnbergZirbnComponent);
+    fixture = TestBed.createComponent(RoterSalonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

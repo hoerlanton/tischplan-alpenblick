@@ -3,22 +3,24 @@ import { TischplanService } from '../../../../services/tischplan.service';
 import { Table } from '../../../../../../Table';
 
 @Component({
-  selector: 'app-sonnberg-zirbn',
-  templateUrl: 'sonnberg-zirbn.component.html',
+  selector: 'app-blauer-salon',
+  templateUrl: 'blauer-salon.component.html',
   styleUrls: ['../../tischplan.component.css']
 })
-export class SonnbergZirbnComponent implements OnInit {
+export class BlauerSalonComponent implements OnInit {
 
-  @Input('tablesSonnbergZirbn') tablesSonnbergZirbn: Table[];
-  @Input('showSonnbergZirbnBool') showSonnbergZirbnBool: boolean;
+  @Input('tablesBlauerSalon') tablesBlauerSalon: Table[];
+  @Input('showBlauerSalonBool') showBlauerSalonBool: boolean;
   @Input('term') term: string;
 
   @Output()
   occupied:EventEmitter<any> = new EventEmitter();
 
-  constructor() {
-  }
+  dateGenerated: any;
 
+  constructor() {
+    this.dateGenerated = new Date();
+  }
   ngOnInit() {
   }
 
@@ -38,10 +40,10 @@ export class SonnbergZirbnComponent implements OnInit {
     console.log("term");
     console.log(term);
     if (term == "") {
-      this.tablesSonnbergZirbn = tables;
+      this.tablesBlauerSalon = tables;
     } else {
       if (Array.isArray(tables) && tables.length && term && term.length) {
-        this.tablesSonnbergZirbn = tables.filter(item => {
+        this.tablesBlauerSalon = tables.filter(item => {
           console.log(item);
           let keys = Object.keys(item);
           if (item.groups) {

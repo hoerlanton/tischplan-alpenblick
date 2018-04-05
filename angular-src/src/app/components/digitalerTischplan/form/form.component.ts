@@ -18,17 +18,19 @@ export class FormComponent implements OnInit {
   @Input('tableNumber') tableNumber: string;
   @Input('nameTraceInput') nameTraceInput: string;
   @Input('employee') employee: string;
-  @Input('tablesRestaurant') tablesRestaurant: Table[];
+  @Input('tablesTurm') tablesTurm: Table[];
   @Input('tablesPanorama') tablesPanorama: Table[];
-  @Input('tablesWintergarten') tablesWintergarten: Table[];
-  @Input('tablesSonnbergZirbn') tablesSonnbergZirbn: Table[];
+  @Input('tablesRoterSalon') tablesRoterSalon: Table[];
+  @Input('tablesBlauerSalon') tablesBlauerSalon: Table[];
+  @Input('tablesAndreasSaal') tablesAndreasSaal: Table[];
   @Input('showInfoFormBool') showInfoFormBool: boolean;
   @Input('showNotizFormBool') showNotizFormBool: boolean;
   @Input('notizElements') notizElements: any;
-  @Input('showWintergartenBool') showWintergartenBool: boolean;
-  @Input('showSonnbergZirbnBool') showSonnbergZirbnBool: boolean;
+  @Input('showRoterSalonBool') showRoterSalonBool: boolean;
+  @Input('showBlauerSalonBool') showBlauerSalonBool: boolean;
   @Input('showPanoramaBool') showPanoramaBool: boolean;
-  @Input('showRestaurantBool') showRestaurantBool: boolean;
+  @Input('showTurmBool') showTurmBool: boolean;
+  @Input('showAndreasSaalBool') showAndreasSaalBool: boolean;
   @Input('showAlleBool') showAlleBool: boolean;
   @Output()
   notizResponse:EventEmitter<any> = new EventEmitter();
@@ -42,8 +44,8 @@ export class FormComponent implements OnInit {
   notizDate: any;
 
   constructor(private tischplanService: TischplanService, private _flashMessagesService: FlashMessagesService) {
-    this.departments = ["Sonnberg-Zirbn", "Restaurant", "Wintergarten", "Panorama"];
-    this.employees = ["Alexandra Lopion", "Julia Ackermann", "Torsten Streit", "Sabrina Schrötwieser", "Loreen Kumpfert", "Aylin Fiedler", "Julia Laue", "Richard Klöffel", "Tino Deisenroth", "Stefan Scheiber", "Dominic Mugambi", "Ralf Rohsmann", "Florian Thurner"];
+    this.departments = ["Andreas Saal", "Turm", "Roter Salon", "Panorama", "Blauer Salon / Glockner Saal"];
+    this.employees = ["Test1", "Test2", "Test3", "Test4", "Test5"];
   }
 
   ngOnInit() {
@@ -82,81 +84,84 @@ export class FormComponent implements OnInit {
           if (Information === null) {
             return;
           } else {
-            if (Information.tables[0].department === "Sonnberg-Zirbn") {
-              for (let i = 0; i < this.tablesSonnbergZirbn.length; i++) {
-                if (this.tablesSonnbergZirbn[i].number === Information.tables[0].number) {
-                  this.tablesSonnbergZirbn[i] = Information.tables[0];
+            if (Information.tables[0].department === "blauer-salon") {
+              for (let i = 0; i < this.tablesBlauerSalon.length; i++) {
+                if (this.tablesBlauerSalon[i].number === Information.tables[0].number) {
+                  this.tablesBlauerSalon[i] = Information.tables[0];
                 }
               }
-            } else if (Information.tables[0].department === "Panorama") {
+            } else if (Information.tables[0].department === "panorama") {
               for (let i = 0; i < this.tablesPanorama.length; i++) {
                 if (this.tablesPanorama[i].number === Information.tables[0].number) {
                   this.tablesPanorama[i] = Information.tables[0];
                 }
               }
-            } else if (Information.tables[0].department === "Restaurant") {
-              for (let i = 0; i < this.tablesRestaurant.length; i++) {
-                if (this.tablesRestaurant[i].number === Information.tables[0].number) {
-                  this.tablesRestaurant[i] = Information.tables[0];
+            } else if (Information.tables[0].department === "turm") {
+              for (let i = 0; i < this.tablesTurm.length; i++) {
+                if (this.tablesTurm[i].number === Information.tables[0].number) {
+                  this.tablesTurm[i] = Information.tables[0];
                 }
               }
-            } else if (Information.tables[0].department === "Wintergarten") {
-              for (let i = 0; i < this.tablesWintergarten.length; i++) {
-                if (this.tablesWintergarten[i].number === Information.tables[0].number) {
-                  this.tablesWintergarten[i] = Information.tables[0];
+            } else if (Information.tables[0].department === "roter-salon") {
+              for (let i = 0; i < this.tablesRoterSalon.length; i++) {
+                if (this.tablesRoterSalon[i].number === Information.tables[0].number) {
+                  this.tablesRoterSalon[i] = Information.tables[0];
+                }
+              }
+            } else if (Information.tables[0].department === "andreas-saal") {
+              for (let i = 0; i < this.tablesAndreasSaal.length; i++) {
+                if (this.tablesAndreasSaal[i].number === Information.tables[0].number) {
+                  this.tablesAndreasSaal[i] = Information.tables[0];
                 }
               }
             }
           }
+          });
+          this.changeColorIfAnreiseExport.emit();
+          }
+          this.tischplanService.sendInformationToBox(newInformation)
+            .subscribe(Information => {
+              //console.log('Information: ' + JSON.stringify(Information.tables[0].tableNumber));
+              console.log('Information: ' + JSON.stringify(Information));
+              //console.log(Information.tables[0]);
+              //console.log("------");
+              //console.log(Information[0].tables);
+              this.newInformationElements.push(Information);
+              console.log('this.newInformationElements' + this.newInformationElements);
+            });
+    }
+
+    sendNotiz(event) {
+      event.preventDefault();
+
+      this.notizDate = String(new Date()).substring(0, 15);
+
+      console.log(this.notizDate);
+
+      let newNotiz = {
+        notizInput: this.notizInput,
+        departmentNotizInput: this.departmentNotizInput,
+        date: this.notizDate
+      };
+      if (newNotiz.notizInput === undefined) {
+        this._flashMessagesService.show('Die Nachricht ist leer ... ',
+          {cssClass: 'alert-danger', timeout: 20000});
+        return;
+      } else {
+        this._flashMessagesService.show('Erfolgreich Information gespeichert ... ',
+          {cssClass: 'alert-success', timeout: 20000});
+      }
+      this.tischplanService.sendInformationToNotizBlock(newNotiz)
+        .subscribe(Notiz => {
+          //console.log('Information: ' + JSON.stringify(Information.tables[0].tableNumber));
+          console.log('Information: ' + JSON.stringify(Notiz));
+          //console.log(Information.tables[0]);
+          //console.log("------");
+          //console.log(Information[0].tables);
+          this.notizResponse.emit(Notiz);
+          this.notizElements = Notiz;
+          console.log(this.notizElements);
+          //console.log('this.newInformationElements' + this.newInformationElements);
         });
-      this.changeColorIfAnreiseExport.emit();
     }
-    this.tischplanService.sendInformationToBox(newInformation)
-      .subscribe(Information => {
-        //console.log('Information: ' + JSON.stringify(Information.tables[0].tableNumber));
-        console.log('Information: ' + JSON.stringify(Information));
-        //console.log(Information.tables[0]);
-        //console.log("------");
-        //console.log(Information[0].tables);
-        this.newInformationElements.push(Information);
-        console.log('this.newInformationElements' + this.newInformationElements);
-      });
-  }
-
-  sendNotiz(event) {
-    event.preventDefault();
-
-    this.notizDate = String(new Date()).substring(0, 15);
-
-    console.log(this.notizDate);
-
-    let newNotiz = {
-      notizInput: this.notizInput,
-      departmentNotizInput: this.departmentNotizInput,
-      date: this.notizDate
-    };
-    if (newNotiz.notizInput === undefined) {
-      this._flashMessagesService.show('Die Nachricht ist leer ... ',
-        {cssClass: 'alert-danger', timeout: 20000});
-      return;
-    } else {
-      this._flashMessagesService.show('Erfolgreich Information gespeichert ... ',
-        {cssClass: 'alert-success', timeout: 20000});
-    }
-    this.tischplanService.sendInformationToNotizBlock(newNotiz)
-      .subscribe(Notiz => {
-        //console.log('Information: ' + JSON.stringify(Information.tables[0].tableNumber));
-        console.log('Information: ' + JSON.stringify(Notiz));
-        //console.log(Information.tables[0]);
-        //console.log("------");
-        //console.log(Information[0].tables);
-        this.notizResponse.emit(Notiz);
-        this.notizElements = Notiz;
-        console.log(this.notizElements);
-        //console.log('this.newInformationElements' + this.newInformationElements);
-      });
-
-  }
-
-
 }

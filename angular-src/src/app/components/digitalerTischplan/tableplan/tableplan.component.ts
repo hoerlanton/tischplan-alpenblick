@@ -10,56 +10,66 @@ import { NavService }   from '../../../services/tables.service';
 })
 
 export class TableplanComponent implements AfterViewInit {
-  @Input('tablesWintergarten') tablesWintergarten: Table[];
-  @Input('showWintergartenBool') showWintergartenBool: boolean;
-  @Input('tablesSonnbergZirbn') tablesSonnbergZirbn: Table[];
-  @Input('showSonnbergZirbnBool') showSonnbergZirbnBool: boolean;
+  @Input('tablesAndreasSaal') tablesAndreasSaal: Table[];
+  @Input('showAndreasSaalBool') showAndreasSaalBool: boolean;
+  @Input('tablesRoterSalon') tablesRoterSalon: Table[];
+  @Input('showRoterSalonBool') showRoterSalonBool: boolean;
+  @Input('tablesTurm') tablesTurm: Table[];
+  @Input('showTurmBool') showTurmBool: boolean;
   @Input('tablesPanorama') tablesPanorama: Table[];
   @Input('showPanoramaBool') showPanoramaBool: boolean;
-  @Input('tablesRestaurant') tablesRestaurant: Table[];
-  @Input('showRestaurantBool') showRestaurantBool: boolean;
+  @Input('tablesBlauerSalon') tablesBlauerSalon: Table[];
+  @Input('showBlauerSalonBool') showBlauerSalonBool: boolean;
   @Input('showAlleBool') showAlleBool: boolean;
   @Input('showTablePlanBool') showTablePlanBool: boolean;
   @Output()
-  movedSonnbergZirbn: EventEmitter<any> = new EventEmitter();
+  movedTurm: EventEmitter<any> = new EventEmitter();
   @Output()
-  movedRestaurant: EventEmitter<any> = new EventEmitter();
+  movedBlauerSalon: EventEmitter<any> = new EventEmitter();
   @Output()
-  movedWintergarten: EventEmitter<any> = new EventEmitter();
+  movedRoterSalon: EventEmitter<any> = new EventEmitter();
   @Output()
   movedPanorama: EventEmitter<any> = new EventEmitter();
   @Output()
+  movedAndreasSaal: EventEmitter<any> = new EventEmitter();
+  @Output()
   changeBgColorIfAnreise: EventEmitter<any> = new EventEmitter();
   @Output()
-  kiWintergartenExport:EventEmitter<any> = new EventEmitter();
+  kiRoterSalonExport:EventEmitter<any> = new EventEmitter();
   @Output()
-  erwWintergartenExport:EventEmitter<any> = new EventEmitter();
+  erwRoterSalonExport:EventEmitter<any> = new EventEmitter();
   @Output()
-  erwRestaurantExport:EventEmitter<any> = new EventEmitter();
+  erwBlauerSalonExport:EventEmitter<any> = new EventEmitter();
   @Output()
-  kiRestaurantExport:EventEmitter<any> = new EventEmitter();
+  kiBlauerSalonExport:EventEmitter<any> = new EventEmitter();
   @Output()
   erwPanoramaExport:EventEmitter<any> = new EventEmitter();
   @Output()
   kiPanoramaExport:EventEmitter<any> = new EventEmitter();
   @Output()
-  erwSonnbergZirbnExport:EventEmitter<any> = new EventEmitter();
+  erwTurmExport:EventEmitter<any> = new EventEmitter();
   @Output()
-  kiSonnbergZirbnExport:EventEmitter<any> = new EventEmitter();
+  kiTurmExport:EventEmitter<any> = new EventEmitter();
+  @Output()
+  erwAndreasSaalExport:EventEmitter<any> = new EventEmitter();
+  @Output()
+  kiAndreasSaalExport:EventEmitter<any> = new EventEmitter();
 
   buttonMoveTable: string;
   buttonInfo: string;
   buttonHinzufuegen: string;
   buttonEntfernen: string;
   trace: boolean;
-  erwSonnbergZirbn: any[] = [];
-  kiSonnbergZirbn: any[] = [];
+  erwTurm: any[] = [];
+  kiTurm: any[] = [];
   erwPanorama: any[] = [];
   kiPanorama: any[] = [];
-  erwRestaurant: any[] = [];
-  kiRestaurant: any[] = [];
-  erwWintergarten: any[] = [];
-  kiWintergarten: any[] = [];
+  erwBlauerSalon: any[] = [];
+  kiBlauerSalon: any[] = [];
+  erwRoterSalon: any[] = [];
+  kiRoterSalon: any[] = [];
+  erwAndreasSaal: any[] = [];
+  kiAndreasSaal: any[] = [];
 
   constructor(private tischplanService: TischplanService, private _navService: NavService) {
     this.buttonMoveTable = "ff0000";
@@ -96,22 +106,26 @@ export class TableplanComponent implements AfterViewInit {
       if (response === null) {
         return;
       } else {
-        if (response[0].tables[j].department === "Sonnberg-Zirbn") {
-          this.movedSonnbergZirbn.emit(response[0].tables);
-          //this.tablesSonnbergZirbn = response[0].tables;
+        if (response[0].tables[j].department === "turm") {
+          this.movedTurm.emit(response[0].tables);
+          //this.tablesTurm = response[0].tables;
         }
-        else if (response[0].tables[j].department === "Panorama") {
+        else if (response[0].tables[j].department === "panorama") {
           this.movedPanorama.emit(response[0].tables);
           //this.tablesPanorama = response[0].tables;
           //this._navService.changeNav(response[0].tables);
         }
-        else if (response[0].tables[j].department === "Restaurant") {
-          this.movedRestaurant.emit(response[0].tables);
-          //this.tablesRestaurant = response[0].tables;
+        else if (response[0].tables[j].department === "blauer-salon") {
+          this.movedBlauerSalon.emit(response[0].tables);
+          //this.tablesBlauerSalon = response[0].tables;
         }
-        else if (response[0].tables[j].department === "Wintergarten") {
-          this.movedWintergarten.emit(response[0].tables);
-          //this.tablesWintergarten = response[0].tables;
+        else if (response[0].tables[j].department === "roter-salon") {
+          this.movedRoterSalon.emit(response[0].tables);
+          //this.tablesRoterSalon = response[0].tables;
+        }
+        else if (response[0].tables[j].department === "andreas-saal") {
+          this.movedAndreasSaal.emit(response[0].tables);
+          //this.tablesRoterSalon = response[0].tables;
         }
       }
       this.changeBgColorIfAnreise.emit();
@@ -141,22 +155,26 @@ export class TableplanComponent implements AfterViewInit {
       if (response === null) {
         return;
       } else {
-        if (response[0].tables[j].department === "Sonnberg-Zirbn") {
-          this.movedSonnbergZirbn.emit(response[0].tables);
-          //this.tablesSonnbergZirbn = response[0].tables;
+        if (response[0].tables[j].department === "turm") {
+          this.movedTurm.emit(response[0].tables);
+          //this.tablesTurm = response[0].tables;
         }
-        else if (response[0].tables[j].department === "Panorama") {
+        else if (response[0].tables[j].department === "panorama") {
           this.movedPanorama.emit(response[0].tables);
           //this.tablesPanorama = response[0].tables;
           //this._navService.changeNav(response[0].tables);
         }
-        else if (response[0].tables[j].department === "Restaurant") {
-          this.movedRestaurant.emit(response[0].tables);
-          //this.tablesRestaurant = response[0].tables;
+        else if (response[0].tables[j].department === "blauer-salon") {
+          this.movedBlauerSalon.emit(response[0].tables);
+          //this.tablesBlauerSalon = response[0].tables;
         }
-        else if (response[0].tables[j].department === "Wintergarten") {
-          this.movedWintergarten.emit(response[0].tables);
-          //this.tablesWintergarten = response[0].tables;
+        else if (response[0].tables[j].department === "roter-salon") {
+          this.movedRoterSalon.emit(response[0].tables);
+          //this.tablesRoterSalon = response[0].tables;
+        }
+        else if (response[0].tables[j].department === "andreas-saal") {
+          this.movedAndreasSaal.emit(response[0].tables);
+          //this.tablesRoterSalon = response[0].tables;
         }
       }
       this.changeBgColorIfAnreise.emit();
@@ -259,22 +277,22 @@ export class TableplanComponent implements AfterViewInit {
 
   sumUpPersonenAnzahl(){
     console.log("sumUpPersonenAnzahl called");
-    if (this.tablesSonnbergZirbn) {
-      for (let p = 0; p < this.tablesSonnbergZirbn.length; p++) {
-        this.erwSonnbergZirbn[p] = 0;
-        this.kiSonnbergZirbn[p] = 0;
-        if (this.tablesSonnbergZirbn[p].groups) {
-          for (let g = 0; g < this.tablesSonnbergZirbn[p].groups.length; g++) {
-            if (this.tablesSonnbergZirbn[p].groups[g].personenAnzahlValue) {
-              let erwKi = this.tablesSonnbergZirbn[p].groups[g].personenAnzahlValue.match(/\d+/g);
+    if (this.tablesTurm) {
+      for (let p = 0; p < this.tablesTurm.length; p++) {
+        this.erwTurm[p] = 0;
+        this.kiTurm[p] = 0;
+        if (this.tablesTurm[p].groups) {
+          for (let g = 0; g < this.tablesTurm[p].groups.length; g++) {
+            if (this.tablesTurm[p].groups[g].personenAnzahlValue) {
+              let erwKi = this.tablesTurm[p].groups[g].personenAnzahlValue.match(/\d+/g);
               if (erwKi != null) {
                 //console.log(erwKi);
-                this.erwSonnbergZirbn[p] = this.erwSonnbergZirbn[p] + Number(erwKi[0]);
+                this.erwTurm[p] = this.erwTurm[p] + Number(erwKi[0]);
                 //console.log(this.erw[p]);
               }
               if (erwKi != null) {
                 //console.log(erwKi);
-                this.kiSonnbergZirbn[p] = this.kiSonnbergZirbn[p] + Number(erwKi[1]);
+                this.kiTurm[p] = this.kiTurm[p] + Number(erwKi[1]);
                 //console.log(this.ki[p]);
               }
             }
@@ -305,22 +323,22 @@ export class TableplanComponent implements AfterViewInit {
         }
       }
     }
-    if (this.tablesRestaurant) {
-      for (let p = 0; p < this.tablesRestaurant.length; p++) {
-        this.erwRestaurant[p] = 0;
-        this.kiRestaurant[p] = 0;
-        if (this.tablesRestaurant[p].groups) {
-          for (let g = 0; g < this.tablesRestaurant[p].groups.length; g++) {
-            if (this.tablesRestaurant[p].groups[g].personenAnzahlValue) {
-              let erwKi = this.tablesRestaurant[p].groups[g].personenAnzahlValue.match(/\d+/g);
+    if (this.tablesBlauerSalon) {
+      for (let p = 0; p < this.tablesBlauerSalon.length; p++) {
+        this.erwBlauerSalon[p] = 0;
+        this.kiBlauerSalon[p] = 0;
+        if (this.tablesBlauerSalon[p].groups) {
+          for (let g = 0; g < this.tablesBlauerSalon[p].groups.length; g++) {
+            if (this.tablesBlauerSalon[p].groups[g].personenAnzahlValue) {
+              let erwKi = this.tablesBlauerSalon[p].groups[g].personenAnzahlValue.match(/\d+/g);
               if (erwKi != null) {
                 //console.log(erwKi);
-                this.erwRestaurant[p] = this.erwRestaurant[p] + Number(erwKi[0]);
+                this.erwBlauerSalon[p] = this.erwBlauerSalon[p] + Number(erwKi[0]);
                 //console.log(this.erw[p]);
               }
               if (erwKi != null) {
                 //console.log(erwKi);
-                this.kiRestaurant[p] = this.kiRestaurant[p] + Number(erwKi[1]);
+                this.kiBlauerSalon[p] = this.kiBlauerSalon[p] + Number(erwKi[1]);
                 //console.log(this.ki[p]);
               }
             }
@@ -328,22 +346,22 @@ export class TableplanComponent implements AfterViewInit {
         }
       }
     }
-    if (this.tablesWintergarten) {
-      for (let p = 0; p < this.tablesWintergarten.length; p++) {
-        this.erwWintergarten[p] = 0;
-        this.kiWintergarten[p] = 0;
-        if (this.tablesWintergarten[p].groups) {
-          for (let g = 0; g < this.tablesWintergarten[p].groups.length; g++) {
-            if (this.tablesWintergarten[p].groups[g].personenAnzahlValue) {
-              let erwKi = this.tablesWintergarten[p].groups[g].personenAnzahlValue.match(/\d+/g);
+    if (this.tablesRoterSalon) {
+      for (let p = 0; p < this.tablesRoterSalon.length; p++) {
+        this.erwRoterSalon[p] = 0;
+        this.kiRoterSalon[p] = 0;
+        if (this.tablesRoterSalon[p].groups) {
+          for (let g = 0; g < this.tablesRoterSalon[p].groups.length; g++) {
+            if (this.tablesRoterSalon[p].groups[g].personenAnzahlValue) {
+              let erwKi = this.tablesRoterSalon[p].groups[g].personenAnzahlValue.match(/\d+/g);
               if (erwKi != null) {
                 //console.log(erwKi);
-                this.erwWintergarten[p] = this.erwWintergarten[p] + Number(erwKi[0]);
+                this.erwRoterSalon[p] = this.erwRoterSalon[p] + Number(erwKi[0]);
                 //console.log(this.erw[p]);
               }
               if (erwKi != null) {
                 //console.log(erwKi);
-                this.kiWintergarten[p] = this.kiWintergarten[p] + Number(erwKi[1]);
+                this.kiRoterSalon[p] = this.kiRoterSalon[p] + Number(erwKi[1]);
                 //console.log(this.ki[p]);
               }
             }
@@ -351,13 +369,38 @@ export class TableplanComponent implements AfterViewInit {
         }
       }
     }
-    this.kiWintergartenExport.emit(this.kiWintergarten);
-    this.erwWintergartenExport.emit(this.erwWintergarten);
-    this.erwRestaurantExport.emit(this.erwRestaurant);
-    this.kiRestaurantExport.emit(this.kiRestaurant);
+    if (this.tablesAndreasSaal) {
+      for (let p = 0; p < this.tablesAndreasSaal.length; p++) {
+        this.erwAndreasSaal[p] = 0;
+        this.kiAndreasSaal[p] = 0;
+        if (this.tablesAndreasSaal[p].groups) {
+          for (let g = 0; g < this.tablesAndreasSaal[p].groups.length; g++) {
+            if (this.tablesAndreasSaal[p].groups[g].personenAnzahlValue) {
+              let erwKi = this.tablesAndreasSaal[p].groups[g].personenAnzahlValue.match(/\d+/g);
+              if (erwKi != null) {
+                //console.log(erwKi);
+                this.erwAndreasSaal[p] = this.erwAndreasSaal[p] + Number(erwKi[0]);
+                //console.log(this.erw[p]);
+              }
+              if (erwKi != null) {
+                //console.log(erwKi);
+                this.kiAndreasSaal[p] = this.kiAndreasSaal[p] + Number(erwKi[1]);
+                //console.log(this.ki[p]);
+              }
+            }
+          }
+        }
+      }
+    }
+    this.kiRoterSalonExport.emit(this.kiRoterSalon);
+    this.erwRoterSalonExport.emit(this.erwRoterSalon);
+    this.erwBlauerSalonExport.emit(this.erwBlauerSalon);
+    this.kiBlauerSalonExport.emit(this.kiBlauerSalon);
     this.erwPanoramaExport.emit(this.erwPanorama);
     this.kiPanoramaExport.emit(this.kiPanorama);
-    this.erwSonnbergZirbnExport.emit(this.erwSonnbergZirbn);
-    this.kiSonnbergZirbnExport.emit(this.kiSonnbergZirbn);
+    this.erwTurmExport.emit(this.erwTurm);
+    this.kiTurmExport.emit(this.kiTurm);
+    this.erwAndreasSaalExport.emit(this.erwAndreasSaal);
+    this.kiAndreasSaalExport.emit(this.kiAndreasSaal);
   }
 }

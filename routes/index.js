@@ -7,10 +7,8 @@ const   express = require('express'),
     jwt = require('jsonwebtoken'),
     config = require('../config/database'),
     User = require('../models/user'),
-    db = mongojs('mongodb://anton:b2d4f6h8@ds127132.mlab.com:27132/servicio', ['tracesListe', 'anreiseListe', 'imHausListe', 'tables', 'tablesTemp', 'newInformation', 'newNotizDb', 'newInformationToEmployee']),
-    anreiseliste = require('./anreiseListe.js'),
+    db = mongojs('mongodb://anton:b2d4f6h8@ds127132.mlab.com:27132/servicio', ['alpenblickImHausListe', 'alpenblickTables', 'alpenblickNewInformation', 'alpenblickNewNotiz', 'alpenblickNewInformationToEmployee']),
     imHausListe = require('./imHausListe.js'),
-    traceListe = require('./traceListe.js'),
     information = require('./information.js'),
     notiz = require('./notiz.js'),
     placeholder = require('./placeholder.js'),
@@ -29,15 +27,7 @@ router.use(cors());
 
 //----->DB API<------//
 
-//Save AnreiseListe
-router.post('/anreiseListe', function(req, res, next) {
-anreiseliste.saveAnreiseListe(req, res, db)});
-//Update AnreiseListe
-router.post('/updateAnreiseListeElement', function(req, res, next) {
-anreiseliste.updateAnreiseListe(req, res, db)});
-//Get anreiseListe
-router.get('/anreiseListe', function(req, res, next) {
-anreiseliste.getAnreiseListe(req, res, db)});
+
 //Save ImHausListe
 router.post('/imHausListe', function(req, res, next) {
 imHausListe.saveImHausListe(req, res, db)});
@@ -47,15 +37,6 @@ imHausListe.updateImHausListe(req, res, db)});
 //Get imHausListe
 router.get('/imHausListe', function(req, res, next) {
 imHausListe.getImHausListe(req, res, db)});
-//Save TracesListe
-router.post('/tracesListe', function(req, res, next) {
-traceListe.saveTraceListe(req, res, db)});
-//Update TraceListe
-router.post('/updateTracesListeElement', function(req, res, next) {
-traceListe.updateTraceListe(req, res, db)});
-//Get TracesListe
-router.get('/tracesListe', function(req, res, next) {
-traceListe.getTraceListe(req, res, db)});
 //Get Information
 router.get('/information', function(req, res, next) {
 information.getInformation(req, res, db)});

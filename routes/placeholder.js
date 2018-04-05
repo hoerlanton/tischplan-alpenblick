@@ -16,7 +16,7 @@ module.exports = {
         //console.log(occupyTable);
         new Promise(function(resolve, reject) {
 
-        db.tables.update(
+        db.alpenblickTables.update(
             {
                 department: addPlaceholder.department,
                 "tables.number": addPlaceholder.number
@@ -36,7 +36,7 @@ module.exports = {
         }).then(function() { // (**)
 
         setTimeout(function () {
-            db.tables.find(
+            db.alpenblickTables.find(
                 {
                     department: addPlaceholder.department,
                     "tables.number": addPlaceholder.number
@@ -105,7 +105,7 @@ module.exports = {
         //console.log(tableValue);
         //console.log(occupyTable);
 
-        db.tables.update(
+        db.alpenblickTables.update(
             {
                 department: departmentValueDB,
                 "tables.number": tableValue[0]
@@ -122,7 +122,7 @@ module.exports = {
             });
 
         setTimeout(function () {
-            db.tables.findOne(
+            db.alpenblickTables.findOne(
                 {
                     department: departmentValueDB,
                     "tables.number": tableValue[0]

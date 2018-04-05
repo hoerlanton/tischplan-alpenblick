@@ -1,12 +1,12 @@
-<div *ngIf="showWintergartenBool">
-  <div *ngFor="let tableWintergarten of tablesWintergarten; let j = index;">
-    <div *ngIf="tablesWintergarten[j] !== tablesWintergarten[j+1]">
-      <button style="float: right; margin: 20px 0px 20px 0px; background-color: #0a7a74; color: #FFFFFF"  type="button" class="btn btn-send" (click)="occupy(tableWintergarten, j)">{{tableWintergarten.isBesetzt === 'true' ? 'FREI MACHEN' : ''}}</button>
-      <h4><b> Tisch:</b>{{tableWintergarten.number}} </h4><br>
-      <div class='cards-container' id='containerWintergarten' [ngStyle]="{'background-color': + tableWintergarten.bgColor}">
-        <div class="table" [ngStyle]="{'background-color': '#' + tableWintergarten.bgColor}">
-          <div *ngIf="tableWintergarten.isBesetzt === 'true'">
-            <div *ngFor="let group of tableWintergarten.groups; let j = index;">
+<div *ngIf="showRoterSalonBool">
+  <div *ngFor="let tableRoterSalon of tablesRoterSalon; let j = index;">
+    <div *ngIf="tablesRoterSalon[j] !== tablesRoterSalon[j+1]">
+      <button style="float: right; margin: 20px 0px 20px 0px; background-color: #0a7a74; color: #FFFFFF"  type="button" class="btn btn-send" (click)="occupy(tableRoterSalon, j)">{{tableRoterSalon.isBesetzt === 'true' ? 'FREI MACHEN' : ''}}</button>
+      <h4><b> Tisch:</b>{{tableRoterSalon.number}} </h4><br>
+      <div class='cards-container' id='containerRoterSalon' [ngStyle]="{'background-color': + tableRoterSalon.bgColor}">
+        <div class="table" [ngStyle]="{'background-color': '#' + tableRoterSalon.bgColor}">
+          <div *ngIf="tableRoterSalon.isBesetzt === 'true'">
+            <div *ngFor="let group of tableRoterSalon.groups; let j = index;">
               <div [style.border]="getStyle(group.traceValue)">
                 <div *ngIf="group.nameValue">
                   <p style="background-color: #FFFFFF; padding: 10px">
@@ -34,8 +34,8 @@
             </div>
           </div>
         </div>
-        <div *ngIf="tableWintergarten.placeholder === 'true'">
-          <p [dragula]='"evented-bag"' id="Wintergarten" style="background-color: #9d9d9d; border: dashed 3px black; margin-top: 50px; opacity: 0.4; padding: 10px 10px 10px 10px">Listen-Element hier hin ziehen! {{tableWintergarten.number}} {{tableWintergarten.department}} {{j}}</p>
+        <div *ngIf="tableRoterSalon.placeholder === 'true'">
+          <p [dragula]='"evented-bag"' id="RoterSalon" style="background-color: #9d9d9d; border: dashed 3px black; margin-top: 50px; opacity: 0.4; padding: 10px 10px 10px 10px">Listen-Element hier hin ziehen! {{tableRoterSalon.number}} {{tableRoterSalon.department}} {{j}}</p>
         </div>
       </div>
     </div>

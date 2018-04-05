@@ -14,20 +14,24 @@ export class PrintComponent {
   @Input('dateGeneratedListe') dateGeneratedListe: string;
   @Input('tablesPanorama') tablesPanorama: string;
   @Input('showPanoramaBool') showPanoramaBool: string;
-  @Input('showRestaurantBool') showRestaurantBool: string;
-  @Input('tablesRestaurant') tablesRestaurant: string;
-  @Input('showSonnbergZirbnBool') showSonnbergZirbnBool: string;
-  @Input('tablesSonnbergZirbn') tablesSonnbergZirbn: string;
-  @Input('showWintergartenBool') showWintergartenBool: string;
-  @Input('tablesWintergarten') tablesWintergarten: string;
+  @Input('tablesAndreasSaal') tablesAndreasSaal: string;
+  @Input('showAndreasSaalBool') showAndreasSaalBool: string;
+  @Input('showRoterSalonBool') showRoterSalonBool: string;
+  @Input('tablesRoterSalon') tablesRoterSalon: string;
+  @Input('showBlauerSalonBool') showBlauerSalonBool: string;
+  @Input('tablesBlauerSalon') tablesBlauerSalon: string;
+  @Input('showTurmBool') showTurmBool: string;
+  @Input('tablesTurm') tablesTurm: string;
   @Input('erwPanorama') erwPanorama: string;
-  @Input('erwRestaurant') erwRestaurant: string;
-  @Input('erwSonnbergZirbn') erwSonnbergZirbn: string;
-  @Input('erwWintergarten') erwWintergarten: string;
+  @Input('erwRoterSalon') erwRoterSalon: string;
+  @Input('erwBlauerSalon') erwBlauerSalon: string;
+  @Input('erwTurm') erwTurm: string;
+  @Input('erwAndreasSaal') erwAndreasSaal: string;
   @Input('kiPanorama') kiPanorama: string;
-  @Input('kiRestaurant') kiRestaurant: string;
-  @Input('kiSonnbergZirbn') kiSonnbergZirbn: string;
-  @Input('kiWintergarten') kiWintergarten: string;
+  @Input('kiRoterSalon') kiRoterSalon: string;
+  @Input('kiBlauerSalon') kiBlauerSalon: string;
+  @Input('kiTurm') kiTurm: string;
+  @Input('kiAndreasSaal') kiAndreasSaal: string;
 
   @Output()
   getTablesOccupied:EventEmitter<number> = new EventEmitter();

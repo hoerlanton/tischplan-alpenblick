@@ -6,7 +6,7 @@ module.exports = {
     getInformation: function (req, res, db) {
         console.log("tables get called");
         //Get guests from Mongo DB
-        db.newInformation.find(function (err, information) {
+        db.alpenblickNewInformation.find(function (err, information) {
             if (err) {
                 res.send(err);
             }
@@ -19,7 +19,7 @@ module.exports = {
         console.log("deleteInformation request made to /deleteInformation");
         let informationElementToDelete = req.body;
         console.log(JSON.stringify(informationElementToDelete));
-        db.newInformation.remove({
+        db.alpenblickNewInformation.remove({
 
                 roomNumber: informationElementToDelete.roomNumber,
                 text: informationElementToDelete.text
@@ -37,7 +37,7 @@ module.exports = {
         console.log(req.body);
         let newInformation = req.body;
 
-        db.tables.update(
+        db.alpenblickTables.update(
             {
                 "tables.number": newInformation.tableNumber,
             },
@@ -60,7 +60,7 @@ module.exports = {
             });
 
         setTimeout(function () {
-            db.tables.findOne(
+            db.alpenblickTables.findOne(
                 {
                     "tables.number": newInformation.tableNumber
                 },
@@ -79,7 +79,7 @@ module.exports = {
     getInformationEmployees: function (req, res, db) {
         console.log("getInformationEmployees get called");
         //Get guests from Mongo DB
-        db.newInformationToEmployee.find(function (err, information) {
+        db.alpenblickNewInformationToEmployee.find(function (err, information) {
             if (err) {
                 res.send(err);
             }
@@ -98,7 +98,7 @@ module.exports = {
         let newInformation = req.body;
 
 
-        db.newInformation.save(newInformation, function (err, newInformation) {
+        db.alpenblickNewInformation.save(newInformation, function (err, newInformation) {
             if (err) {
                 res.send(err);
             }
@@ -106,7 +106,7 @@ module.exports = {
         });
 
         setTimeout(function () {
-            db.newInformationToEmployee.findOne(
+            db.alpenblickNewInformationToEmployee.findOne(
                 {
                     "employee": newInformation.employee
                 },
@@ -117,7 +117,7 @@ module.exports = {
                     if (err) {
                         res.send(err);
                     }
-                    db.newInformationToEmployee.update(
+                    db.alpenblickNewInformationToEmployee.update(
                         {
                             "employee": newInformation.employee
                         },

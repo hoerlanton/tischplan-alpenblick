@@ -69,22 +69,24 @@ module.exports = {
             console.log(nameValue[0]);
             console.log(tableValue + " " + departmentValue);
 
-
-            if (departmentValue === "SonnbergZirbn") {
-                departmentValueDB = "Sonnberg-Zirbn";
+            if (departmentValue === "RoterSalon") {
+                departmentValueDB = "roter-salon";
+            }
+            else if (departmentValue === "BlauerSalon") {
+                departmentValueDB = "blauer-salon";
             }
             else if (departmentValue === "Panorama") {
-                departmentValueDB = "Panorama";
+                departmentValueDB = "panorama";
             }
-            else if (departmentValue === "Restaurant") {
-                departmentValueDB = "Restaurant";
+            else if (departmentValue === "AndreasSaal") {
+                departmentValueDB = "andreas-saal";
             }
-            else if (departmentValue === "Wintergarten") {
-                departmentValueDB = "Wintergarten";
+            else if (departmentValue === "Turm") {
+                departmentValueDB = "turm";
             }
             setTimeout(function () {
 
-                db.tables.update(
+                db.alpenblickTables.update(
                     {
                         department: departmentValueDB,
                         "tables.number": tableValue
@@ -150,7 +152,7 @@ module.exports = {
 
 
             setTimeout(function () {
-                db.tables.findOne(
+                db.alpenblickTables.findOne(
                     {
                         department: departmentValueDB,
                         "tables.number": tableValue
@@ -170,7 +172,7 @@ module.exports = {
                         console.log("Länge tables firstplace" + JSON.stringify(tablesfirst.tables[0]).length);
                         for (let i = 0; i < umsetzen[0].groups.length; i++) {
                             if (nameValue[i]) {
-                                db.tables.update(
+                                db.alpenblickTables.update(
                                 {
                                     department: departmentValueDB,
                                     "tables.number": tableValue
@@ -201,7 +203,7 @@ module.exports = {
                                     console.log("addInformationToTable updated successfully");
                                 });
                         } else {
-                                db.tables.update(
+                                db.alpenblickTables.update(
                                     {
                                         department: departmentValueDB,
                                         "tables.number": tableValue
@@ -223,14 +225,13 @@ module.exports = {
                                         }
                                         console.log("addInformationToTable updated successfully");
                                     });
-
                             }
                         }
                     });
             }, 200);
         }
         setTimeout(function () {
-            db.tables.find(
+            db.alpenblickTables.find(
                 {
                     department: departmentValueDB,
                     "tables.number": tableValue

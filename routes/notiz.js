@@ -6,7 +6,7 @@ module.exports = {
     getNotiz: function (req, res, db) {
         console.log("tables get called");
         //Get guests from Mongo DB
-        db.newNotizDb.find(function (err, information) {
+        db.alpenblickNewNotiz.find(function (err, information) {
             if (err) {
                 res.send(err);
             }
@@ -14,13 +14,12 @@ module.exports = {
         });
     },
     newNotiz: function (req, res, db) {
-
         console.log("newNotiz post called");
         //Get guests from Mongo DB
 
         console.log(req.body);
         let newInformation = req.body;
-        db.newNotizDb.update(
+        db.alpenblickNewNotiz.update(
             {
                 departmentNotizInput: newInformation.departmentNotizInput,
             },
@@ -37,7 +36,7 @@ module.exports = {
             });
 
         setTimeout(function () {
-            db.newNotizDb.find(
+            db.alpenblickNewNotiz.find(
                 function (err, notiz) {
                     if (err) {
                         res.send(err);

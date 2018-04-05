@@ -8,13 +8,14 @@ import { PrintComponent } from './components/digitalerTischplan/print/print.comp
 import { NavService } from './services/tables.service';
 import { FlashMessagesModule } from 'angular2-flash-messages';
 import { DragulaModule } from 'ng2-dragula';
-import {NgClass} from '@angular/common';
+import { NgClass} from '@angular/common';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
-import {DropdownModule} from "ng2-dropdown";
-import { WintergartenComponent } from './components/digitalerTischplan/departments/wintergarten/wintergarten.component';
-import { RestaurantComponent } from './components/digitalerTischplan/departments/restaurant/restaurant.component';
+import { DropdownModule} from "ng2-dropdown";
+import { AndreasSaalComponent } from './components/digitalerTischplan/departments/andreas-saal/andreas-saal.component';
+import { BlauerSalonComponent } from './components/digitalerTischplan/departments/blauer-salon/blauer-salon.component';
 import { PanoramaComponent } from './components/digitalerTischplan/departments/panorama/panorama.component';
-import { SonnbergZirbnComponent } from './components/digitalerTischplan/departments/sonnberg-zirbn/sonnberg-zirbn.component';
+import { RoterSalonComponent } from './components/digitalerTischplan/departments/roter-salon/roter-salon.component';
+import { TurmComponent } from './components/digitalerTischplan/departments/turm/turm.component';
 import { NavigationComponent } from './components/digitalerTischplan/navigation/navigation.component';
 import { FormComponent } from './components/digitalerTischplan/form/form.component';
 import { TableplanComponent } from './components/digitalerTischplan/tableplan/tableplan.component';
@@ -48,10 +49,11 @@ const appRoutes: Routes =  [
     AppComponent,
     TischplanComponent,
     PrintComponent,
-    WintergartenComponent,
-    RestaurantComponent,
+    AndreasSaalComponent,
+    BlauerSalonComponent,
     PanoramaComponent,
-    SonnbergZirbnComponent,
+    RoterSalonComponent,
+    TurmComponent,
     NavigationComponent,
     FormComponent,
     TableplanComponent,

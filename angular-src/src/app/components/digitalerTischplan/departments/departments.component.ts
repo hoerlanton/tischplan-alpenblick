@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, ViewChild, Output, EventEmitter, Injectable  } from '@angular/core';
 import { TischplanService } from '../../../services/tischplan.service';
 import { Table } from '../../../../../Table';
-import { WintergartenComponent } from './wintergarten/wintergarten.component';
+import { TurmComponent } from './turm/turm.component';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { NavService }   from '../../../services/tables.service';
 import { TischplanComponent } from '../tischplan.component';
@@ -9,9 +9,9 @@ import { DragulaService } from "ng2-dragula";
 import { Http, Headers } from '@angular/http';
 import {AlleComponent} from "./alle/alle.component";
 import {PanoramaComponent} from "./panorama/panorama.component";
-import {RestaurantComponent} from "./restaurant/restaurant.component";
-import {SonnbergZirbnComponent} from "./sonnberg-zirbn/sonnberg-zirbn.component";
-
+import {RoterSalonComponent} from "./roter-salon/roter-salon.component";
+import {BlauerSalonComponent} from "./blauer-salon/blauer-salon.component";
+import {AndreasSaalComponent} from "./andreas-saal/andreas-saal.component";
 
 
 @Component({
@@ -22,15 +22,17 @@ import {SonnbergZirbnComponent} from "./sonnberg-zirbn/sonnberg-zirbn.component"
 
 export class DepartmentsComponent {
 
-  @Input('tablesWintergarten') tablesWintergarten: Table[];
-  @Input('showWintergartenBool') showWintergartenBool: boolean;
-  @Input('tablesSonnbergZirbn') tablesSonnbergZirbn: Table[];
-  @Input('showSonnbergZirbnBool') showSonnbergZirbnBool: boolean;
+  @Input('tablesTurm') tablesTurm: Table[];
+  @Input('showTurmBool') showTurmBool: boolean;
+  @Input('tablesAndreasSaal') tablesAndreasSaal: Table[];
+  @Input('showAndreasSaalBool') showAndreasSaalBool: boolean;
+  @Input('tablesBlauerSalon') tablesBlauerSalon: Table[];
+  @Input('showBlauerSalonBool') showBlauerSalonBool: boolean;
   @Input() tablesPanorama: Table[];
   @Input('tables') tables: any;
   @Input('showPanoramaBool') showPanoramaBool: boolean;
-  @Input('tablesRestaurant') tablesRestaurant: Table[];
-  @Input('showRestaurantBool') showRestaurantBool: boolean;
+  @Input('tablesRoterSalon') tablesRoterSalon: Table[];
+  @Input('showRoterSalonBool') showRoterSalonBool: boolean;
   @Input('showAlleBool') showAlleBool: boolean;
   @Input() tablesTempAbreise: any;
   @Input('term') term: string;
@@ -40,21 +42,27 @@ export class DepartmentsComponent {
   @ViewChild(PanoramaComponent)
   private panoramaComponent: PanoramaComponent;
 
-  @ViewChild(RestaurantComponent)
-  private restaurantComponent: RestaurantComponent;
+  @ViewChild(RoterSalonComponent)
+  private roterSalonComponent: RoterSalonComponent;
 
-  @ViewChild(WintergartenComponent)
-  private wintergartenComponent: WintergartenComponent;
+  @ViewChild(TurmComponent)
+  private turmComponent: TurmComponent;
 
-  @ViewChild(SonnbergZirbnComponent)
-  private sonnbergZirbnComponent: SonnbergZirbnComponent;
+  @ViewChild(BlauerSalonComponent)
+  private blauerSalonComponent: BlauerSalonComponent;
+
+  @ViewChild(AndreasSaalComponent)
+  private andreasSaalComponent: AndreasSaalComponent;
+
 
   @Output()
-  dispensedSonnbergZirbn:EventEmitter<any> = new EventEmitter();
+  dispensedBlauerSalon:EventEmitter<any> = new EventEmitter();
   @Output()
-  dispensedRestaurant:EventEmitter<any> = new EventEmitter();
+  dispensedAndreasSaal:EventEmitter<any> = new EventEmitter();
   @Output()
-  dispensedWintergarten:EventEmitter<any> = new EventEmitter();
+  dispensedRoterSalon:EventEmitter<any> = new EventEmitter();
+  @Output()
+  dispensedTurm:EventEmitter<any> = new EventEmitter();
   @Output()
   dispensedPanorama:EventEmitter<any> = new EventEmitter();
   @Output()
@@ -102,15 +110,17 @@ export class DepartmentsComponent {
           return 0;
         });
 
-        if (response[0].tables[j].department === "Sonnberg-Zirbn") {
-          this.dispensedSonnbergZirbn.emit(response[0].tables);
-        } else if (response[0].tables[j].department === "Panorama") {
+        if (response[0].tables[j].department === "blauer-salon") {
+          this.dispensedBlauerSalon.emit(response[0].tables);
+        } else if (response[0].tables[j].department === "panorama") {
           this.dispensedPanorama.emit(response[0].tables);
-        } else if (response[0].tables[j].department === "Restaurant") {
-          this.dispensedRestaurant.emit(response[0].tables);
-        } else if (response[0].tables[j].department === "Wintergarten") {
-          this.dispensedWintergarten.emit(response[0].tables);
-          console.log("Wintergarten" + JSON.stringify(response[0].tables));
+        } else if (response[0].tables[j].department === "roter-salon") {
+          this.dispensedRoterSalon.emit(response[0].tables);
+        } else if (response[0].tables[j].department === "turm") {
+          this.dispensedTurm.emit(response[0].tables);
+        } else if (response[0].tables[j].department === "andreas-saal") {
+          this.dispensedAndreasSaal.emit(response[0].tables);
+          console.log("Turm" + JSON.stringify(response[0].tables));
         }
       }
     },
@@ -123,14 +133,19 @@ export class DepartmentsComponent {
             this.updateImHausListeElement.emit(table[i].table);
           }
         } else {
-          this.updateImHausListeElement.emit(table);
-
+          console.log("______________________________");
+          if (table.constructor === Array) {
+            console.log("isarray");
+            this.updateImHausListeElement.emit(table[0].table);
+          } else {
+            this.updateImHausListeElement.emit(table);
+          }
         }
       });
 
     this.tischplanService.addPlaceholder(table).subscribe(response => {
       console.log("Add placeholder!");
-      //console.log(this.tablesSonnbergZirbn[j].placeholder);
+      //console.log(this.tablesBlauerSalon[j].placeholder);
       console.log("placeholder:" + JSON.stringify(response));
 /*
       if (response === null || typeof response[0].tables[j].groups == null) {
@@ -138,16 +153,16 @@ export class DepartmentsComponent {
       } else {
         {
           if (response[0].tables[j].department === "Sonnberg-Zirbn") {
-            this.tablesSonnbergZirbn[j].placeholder = response[0].tables[j].placeholder;
+            this.tablesBlauerSalon[j].placeholder = response[0].tables[j].placeholder;
           }
           else if (response[0].tables[j].department === "Panorama") {
             this.tablesPanorama[j].placeholder = response[0].tables[j].placeholder;
           }
-          else if (response[0].tables[j].department === "Restaurant") {
-            this.tablesRestaurant[j].placeholder = response[0].tables[j].placeholder;
+          else if (response[0].tables[j].department === "RoterSalon") {
+            this.tablesRoterSalon[j].placeholder = response[0].tables[j].placeholder;
           }
-          else if (response[0].tables[j].department === "Wintergarten") {
-            this.tablesWintergarten[j].placeholder = response[0].tables[j].placeholder;
+          else if (response[0].tables[j].department === "Turm") {
+            this.tablesTurm[j].placeholder = response[0].tables[j].placeholder;
           }
         }
       }
@@ -167,20 +182,24 @@ export class DepartmentsComponent {
             return;
           } else {
             if (response[0].department === "Sonnberg-Zirbn") {
-              this.dispensedSonnbergZirbn.emit(response[0].tables);
+              this.dispensedBlauerSalon.emit(response[0].tables);
             }
             else if (response[0].department === "Panorama") {
               this.dispensedPanorama.emit(response[0].tables);
             }
-            else if (response[0].department === "Restaurant") {
-              this.dispensedRestaurant.emit(response[0].tables);
+            else if (response[0].department === "RoterSalon") {
+              this.dispensedRoterSalon.emit(response[0].tables);
             }
-            else if (response[0].department === "Wintergarten") {
-              this.dispensedWintergarten.emit(response[0].tables);
+            else if (response[0].department === "Turm") {
+              this.dispensedTurm.emit(response[0].tables);
             }
+            else if (response[0].department === "andreas-saal") {
+              this.dispensedAndreasSaal.emit(response[0].tables);
+            }
+
           }
         }
-        // console.log(this.tablesSonnbergZirbn[arrayIndex]);
+        // console.log(this.tablesBlauerSalon[arrayIndex]);
       )
   };
 
@@ -197,17 +216,20 @@ export class DepartmentsComponent {
         if (response === null) {
           return;
         } else {
-          if (response.tables[0].department === "Sonnberg-Zirbn") {
-            this.tablesSonnbergZirbn[arrayIndex] = response.tables[0];
+          if (response.tables[0].department === "blauer-salon") {
+            this.tablesBlauerSalon[arrayIndex] = response.tables[0];
           }
-          else if (response.tables[0].department === "Panorama") {
+          else if (response.tables[0].department === "panorama") {
             this.tablesPanorama[arrayIndex] = response.tables[0];
           }
-          else if (response.tables[0].department === "Restaurant") {
-            this.tablesRestaurant[arrayIndex] = response.tables[0];
+          else if (response.tables[0].department === "roter-salon") {
+            this.tablesRoterSalon[arrayIndex] = response.tables[0];
           }
-          else if (response.tables[0].department === "Wintergarten") {
-            this.tablesWintergarten[arrayIndex] = response.tables[0];
+          else if (response.tables[0].department === "turm") {
+            this.tablesTurm[arrayIndex] = response.tables[0];
+          }
+          else if (response.tables[0].department === "andreas-saal") {
+            this.tablesAndreasSaal[arrayIndex] = response.tables[0];
           }
         }
         this.updateAzList.emit();
@@ -241,31 +263,36 @@ export class DepartmentsComponent {
               // note parts[1]-1
               // console.log('parts[2]' + parts[2] + 'parts[1]' + (parts[1] - 1) + 'parts[0]' + parts[0]);
               // Mon May 31 2010 00:00:00
-              // this.tablesRestaurant[j].anreiseValue
+              // this.tablesRoterSalon[j].anreiseValue
               let dateToday = String(this.dateTodayGenerated).substring(0, 15);
               //console.log('Parsed Date --->: ' + this.parsedDate[0]);
               //console.log('this.dateGenerated --->: ' + dateToday);
               if (dateToday.indexOf(this.parsedDate[0]) !== -1) {
-                if (this.tablesChangeBgColorIfAnreise[a].department === "Panorama") {
+                if (this.tablesChangeBgColorIfAnreise[a].department === "panorama") {
                   //console.log(this.tablesPanorama);
                   if (this.tablesPanorama[b]) {
                     //console.log(this.tablesPanorama[b]);
                     this.tablesPanorama[b].bgColor = "#0a7a74";
                   }
                 }
-                else if (this.tablesChangeBgColorIfAnreise[a].department === "Wintergarten") {
-                  if (this.tablesWintergarten[b]) {
-                    this.tablesWintergarten[b].bgColor = "#0a7a74";
+                else if (this.tablesChangeBgColorIfAnreise[a].department === "turm") {
+                  if (this.tablesTurm[b]) {
+                    this.tablesTurm[b].bgColor = "#0a7a74";
                   }
                 }
-                else if (this.tablesChangeBgColorIfAnreise[a].department === "Sonnberg-Zirbn") {
-                  if (this.tablesSonnbergZirbn[b]) {
-                    this.tablesSonnbergZirbn[b].bgColor = "#0a7a74";
+                else if (this.tablesChangeBgColorIfAnreise[a].department === "blauer-salon") {
+                  if (this.tablesBlauerSalon[b]) {
+                    this.tablesBlauerSalon[b].bgColor = "#0a7a74";
                   }
                 }
-                else if (this.tablesChangeBgColorIfAnreise[a].department === "Restaurant") {
-                  if (this.tablesRestaurant[b]) {
-                    this.tablesRestaurant[b].bgColor = "#0a7a74";
+                else if (this.tablesChangeBgColorIfAnreise[a].department === "roter-salon") {
+                  if (this.tablesRoterSalon[b]) {
+                    this.tablesRoterSalon[b].bgColor = "#0a7a74";
+                  }
+                }
+                else if (this.tablesChangeBgColorIfAnreise[a].department === "andreas-saal") {
+                  if (this.tablesAndreasSaal[b]) {
+                    this.tablesAndreasSaal[b].bgColor = "#0a7a74";
                   }
                 }
               }
@@ -279,12 +306,14 @@ export class DepartmentsComponent {
   transform(term) {
       if (this.showPanoramaBool) {
       this.panoramaComponent.transform(this.tablesPanorama, term);
-       } else if (this.showRestaurantBool) {
-       this.restaurantComponent.transform(this.tablesRestaurant, term);
-       } else if (this.showWintergartenBool) {
-       this.wintergartenComponent.transform(this.tablesWintergarten, term);
-       } else if (this.showSonnbergZirbnBool) {
-       this.sonnbergZirbnComponent.transform(this.tablesSonnbergZirbn, term);
+       } else if (this.showRoterSalonBool) {
+       this.roterSalonComponent.transform(this.tablesRoterSalon, term);
+       } else if (this.showTurmBool) {
+       this.turmComponent.transform(this.tablesTurm, term);
+       } else if (this.showBlauerSalonBool) {
+       this.blauerSalonComponent.transform(this.tablesBlauerSalon, term);
+      } else if (this.showAndreasSaalBool) {
+        this.andreasSaalComponent.transform(this.tablesAndreasSaal, term);
        } else if (this.showAlleBool) {
         this.alleComponent.transform(this.tables, term);
 

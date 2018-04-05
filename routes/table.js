@@ -26,7 +26,7 @@ module.exports = {
 
         console.log("tables get called");
         //Get guests from Mongo DB
-        db.tables.find(function (err, tables) {
+        db.alpenblickTables.find(function (err, tables) {
             if (err) {
                 res.send(err);
             }
@@ -81,7 +81,7 @@ module.exports = {
         removeTablesRestaurant1024.removeTable(db, tableNumber, departmentValue, topValue, leftValue, height, width);
 
         setTimeout(function () {
-            db.tables.find(
+            db.alpenblickTables.find(
                 {
                     "department": departmentValue,
                 },
@@ -141,7 +141,7 @@ module.exports = {
         addTablesRestaurant1024.addTable(db, tableNumber, departmentValue, topValue, leftValue, height, width);
 
         setTimeout(function () {
-            db.tables.find(
+            db.alpenblickTables.find(
                 {
                     "department": departmentValue,
                 },
@@ -197,20 +197,23 @@ module.exports = {
             console.log(departmentValueDB);
         }
 
-        if (departmentValue === "SonnbergZirbn") {
-            departmentValueDB = "Sonnberg-Zirbn";
+        if (departmentValue === "RoterSalon") {
+            departmentValueDB = "roter-salon";
+        }
+        else if (departmentValue === "BlauerSalon") {
+            departmentValueDB = "blauer-salon";
         }
         else if (departmentValue === "Panorama") {
-            departmentValueDB = "Panorama";
+            departmentValueDB = "panorama";
         }
-        else if (departmentValue === "Restaurant") {
-            departmentValueDB = "Restaurant";
+        else if (departmentValue === "AndreasSaal") {
+            departmentValueDB = "andreas-saal";
         }
-        else if (departmentValue === "Wintergarten") {
-            departmentValueDB = "Wintergarten";
+        else if (departmentValue === "Turm") {
+            departmentValueDB = "turm";
         }
 
-        db.tables.update(
+        db.alpenblickTables.update(
             {
                 department: departmentValueDB,
                 "tables.number": tableValue
@@ -228,7 +231,7 @@ module.exports = {
             });
 
         setTimeout(function () {
-            db.tables.findOne(
+            db.alpenblickTables.findOne(
                 {
                     "department": departmentValueDB,
                     "tables.number": tableValue
@@ -253,7 +256,7 @@ module.exports = {
         if (dispenseTable.constructor === Array) {
             console.log("dispenseTable[h].table.groups.length > dispenseTable[h].group.length");
             new Promise(function (resolve, reject) {
-                db.tables.find({}, function (err, tables) {
+                db.alpenblickTables.find({}, function (err, tables) {
                     if (err) {
                         res.send(err);
                     } else {
@@ -306,23 +309,24 @@ module.exports = {
                 console.log(JSON.stringify(tablesTemp3[0]));
 
             }).then(function () { // (**)
-                db.tables.remove({
+                db.alpenblickTables.remove({
                 }, function (err, tables) {
                     if (err) {
                         console.log(err);
                     } else {
                         console.log("removed");
                         console.log(tables);
-                        db.tables.save(tablesTemp3[0][0]);
-                        db.tables.save(tablesTemp3[0][1]);
-                        db.tables.save(tablesTemp3[0][2]);
-                        db.tables.save(tablesTemp3[0][3]);
+                        db.alpenblickTables.save(tablesTemp3[0][0]);
+                        db.alpenblickTables.save(tablesTemp3[0][1]);
+                        db.alpenblickTables.save(tablesTemp3[0][2]);
+                        db.alpenblickTables.save(tablesTemp3[0][3]);
+                        db.alpenblickTables.save(tablesTemp3[0][4]);
                     }
                 });
             }).then(function () { // (**)
                 setTimeout(function () {
                     console.log("Dispense Table1: ");
-                    db.tables.find(
+                    db.alpenblickTables.find(
                         {}, function (err, tables) {
                             if (err) {
                                 res.send(err);
@@ -335,7 +339,7 @@ module.exports = {
             });
         } else {
             new Promise(function (resolve, reject) {
-                db.tables.findAndModify({
+                db.alpenblickTables.findAndModify({
                     query: {department: dispenseTable.department, "tables.number": dispenseTable.number},
                     update: {
                         $set: {
@@ -356,7 +360,7 @@ module.exports = {
             }).then(function () { // (**)
                 setTimeout(function () {
                     console.log("Dispense Table2: ");
-                    db.tables.find(
+                    db.alpenblickTables.find(
                         {
                             department: dispenseTable.department,
                             "tables.number": dispenseTable.number

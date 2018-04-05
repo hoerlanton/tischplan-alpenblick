@@ -3,14 +3,14 @@ import { TischplanService } from '../../../../services/tischplan.service';
 import { Table } from '../../../../../../Table';
 
 @Component({
-  selector: 'app-restaurant',
-  templateUrl: 'restaurant.component.html',
+  selector: 'app-turm',
+  templateUrl: 'turm.component.html',
   styleUrls: ['../../tischplan.component.css']
 })
-export class RestaurantComponent implements OnInit {
+export class TurmComponent implements OnInit {
 
-  @Input('tablesRestaurant') tablesRestaurant: Table[];
-  @Input('showRestaurantBool') showRestaurantBool: boolean;
+  @Input('tablesTurm') tablesTurm: Table[];
+  @Input('showTurmBool') showTurmBool: boolean;
   @Input('term') term: string;
 
   @Output()
@@ -21,14 +21,15 @@ export class RestaurantComponent implements OnInit {
   constructor() {
     this.dateGenerated = new Date();
   }
+
   ngOnInit() {
   }
 
   occupy(table, j) {
     this.occupied.emit({table, j});
   }
-
   getStyle(j) {
+    //console.log(j);
     if (j != "-") {
       return "solid 3px red";
     } else {
@@ -40,10 +41,10 @@ export class RestaurantComponent implements OnInit {
     console.log("term");
     console.log(term);
     if (term == "") {
-      this.tablesRestaurant = tables;
+      this.tablesTurm = tables;
     } else {
       if (Array.isArray(tables) && tables.length && term && term.length) {
-        this.tablesRestaurant = tables.filter(item => {
+        this.tablesTurm = tables.filter(item => {
           console.log(item);
           let keys = Object.keys(item);
           if (item.groups) {

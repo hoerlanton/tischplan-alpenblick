@@ -8,38 +8,45 @@
     <div *ngIf="showAlleBool">
       Alle <i class="fa fa-th-large" aria-hidden="true"></i><span class="caret"></span>
     </div>
-    <div *ngIf="showSonnbergZirbnBool">
-      Sonnberg-<br>Zirbn <i class="fa fa-th-large" aria-hidden="true"></i><span class="caret"></span>
+    <div *ngIf="showRoterSalonBool">
+      Roter-<br>Salon <i class="fa fa-th-large" aria-hidden="true"></i><span class="caret"></span>
     </div>
-    <div *ngIf="showWintergartenBool">
-       Wintergarten <br><i class="fa fa-th-large" aria-hidden="true"></i><span class="caret"></span>
+    <div *ngIf="showTurmBool">
+       Turm <br><i class="fa fa-th-large" aria-hidden="true"></i><span class="caret"></span>
     </div>
-    <div *ngIf="showRestaurantBool">
-      Restaurant <i class="fa fa-th-large" aria-hidden="true"></i><span class="caret"></span>
+    <div *ngIf="showBlauerSalonBool">
+      Blauer Salon <br> Glockner Saal<i class="fa fa-th-large" aria-hidden="true"></i><span class="caret"></span>
     </div>
     <div *ngIf="showPanoramaBool">
        Panorama <i class="fa fa-th-large" aria-hidden="true"></i><span class="caret"></span>
     </div>
+    <div *ngIf="showAndreasSaalBool">
+      Andreas<br>Saal <i class="fa fa-th-large" aria-hidden="true"></i><span class="caret"></span>
+    </div>
   </button>
   <ul *dropdownMenu class="dropdown-menu" role="menu">
-      <li role="menuitem" class="showSonnbergZirbn"  (click)="showSonnbergZirbn()" (mouseenter)="mouseEnterSonnbergZirbn()"  (mouseleave)="mouseLeaveSonnbergZirbn()" [ngStyle]="{'background-color': '#' + buttonBgColor1}">
-        <p [ngStyle]="{'color': '#' + fontColor1}">Sonnberg-Zirbn</p>
+      <li role="menuitem" class="showRoterSalon"  (click)="showRoterSalon()" (mouseenter)="mouseEnterRoterSalon()"  (mouseleave)="mouseLeaveRoterSalon()" [ngStyle]="{'background-color': '#' + buttonBgColor1}">
+        <p [ngStyle]="{'color': '#' + fontColor1}">Roter Salon</p>
       </li>
     <li class="divider dropdown-divider"></li>
     <li role="menuitem" class="showPanorama"  (click)="showPanorama()" (mouseenter)="mouseEnterPanorama()"  (mouseleave)="mouseLeavePanorama()" [ngStyle]="{'background-color': '#' + buttonBgColor2}">
         <p [ngStyle]="{'color': '#' + fontColor2}">Panorama</p>
       </li>
     <li class="divider dropdown-divider"></li>
-    <li role="menuitem" class="showRestaurant" (click)="showRestaurant()" (mouseenter)="mouseEnterRestaurant()"  (mouseleave)="mouseLeaveRestaurant()" [ngStyle]="{'background-color': '#' + buttonBgColor3}">
-        <p [ngStyle]="{'color': '#' + fontColor3}">Restaurant</p>
+    <li role="menuitem" class="showBlauerSalon" (click)="showBlauerSalon()" (mouseenter)="mouseEnterBlauerSalon()"  (mouseleave)="mouseLeaveBlauerSalon()" [ngStyle]="{'background-color': '#' + buttonBgColor3}">
+        <p [ngStyle]="{'color': '#' + fontColor3}">Blauer Salon</p>
       </li>
     <li class="divider dropdown-divider"></li>
-    <li role="menuitem" class="showWintergarten" (click)="showWintergarten()" (mouseenter)="mouseEnterWintergarten()"  (mouseleave)="mouseLeaveWintergarten()" [ngStyle]="{'background-color': '#' + buttonBgColor4}">
-        <p [ngStyle]="{'color': '#' + fontColor4}">Wintergarten</p>
+    <li role="menuitem" class="showTurm" (click)="showTurm()" (mouseenter)="mouseEnterTurm()"  (mouseleave)="mouseLeaveTurm()" [ngStyle]="{'background-color': '#' + buttonBgColor4}">
+        <p [ngStyle]="{'color': '#' + fontColor4}">Turm</p>
       </li>
     <li class="divider dropdown-divider"></li>
-    <li role="menuitem" class="showAlle" (click)="showAlle()" (mouseenter)="mouseEnterAlle()"  (mouseleave)="mouseLeaveAlle()" [ngStyle]="{'background-color': '#' + buttonBgColor5}">
-        <p [ngStyle]="{'color': '#' + fontColor5}">Alle</p>
+    <li role="menuitem" class="showAndreasSaal" (click)="showAndreasSaal()" (mouseenter)="mouseEnterAndreasSaal()"  (mouseleave)="mouseLeaveAndreasSaal()" [ngStyle]="{'background-color': '#' + buttonBgColor5}">
+      <p [ngStyle]="{'color': '#' + fontColor5}">Andreas Saal</p>
+    </li>
+    <li class="divider dropdown-divider"></li>
+    <li role="menuitem" class="showAlle" (click)="showAlle()" (mouseenter)="mouseEnterAlle()"  (mouseleave)="mouseLeaveAlle()" [ngStyle]="{'background-color': '#' + buttonBgColor6}">
+        <p [ngStyle]="{'color': '#' + fontColor6}">Alle</p>
       </li>
     <li class="divider dropdown-divider"></li>
   </ul>

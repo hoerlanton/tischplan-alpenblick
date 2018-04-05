@@ -1,16 +1,16 @@
-import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { TischplanService } from '../../../../services/tischplan.service';
 import { Table } from '../../../../../../Table';
 
 @Component({
-  selector: 'app-wintergarten',
-  templateUrl: 'wintergarten.component.html',
+  selector: 'app-andreas-saal',
+  templateUrl: 'andreas-saal.component.html',
   styleUrls: ['../../tischplan.component.css']
 })
-export class WintergartenComponent implements OnInit {
+export class AndreasSaalComponent implements OnInit {
 
-  @Input('tablesWintergarten') tablesWintergarten: Table[];
-  @Input('showWintergartenBool') showWintergartenBool: boolean;
+  @Input('tablesAndreasSaal') tablesAndreasSaal: Table[];
+  @Input('showAndreasSaalBool') showAndreasSaalBool: boolean;
   @Input('term') term: string;
 
   @Output()
@@ -38,10 +38,10 @@ export class WintergartenComponent implements OnInit {
     console.log("term");
     console.log(term);
     if (term == "") {
-      this.tablesWintergarten = tables;
+      this.tablesAndreasSaal = tables;
     } else {
       if (Array.isArray(tables) && tables.length && term && term.length) {
-        this.tablesWintergarten = tables.filter(item => {
+        this.tablesAndreasSaal = tables.filter(item => {
           console.log(item);
           let keys = Object.keys(item);
           if (item.groups) {
