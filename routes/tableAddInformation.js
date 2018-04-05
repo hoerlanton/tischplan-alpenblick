@@ -4,7 +4,7 @@
 
 module.exports = {
     addInformationToTable: function (req, res, db) {
-        console.log("addInformationToTable request made to /addInformationToTable");
+        console.log("addInformationToTable request made to /addInformationToTable!!");
         console.log(JSON.stringify(req.body));
 
         let data = JSON.stringify(req.body),
