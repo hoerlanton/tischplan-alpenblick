@@ -181,16 +181,16 @@ export class DepartmentsComponent {
           if (response === null) {
             return;
           } else {
-            if (response[0].department === "Sonnberg-Zirbn") {
+            if (response[0].department === "blauer-salon") {
               this.dispensedBlauerSalon.emit(response[0].tables);
             }
-            else if (response[0].department === "Panorama") {
+            else if (response[0].department === "panorama") {
               this.dispensedPanorama.emit(response[0].tables);
             }
-            else if (response[0].department === "RoterSalon") {
+            else if (response[0].department === "roter-salon") {
               this.dispensedRoterSalon.emit(response[0].tables);
             }
-            else if (response[0].department === "Turm") {
+            else if (response[0].department === "turm") {
               this.dispensedTurm.emit(response[0].tables);
             }
             else if (response[0].department === "andreas-saal") {

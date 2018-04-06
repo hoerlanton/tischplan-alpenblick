@@ -3,20 +3,16 @@
  */
 
 const
-    removeTablesPanorama60s = require('./removeTablesPanorama60s.js'),
-    removeTablesPanorama70s = require('./removeTablesPanorama70s.js'),
-    removeTablesPanorama80s = require('./removeTablesPanorama80s.js'),
-    removeTablesSonnbergZirbn = require('./removeTablesSonnbergZirbn.js'),
-    removeTablesWintergarten = require('./removeTablesWintergarten.js'),
-    removeTablesRestaurant1024 = require('./removeTablesRestaurant10-24.js'),
-    removeTablesRestaurant110 = require('./removeTablesRestaurant1-10.js'),
-    addTablesPanorama60s = require('./addTablesPanorama60s.js'),
-    addTablesPanorama70s = require('./addTablesPanorama70s.js'),
-    addTablesPanorama80s = require('./addTablesPanorama80s.js'),
-    addTablesSonnbergZirbn = require('./addTablesSonnbergZirbn.js'),
-    addTablesWintergarten = require('./addTablesWintergarten.js'),
-    addTablesRestaurant1024 = require('./addTablesRestaurant10-24.js'),
-    addTablesRestaurant110 = require('./addTablesRestaurant1-10.js'),
+    removeTablesAndreasSaal = require('./removeTablesAndreasSaal.js'),
+    removeTablesTurm = require('./removeTablesTurm.js'),
+    removeTablesPanorama = require('./removeTablesPanorama.js'),
+    removeTablesBlauerSalon = require('./removeTablesBlauerSalon.js'),
+    removeTablesRoterSalon = require('./removeTablesRoterSalon.js'),
+    addTablesPanorama = require('./addTablesPanorama.js'),
+    addTablesTurm = require('./addTablesTurm.js'),
+    addTablesBlauerSalon = require('./addTablesBlauerSalon.js'),
+    addTablesRoterSalon = require('./addTablesRoterSalon.js'),
+    addTablesAndreasSaal = require('./addTablesAndreasSaal.js'),
     Promise = require('promise'),
     dateFns = require('date-fns');
 
@@ -72,13 +68,11 @@ module.exports = {
         console.log('topValue: ' + topValue);
         console.log('leftValue: ' + leftValue);
 
-        removeTablesPanorama60s.removeTable(db, tableNumber, departmentValue, topValue, leftValue, height, width);
-        removeTablesPanorama70s.removeTable(db, tableNumber, departmentValue, topValue, leftValue, height, width);
-        removeTablesPanorama80s.removeTable(db, tableNumber, departmentValue, topValue, leftValue, height, width);
-        removeTablesSonnbergZirbn.removeTable(db, tableNumber, departmentValue, topValue, leftValue, height, width);
-        removeTablesWintergarten.removeTable(db, tableNumber, departmentValue, topValue, leftValue, height, width);
-        removeTablesRestaurant110.removeTable(db, tableNumber, departmentValue, topValue, leftValue, height, width);
-        removeTablesRestaurant1024.removeTable(db, tableNumber, departmentValue, topValue, leftValue, height, width);
+        removeTablesPanorama.removeTable(db, tableNumber, departmentValue, topValue, leftValue, height, width);
+        removeTablesBlauerSalon.removeTable(db, tableNumber, departmentValue, topValue, leftValue, height, width);
+        removeTablesRoterSalon.removeTable(db, tableNumber, departmentValue, topValue, leftValue, height, width);
+        removeTablesTurm.removeTable(db, tableNumber, departmentValue, topValue, leftValue, height, width);
+        removeTablesAndreasSaal.removeTable(db, tableNumber, departmentValue, topValue, leftValue, height, width);
 
         setTimeout(function () {
             db.alpenblickTables.find(
@@ -132,13 +126,11 @@ module.exports = {
         console.log('topValue: ' + topValue);
         console.log('leftValue: ' + leftValue);
 
-        addTablesPanorama60s.addTable(db, tableNumber, departmentValue, topValue, leftValue, height, width);
-        addTablesPanorama70s.addTable(db, tableNumber, departmentValue, topValue, leftValue, height, width);
-        addTablesPanorama80s.addTable(db, tableNumber, departmentValue, topValue, leftValue, height, width);
-        addTablesSonnbergZirbn.addTable(db, tableNumber, departmentValue, topValue, leftValue, height, width);
-        addTablesWintergarten.addTable(db, tableNumber, departmentValue, topValue, leftValue, height, width);
-        addTablesRestaurant110.addTable(db, tableNumber, departmentValue, topValue, leftValue, height, width);
-        addTablesRestaurant1024.addTable(db, tableNumber, departmentValue, topValue, leftValue, height, width);
+        addTablesPanorama.addTable(db, tableNumber, departmentValue, topValue, leftValue, height, width);
+        addTablesTurm.addTable(db, tableNumber, departmentValue, topValue, leftValue, height, width);
+        addTablesRoterSalon.addTable(db, tableNumber, departmentValue, topValue, leftValue, height, width);
+        addTablesBlauerSalon.addTable(db, tableNumber, departmentValue, topValue, leftValue, height, width);
+        addTablesAndreasSaal.addTable(db, tableNumber, departmentValue, topValue, leftValue, height, width);
 
         setTimeout(function () {
             db.alpenblickTables.find(

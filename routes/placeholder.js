@@ -88,17 +88,20 @@ module.exports = {
         }
 
 
-        if (departmentValue === "SonnbergZirbn") {
-            departmentValueDB = "Sonnberg-Zirbn";
+        if (departmentValue === "RoterSalon") {
+            departmentValueDB = "roter-salon";
+        }
+        else if (departmentValue === "BlauerSalon") {
+            departmentValueDB = "blauer-salon";
         }
         else if (departmentValue === "Panorama") {
-            departmentValueDB = "Panorama";
+            departmentValueDB = "panorama";
         }
-        else if (departmentValue === "Restaurant") {
-            departmentValueDB = "Restaurant";
+        else if (departmentValue === "AndreasSaal") {
+            departmentValueDB = "andreas-saal";
         }
-        else if (departmentValue === "Wintergarten") {
-            departmentValueDB = "Wintergarten";
+        else if (departmentValue === "Turm") {
+            departmentValueDB = "turm";
         }
 
         //console.log(departmentValueDB);

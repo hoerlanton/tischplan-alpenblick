@@ -4,17 +4,16 @@
 
 module.exports = {
     addTable: function (db, tableNumber, departmentValue, topValue, leftValue, height, width) {
-        if (tableNumber === '40' && topValue === '340' && leftValue === '630' && height === '40') {
-            db.tables.update(
+        if (tableNumber === '201' && topValue === '200' && leftValue === '10' && height === '90') {
+            db.alpenblickTables.update(
                 {
                     department: departmentValue,
                     "tables.number": tableNumber
                 },
                 {
                     $set: {
-                        "tables.$.topValue": "260",
-                        "tables.$.leftValue": "630",
-                        "tables.$.height": "80",
+                        "tables.$.topValue": "100",
+                        "tables.$.height": "190",
                     }
                 }, function (err, tables) {
                     if (err) {
@@ -22,11 +21,11 @@ module.exports = {
                     }
                     console.log("moveTable Update successful");
                 });
-            db.tables.update(
+            db.alpenblickTables.update(
                 {}, {
                     $pull: {
                         tables: {
-                            "number": "41",
+                            "number": "202",
                         }
                     }
                 },
@@ -39,17 +38,15 @@ module.exports = {
                     console.log("removeTable Update successful");
                     console.log(tables);
                 });
-    } else if (tableNumber === '48' && topValue === '220' && leftValue === '400' && height === '40') {
-            db.tables.update(
+    } else if (tableNumber === '202' && topValue === '100' && leftValue === '10' && width === '160') {
+            db.alpenblickTables.update(
                 {
                     department: departmentValue,
                     "tables.number": tableNumber
                 },
                 {
                     $set: {
-                        "tables.$.topValue": "260",
-                        "tables.$.leftValue": "400",
-                        "tables.$.height": "80",
+                        "tables.$.width": "320"
                     }
                 }, function (err, tables) {
                     if (err) {
@@ -57,11 +54,11 @@ module.exports = {
                     }
                     console.log("moveTable Update successful");
                 });
-            db.tables.update(
+            db.alpenblickTables.update(
                 {}, {
                     $pull: {
                         tables: {
-                            "number": "49",
+                            "number": "203",
                         }
                     }
                 },
@@ -74,16 +71,16 @@ module.exports = {
                     console.log("removeTable Update successful");
                     console.log(tables);
                 });
-        } else if (tableNumber === '50' && topValue === '460') {
-            db.tables.update(
+    } else if (tableNumber === '203' && topValue === '200' && leftValue === '230' && width === '160') {
+            db.alpenblickTables.update(
                 {
                     department: departmentValue,
                     "tables.number": tableNumber
                 },
                 {
                     $set: {
-                        "tables.$.topValue": "430",
-                        "tables.$.height": "60",
+                        "tables.$.width": "320",
+                        "tables.$.topValue": "100"
                     }
                 }, function (err, tables) {
                     if (err) {
@@ -91,12 +88,11 @@ module.exports = {
                     }
                     console.log("moveTable Update successful");
                 });
-
-            db.tables.update(
+            db.alpenblickTables.update(
                 {}, {
                     $pull: {
                         tables: {
-                            "number": "51",
+                            "number": "204",
                         }
                     }
                 },
@@ -109,16 +105,15 @@ module.exports = {
                     console.log("removeTable Update successful");
                     console.log(tables);
                 });
-        } else if (tableNumber === '52' && topValue === '280' && leftValue === '230') {
-            db.tables.update(
+        } else if (tableNumber === '204' && topValue === '100' && leftValue === '440' && height === '90') {
+            db.alpenblickTables.update(
                 {
                     department: departmentValue,
                     "tables.number": tableNumber
                 },
                 {
                     $set: {
-                        "tables.$.width": "60",
-                        "tables.$.leftValue": "200",
+                        "tables.$.height": "180",
                     }
                 }, function (err, tables) {
                     if (err) {
@@ -126,11 +121,11 @@ module.exports = {
                     }
                     console.log("moveTable Update successful");
                 });
-            db.tables.update(
+            db.alpenblickTables.update(
                 {}, {
                     $pull: {
                         tables: {
-                            "number": "53",
+                            "number": "205",
                         }
                     }
                 },
@@ -140,20 +135,18 @@ module.exports = {
                     if (err) {
                         console.log("Error");
                     }
-                    console.log("addTable Update successful");
+                    console.log("removeTable Update successful");
                     console.log(tables);
                 });
-        } else if (tableNumber === '54' && topValue === '320' && leftValue === '50') {
-            db.tables.update(
+        } else if (tableNumber === '204' && topValue === '100' && leftValue === '440' && height === '180') {
+            db.alpenblickTables.update(
                 {
                     department: departmentValue,
                     "tables.number": tableNumber
                 },
                 {
                     $set: {
-                        "tables.$.topValue": "290",
-                        "tables.$.leftValue": "50",
-                        "tables.$.height": "60",
+                        "tables.$.height": "270",
                     }
                 }, function (err, tables) {
                     if (err) {
@@ -161,11 +154,11 @@ module.exports = {
                     }
                     console.log("moveTable Update successful");
                 });
-            db.tables.update(
+            db.alpenblickTables.update(
                 {}, {
                     $pull: {
                         tables: {
-                            "number": "55",
+                            "number": "206",
                         }
                     }
                 },
@@ -175,19 +168,18 @@ module.exports = {
                     if (err) {
                         console.log("Error");
                     }
-                    console.log("addTable Update successful");
+                    console.log("removeTable Update successful");
                     console.log(tables);
                 });
-        } else if (tableNumber === '54' && topValue === '290' && leftValue === '50' && height === '60') {
-            db.tables.update(
+        } else if (tableNumber === '205' && topValue === '200' && leftValue === '440' && height === '90') {
+            db.alpenblickTables.update(
                 {
                     department: departmentValue,
                     "tables.number": tableNumber
                 },
                 {
                     $set: {
-                        "tables.$.topValue": "260",
-                        "tables.$.height": "90",
+                        "tables.$.height": "180",
                     }
                 }, function (err, tables) {
                     if (err) {
@@ -195,11 +187,11 @@ module.exports = {
                     }
                     console.log("moveTable Update successful");
                 });
-            db.tables.update(
+            db.alpenblickTables.update(
                 {}, {
                     $pull: {
                         tables: {
-                            "number": "56",
+                            "number": "206",
                         }
                     }
                 },
@@ -209,19 +201,19 @@ module.exports = {
                     if (err) {
                         console.log("Error");
                     }
-                    console.log("addTable Update successful");
+                    console.log("removeTable Update successful");
                     console.log(tables);
                 });
-        } else if (tableNumber === '54' && topValue === '260' && leftValue === '50' && height === '90') {
-            db.tables.update(
+        } else if (tableNumber === '206' && topValue === '300' && leftValue === '440' && width === '160') {
+            db.alpenblickTables.update(
                 {
                     department: departmentValue,
                     "tables.number": tableNumber
                 },
                 {
                     $set: {
-                        "tables.$.topValue": "200",
-                        "tables.$.height": "120",
+                        "tables.$.width": "320",
+                        "tables.$.leftValue": "270"
                     }
                 }, function (err, tables) {
                     if (err) {
@@ -229,11 +221,11 @@ module.exports = {
                     }
                     console.log("moveTable Update successful");
                 });
-            db.tables.update(
+            db.alpenblickTables.update(
                 {}, {
                     $pull: {
                         tables: {
-                            "number": "57",
+                            "number": "207",
                         }
                     }
                 },
@@ -243,20 +235,19 @@ module.exports = {
                     if (err) {
                         console.log("Error");
                     }
-                    console.log("addTable Update successful");
+                    console.log("removeTable Update successful");
                     console.log(tables);
                 });
-        } else if (tableNumber === '55' && topValue === '260' && leftValue === '50') {
-            db.tables.update(
+        } else if (tableNumber === '206' && topValue === '300' && leftValue === '270' && width === '320') {
+            db.alpenblickTables.update(
                 {
                     department: departmentValue,
                     "tables.number": tableNumber
                 },
                 {
                     $set: {
-                        "tables.$.topValue": "230",
-                        "tables.$.leftValue": "50",
-                        "tables.$.height": "60",
+                        "tables.$.width": "480",
+                        "tables.$.leftValue": "100"
                     }
                 }, function (err, tables) {
                     if (err) {
@@ -264,11 +255,11 @@ module.exports = {
                     }
                     console.log("moveTable Update successful");
                 });
-            db.tables.update(
+            db.alpenblickTables.update(
                 {}, {
                     $pull: {
                         tables: {
-                            "number": "56",
+                            "number": "208",
                         }
                     }
                 },
@@ -278,20 +269,19 @@ module.exports = {
                     if (err) {
                         console.log("Error");
                     }
-                    console.log("addTable Update successful");
+                    console.log("removeTable Update successful");
                     console.log(tables);
                 });
-        } else if (tableNumber === '55' && topValue === '230' && leftValue === '50' && height === '60') {
-            db.tables.update(
+        } else if (tableNumber === '207' && topValue === '300' && leftValue === '270' && width === '160') {
+            db.alpenblickTables.update(
                 {
                     department: departmentValue,
                     "tables.number": tableNumber
                 },
                 {
                     $set: {
-                        "tables.$.topValue": "200",
-                        "tables.$.leftValue": "50",
-                        "tables.$.height": "90",
+                        "tables.$.width": "320",
+                        "tables.$.leftValue": "100"
                     }
                 }, function (err, tables) {
                     if (err) {
@@ -299,11 +289,11 @@ module.exports = {
                     }
                     console.log("moveTable Update successful");
                 });
-            db.tables.update(
+            db.alpenblickTables.update(
                 {}, {
                     $pull: {
                         tables: {
-                            "number": "57",
+                            "number": "208",
                         }
                     }
                 },
@@ -313,77 +303,7 @@ module.exports = {
                     if (err) {
                         console.log("Error");
                     }
-                    console.log("addTable Update successful");
-                    console.log(tables);
-                });
-        } else if (tableNumber === '56' && topValue === '200' && leftValue === '50') {
-            db.tables.update(
-                {
-                    department: departmentValue,
-                    "tables.number": tableNumber
-                },
-                {
-                    $set: {
-                        "tables.$.topValue": "170",
-                        "tables.$.leftValue": "50",
-                        "tables.$.height": "60",
-                    }
-                }, function (err, tables) {
-                    if (err) {
-                        console.log("Error");
-                    }
-                    console.log("moveTable Update successful");
-                });
-            db.tables.update(
-                {}, {
-                    $pull: {
-                        tables: {
-                            "number": "57",
-                        }
-                    }
-                },
-                {
-                    multi: true
-                }, function (err, tables) {
-                    if (err) {
-                        console.log("Error");
-                    }
-                    console.log("addTable Update successful");
-                    console.log(tables);
-                });
-        } else if (tableNumber === '58' && topValue === '140' && leftValue === '170' && width === '30') {
-            db.tables.update(
-                {
-                    department: departmentValue,
-                    "tables.number": tableNumber
-                },
-                {
-                    $set: {
-                        "tables.$.topValue": "140",
-                        "tables.$.leftValue": "170",
-                        "tables.$.width": "60",
-                    }
-                }, function (err, tables) {
-                    if (err) {
-                        console.log("Error");
-                    }
-                    console.log("moveTable Update successful");
-                });
-            db.tables.update(
-                {}, {
-                    $pull: {
-                        tables: {
-                            "number": "59",
-                        }
-                    }
-                },
-                {
-                    multi: true
-                }, function (err, tables) {
-                    if (err) {
-                        console.log("Error");
-                    }
-                    console.log("addTable Update successful");
+                    console.log("removeTable Update successful");
                     console.log(tables);
                 });
         }
