@@ -50,57 +50,54 @@ module.exports = {
             //console.log(accessorNameA);
             //console.log(accessorNameC);
 
-            if (imHausListeData.data["A" + (row -1)]) {
-                if (imHausListeData.data["A" + (row -1)].w === "Traces:" && imHausListeData.data["H" + (row -1)] == null) {
-                    console.log(row + "continue");
-                    console.log(imHausListeData.data[accessorNameA].w);
-                    console.log(imHausListeData.data[accessorNameH]);
-                    continue;
-                } else if (imHausListeData.data["A" + (row -1)] && imHausListeData.data["H" + (row -1)]) {
-                    if (imHausListeData.data["A" + (row - 1)].w === "Traces:" && imHausListeData.data["H" + (row - 1)]) {
-                        console.log(imHausListeData.data["H" + (row - 1)]);
-                        console.log(imHausListeData.data["A" + (row - 1)].w);
-                        trace[counter - 1] = imHausListeData.data["H" + (row - 1)].w;
-                        console.log("imHausListeData.data[H + (row -1)]].w");
-                        console.log(imHausListeData.data["H" + (row - 1)].w);
-                        console.log("imHausListeData.data[H + (row -1)]");
-                        console.log(imHausListeData.data["H" + (row - 1)]);
-                        console.log("imHausListeData.data[A + (row -1)]");
-                        console.log(imHausListeData.data["A" + (row - 1)]);
-                    }
-                    if (imHausListeData.data["H" + (row)] != null && imHausListeData.data["A" + (row)] == null) {
-                        trace[counter - 1] += ", " + imHausListeData.data["H" + (row)].w;
-                        row++;
-                        if (imHausListeData.data["H" + (row)] != null && imHausListeData.data["A" + (row)] == null) {
-                            trace[counter - 1] += ", " + imHausListeData.data["H" + (row)].w;
-                            row++;
-                        }
-                        if (imHausListeData.data["D" + (row)] != null && imHausListeData.data["A" + (row)] == null && imHausListeData.data["H" + (row)] == null) {
-                            trace[counter - 1] += ", " + imHausListeData.data["D" + (row)].w;
-                            row++;
-                        }
-                        if (imHausListeData.data["H" + (row)] != null && imHausListeData.data["A" + (row)] == null) {
-                            trace[counter - 1] += ", " + imHausListeData.data["H" + (row)].w;
-                            row++;
-                        }
-                        if (imHausListeData.data["D" + (row)] != null && imHausListeData.data["A" + (row)] == null && imHausListeData.data["H" + (row)] == null) {
-                            trace[counter - 1] += ", " + imHausListeData.data["D" + (row)].w;
-                            row++;
-                        }
-                        if (imHausListeData.data["H" + (row)] != null && imHausListeData.data["A" + (row)] == null) {
-                            trace[counter - 1] += ", " + imHausListeData.data["H" + (row)].w;
-                            row++;
-                        }
-                        if (imHausListeData.data["D" + (row)] != null && imHausListeData.data["A" + (row)] == null && imHausListeData.data["H" + (row)] == null) {
-                            trace[counter - 1] += ", " + imHausListeData.data["D" + (row)].w;
-                            row++;
-                        }
-                        row--;
-                    }
-                    continue;
-                }
-            } else if (imHausListeData.data[accessorNameA] == null) {
+            if (imHausListeData.data[accessorNameA] == null) {
                 break;
+            } else if (imHausListeData.data[accessorNameA].w === "Traces:" &&  imHausListeData.data[accessorNameH] == null) {
+                console.log(row + "continue");
+                console.log(imHausListeData.data[accessorNameA].w);
+                console.log(imHausListeData.data[accessorNameH]);
+                continue;
+            } else if (imHausListeData.data[accessorNameA].w === "Traces:" && imHausListeData.data[accessorNameH]) {
+                console.log(imHausListeData.data[accessorNameH]);
+                console.log(imHausListeData.data[accessorNameA].w);
+                trace[counter - 1] = imHausListeData.data[accessorNameH].w;
+                console.log("imHausListeData.data[accessorNameH].w");
+                console.log(imHausListeData.data[accessorNameH].w);
+                console.log("imHausListeData.data[H + (row + 1)]");
+                console.log(imHausListeData.data["H" + (row + 1)]);
+                console.log("imHausListeData.data[A + (row + 1)]");
+                console.log(imHausListeData.data["A" + (row + 1)]);
+                if (imHausListeData.data["H" + (row + 1)] != null && imHausListeData.data["A" + (row + 1)] == null) {
+                    trace[counter - 1] += ", " + imHausListeData.data["H" + (row + 1)].w;
+                    row++;
+                    if (imHausListeData.data["H" + (row + 1)] != null && imHausListeData.data["A" + (row + 1)] == null) {
+                        trace[counter - 1] += ", " + imHausListeData.data["H" + (row + 1)].w;
+                        row++;
+                    }
+                    if (imHausListeData.data["D" + (row + 1)] != null && imHausListeData.data["A" + (row + 1)] == null  && imHausListeData.data["H" + (row + 1)] == null) {
+                        trace[counter - 1] += ", " + imHausListeData.data["D" + (row + 1)].w;
+                        row++;
+                    }
+                    if (imHausListeData.data["H" + (row + 1)] != null && imHausListeData.data["A" + (row + 1)] == null) {
+                        trace[counter - 1] += ", " + imHausListeData.data["H" + (row + 1)].w;
+                        row++;
+                    }
+                    if (imHausListeData.data["D" + (row + 1)] != null && imHausListeData.data["A" + (row + 1)] == null  && imHausListeData.data["H" + (row + 1)] == null) {
+                        trace[counter - 1] += ", " + imHausListeData.data["D" + (row + 1)].w;
+                        row++;
+                    }
+                    if (imHausListeData.data["H" + (row + 1)] != null && imHausListeData.data["A" + (row + 1)] == null) {
+                        trace[counter - 1] += ", " + imHausListeData.data["H" + (row + 1)].w;
+                        row++;
+                    }
+                    if (imHausListeData.data["D" + (row + 1)] != null && imHausListeData.data["A" + (row + 1)] == null  && imHausListeData.data["H" + (row + 1)] == null) {
+                        trace[counter - 1] += ", " + imHausListeData.data["D" + (row + 1)].w;
+                        row++;
+                    }
+                    row--;
+                }
+
+                continue;
             } else {
                 if (imHausListeData.data[accessorNameA]) {
                     name.push(imHausListeData.data[accessorNameA].w)
