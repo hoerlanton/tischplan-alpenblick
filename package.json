@@ -43,7 +43,5 @@
     "start": "node app",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "devDependencies": {
-    "node-excel-to-json": "0.0.3"
-  }
+  "devDependencies": {}
 }

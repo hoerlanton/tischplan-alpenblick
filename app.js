@@ -16,7 +16,6 @@ const   bodyParser = require('body-parser'),
     mongoose = require('mongoose'),
     configDatabase = require('./config/database'),
     users = require('./routes/users'),
-    excel2Json = require('node-excel-to-json'),
     XLSX = require('xlsx');
 
 var xlstojson = require("xls-to-json-lc");
