@@ -11,16 +11,11 @@ const   bodyParser = require('body-parser'),
     fs = require("fs"),
     config = require('config'),
     cors = require('cors'),
-    csv = require('csvtojson'),
     passport = require('passport'),
     mongoose = require('mongoose'),
     configDatabase = require('./config/database'),
     users = require('./routes/users'),
-    excel2Json = require('node-excel-to-json'),
     XLSX = require('xlsx');
-
-var xlstojson = require("xls-to-json-lc");
-var xlsxtojson = require("xlsx-to-json-lc");
 
 app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
