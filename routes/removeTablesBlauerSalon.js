@@ -280,6 +280,147 @@ module.exports = {
                  }
                  console.log("addTable Update successful");
              });
+     } else if (tableNumber === '402' && topValue === '350' && leftValue === '120' && height === '315') {
+         db.alpenblickTables.update(
+             {
+                 department: departmentValue,
+                 "tables.number": tableNumber
+             },
+             {
+                 $set: {
+                     "tables.$.height": "210",
+                     "tables.$.topValue": "460"
+                 }
+             }, function (err, tables) {
+                 if (err) {
+                     console.log("Error");
+                 }
+                 console.log("moveTable Update successful");
+             });
+         db.alpenblickTables.update(
+             {
+                 department: departmentValue,
+             }, {
+                 $push: {
+                     tables: {
+                         $each: [{
+                             "arrayIndex": "0",
+                             "department": "blauer-salon",
+                             "number": "404",
+                             "topValue": "350",
+                             "leftValue": "120",
+                             "bgColor": "#ffffff",
+                             "isBesetzt": "false",
+                             "placeholder": "true",
+                             "border": "solid 3px #f3efe4",
+                             "width": "195",
+                             "height": "105"
+                         }],
+                         $sort: {number: 1}
+                     }
+                 }
+             },
+             {multi: true},
+             function (err, tables) {
+                 if (err) {
+                     console.log("Error");
+                 }
+                 console.log("addTable Update successful");
+             });
+     } else if (tableNumber === '402' && topValue === '460' && leftValue === '120' && height === '210') {
+         db.alpenblickTables.update(
+             {
+                 department: departmentValue,
+                 "tables.number": tableNumber
+             },
+             {
+                 $set: {
+                     "tables.$.height": "105",
+                     "tables.$.topValue": "570"
+                 }
+             }, function (err, tables) {
+                 if (err) {
+                     console.log("Error");
+                 }
+                 console.log("moveTable Update successful");
+             });
+         db.alpenblickTables.update(
+             {
+                 department: departmentValue
+             }, {
+                 $push: {
+                     tables: {
+                         $each: [{
+                             "arrayIndex": "0",
+                             "department": "blauer-salon",
+                             "number": "403",
+                             "topValue": "460",
+                             "leftValue": "120",
+                             "bgColor": "#ffffff",
+                             "isBesetzt": "false",
+                             "placeholder": "true",
+                             "border": "solid 3px #f3efe4",
+                             "width": "195",
+                             "height": "105"
+                         }],
+                         $sort: {number: 1}
+                     }
+                 }
+             },
+             {multi: true},
+             function (err, tables) {
+                 if (err) {
+                     console.log("Error");
+                 }
+                 console.log("addTable Update successful");
+             });
+     } else if (tableNumber === '403' && topValue === '350' && leftValue === '120' && height === '210') {
+         db.alpenblickTables.update(
+             {
+                 department: departmentValue,
+                 "tables.number": tableNumber
+             },
+             {
+                 $set: {
+                     "tables.$.height": "105",
+                     "tables.$.topValue": "460"
+                 }
+             }, function (err, tables) {
+                 if (err) {
+                     console.log("Error");
+                 }
+                 console.log("moveTable Update successful");
+             });
+         db.alpenblickTables.update(
+             {
+                 department: departmentValue,
+             }, {
+                 $push: {
+                     tables: {
+                         $each: [{
+                             "arrayIndex": "0",
+                             "department": "blauer-salon",
+                             "number": "404",
+                             "topValue": "350",
+                             "leftValue": "120",
+                             "bgColor": "#ffffff",
+                             "isBesetzt": "false",
+                             "placeholder": "true",
+                             "border": "solid 3px #f3efe4",
+                             "width": "195",
+                             "height": "105"
+                         }],
+                         $sort: {number: 1}
+                     }
+                 }
+             },
+             {multi: true},
+             function (err, tables) {
+                 if (err) {
+                     console.log("Error");
+                 }
+                 console.log("addTable Update successful");
+             });
      } else if (tableNumber === '405' && topValue === '350' && leftValue === '320' && height === '210') {
          db.alpenblickTables.update(
              {

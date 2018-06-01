@@ -403,7 +403,7 @@ module.exports = {
                     console.log("removeTable Update successful");
                     console.log(tables);
                 });
-        } else if (tableNumber === '406' && topValue === '350' && leftValue === '320' && height === '105') {
+        } else if (tableNumber === '406' && topValue === '460' && leftValue === '320' && height === '105') {
             db.alpenblickTables.update(
                 {
                     department: departmentValue,
@@ -436,7 +436,7 @@ module.exports = {
                     console.log("removeTable Update successful");
                     console.log(tables);
                 });
-        } else if (tableNumber === '406' && topValue === '350' && leftValue === '320' && height === '210') {
+        } else if (tableNumber === '406' && topValue === '460' && leftValue === '320' && height === '210') {
             db.alpenblickTables.update(
                 {
                     department: departmentValue,
@@ -469,7 +469,7 @@ module.exports = {
                     console.log("removeTable Update successful");
                     console.log(tables);
                 });
-        } else if (tableNumber === '407' && topValue === '350' && leftValue === '320' && height === '105') {
+        } else if (tableNumber === '407' && topValue === '570' && leftValue === '320' && height === '105') {
             db.alpenblickTables.update(
                 {
                     department: departmentValue,
