@@ -32,20 +32,19 @@ module.exports = "<router-outlet></router-outlet>\n"
 /***/ }),
 
 /***/ "./src/app/app.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__ = __webpack_require__("./src/app/services/tischplan.service.ts");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+var tischplan_service_1 = __webpack_require__("./src/app/services/tischplan.service.ts");
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'App works!';
@@ -53,103 +52,69 @@ var AppComponent = (function () {
     return AppComponent;
 }());
 AppComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    core_1.Component({
         selector: 'app-root',
         template: __webpack_require__("./src/app/app.component.html"),
         styles: [__webpack_require__("./src/app/app.component.css")],
-        providers: [__WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */]],
+        providers: [tischplan_service_1.TischplanService],
     })
 ], AppComponent);
-
+exports.AppComponent = AppComponent;
 //# sourceMappingURL=app.component.js.map
 
 /***/ }),
 
 /***/ "./src/app/app.module.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__("./node_modules/@angular/platform-browser/@angular/platform-browser.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/@angular/forms.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__("./node_modules/@angular/http/@angular/http.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__("./src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_digitalerTischplan_tischplan_component__ = __webpack_require__("./src/app/components/digitalerTischplan/tischplan.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_digitalerTischplan_print_print_component__ = __webpack_require__("./src/app/components/digitalerTischplan/print/print.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_tables_service__ = __webpack_require__("./src/app/services/tables.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_angular2_flash_messages__ = __webpack_require__("./node_modules/angular2-flash-messages/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_angular2_flash_messages__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_ng2_dragula__ = __webpack_require__("./node_modules/ng2-dragula/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_ng2_dragula___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_ng2_dragula__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_ngx_bootstrap_dropdown__ = __webpack_require__("./node_modules/ngx-bootstrap/dropdown/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_digitalerTischplan_departments_andreas_saal_andreas_saal_component__ = __webpack_require__("./src/app/components/digitalerTischplan/departments/andreas-saal/andreas-saal.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_digitalerTischplan_departments_blauer_salon_blauer_salon_component__ = __webpack_require__("./src/app/components/digitalerTischplan/departments/blauer-salon/blauer-salon.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_digitalerTischplan_departments_panorama_panorama_component__ = __webpack_require__("./src/app/components/digitalerTischplan/departments/panorama/panorama.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_digitalerTischplan_departments_roter_salon_roter_salon_component__ = __webpack_require__("./src/app/components/digitalerTischplan/departments/roter-salon/roter-salon.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_digitalerTischplan_departments_turm_turm_component__ = __webpack_require__("./src/app/components/digitalerTischplan/departments/turm/turm.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_digitalerTischplan_navigation_navigation_component__ = __webpack_require__("./src/app/components/digitalerTischplan/navigation/navigation.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_digitalerTischplan_form_form_component__ = __webpack_require__("./src/app/components/digitalerTischplan/form/form.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__components_digitalerTischplan_tableplan_tableplan_component__ = __webpack_require__("./src/app/components/digitalerTischplan/tableplan/tableplan.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__components_digitalerTischplan_departmentmenu_departmentmenu_component__ = __webpack_require__("./src/app/components/digitalerTischplan/departmentmenu/departmentmenu.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__components_digitalerTischplan_im_haus_liste_im_haus_liste_component__ = __webpack_require__("./src/app/components/digitalerTischplan/im-haus-liste/im-haus-liste.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_digitalerTischplan_departments_departments_component__ = __webpack_require__("./src/app/components/digitalerTischplan/departments/departments.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__components_digitalerTischplan_departments_alle_alle_component__ = __webpack_require__("./src/app/components/digitalerTischplan/departments/alle/alle.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23_ng2_search_filter__ = __webpack_require__("./node_modules/ng2-search-filter/dist/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23_ng2_search_filter___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_23_ng2_search_filter__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__angular_common__ = __webpack_require__("./node_modules/@angular/common/@angular/common.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__angular_router__ = __webpack_require__("./node_modules/@angular/router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__components_digitalerTischplan_login_login_component__ = __webpack_require__("./src/app/components/digitalerTischplan/login/login.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__components_digitalerTischplan_register_register_component__ = __webpack_require__("./src/app/components/digitalerTischplan/register/register.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__components_digitalerTischplan_profile_profile_component__ = __webpack_require__("./src/app/components/digitalerTischplan/profile/profile.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__guards_auth_guard__ = __webpack_require__("./src/app/guards/auth.guard.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__services_validate_service__ = __webpack_require__("./src/app/services/validate.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__services_auth_service__ = __webpack_require__("./src/app/services/auth.service.ts");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var platform_browser_1 = __webpack_require__("./node_modules/@angular/platform-browser/@angular/platform-browser.es5.js");
+var core_1 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+var forms_1 = __webpack_require__("./node_modules/@angular/forms/@angular/forms.es5.js");
+var http_1 = __webpack_require__("./node_modules/@angular/http/@angular/http.es5.js");
+var app_component_1 = __webpack_require__("./src/app/app.component.ts");
+var tischplan_component_1 = __webpack_require__("./src/app/components/digitalerTischplan/tischplan.component.ts");
+var print_component_1 = __webpack_require__("./src/app/components/digitalerTischplan/print/print.component.ts");
+var tables_service_1 = __webpack_require__("./src/app/services/tables.service.ts");
+var angular2_flash_messages_1 = __webpack_require__("./node_modules/angular2-flash-messages/index.js");
+var ng2_dragula_1 = __webpack_require__("./node_modules/ng2-dragula/index.js");
+var dropdown_1 = __webpack_require__("./node_modules/ngx-bootstrap/dropdown/index.js");
+var andreas_saal_component_1 = __webpack_require__("./src/app/components/digitalerTischplan/departments/andreas-saal/andreas-saal.component.ts");
+var blauer_salon_component_1 = __webpack_require__("./src/app/components/digitalerTischplan/departments/blauer-salon/blauer-salon.component.ts");
+var panorama_component_1 = __webpack_require__("./src/app/components/digitalerTischplan/departments/panorama/panorama.component.ts");
+var roter_salon_component_1 = __webpack_require__("./src/app/components/digitalerTischplan/departments/roter-salon/roter-salon.component.ts");
+var turm_component_1 = __webpack_require__("./src/app/components/digitalerTischplan/departments/turm/turm.component.ts");
+var navigation_component_1 = __webpack_require__("./src/app/components/digitalerTischplan/navigation/navigation.component.ts");
+var form_component_1 = __webpack_require__("./src/app/components/digitalerTischplan/form/form.component.ts");
+var tableplan_component_1 = __webpack_require__("./src/app/components/digitalerTischplan/tableplan/tableplan.component.ts");
+var departmentmenu_component_1 = __webpack_require__("./src/app/components/digitalerTischplan/departmentmenu/departmentmenu.component.ts");
+var im_haus_liste_component_1 = __webpack_require__("./src/app/components/digitalerTischplan/im-haus-liste/im-haus-liste.component.ts");
+var departments_component_1 = __webpack_require__("./src/app/components/digitalerTischplan/departments/departments.component.ts");
+var alle_component_1 = __webpack_require__("./src/app/components/digitalerTischplan/departments/alle/alle.component.ts");
+var ng2_search_filter_1 = __webpack_require__("./node_modules/ng2-search-filter/dist/index.js");
+var common_1 = __webpack_require__("./node_modules/@angular/common/@angular/common.es5.js");
+var router_1 = __webpack_require__("./node_modules/@angular/router/@angular/router.es5.js");
+var login_component_1 = __webpack_require__("./src/app/components/digitalerTischplan/login/login.component.ts");
+var register_component_1 = __webpack_require__("./src/app/components/digitalerTischplan/register/register.component.ts");
+var profile_component_1 = __webpack_require__("./src/app/components/digitalerTischplan/profile/profile.component.ts");
+var auth_guard_1 = __webpack_require__("./src/app/guards/auth.guard.ts");
+var validate_service_1 = __webpack_require__("./src/app/services/validate.service.ts");
+var auth_service_1 = __webpack_require__("./src/app/services/auth.service.ts");
 var appRoutes = [
-    { path: '', component: __WEBPACK_IMPORTED_MODULE_26__components_digitalerTischplan_login_login_component__["a" /* LoginComponent */] },
-    { path: 'login', component: __WEBPACK_IMPORTED_MODULE_26__components_digitalerTischplan_login_login_component__["a" /* LoginComponent */] },
-    { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_5__components_digitalerTischplan_tischplan_component__["a" /* TischplanComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_29__guards_auth_guard__["a" /* AuthGuard */]] },
-    { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_21__components_digitalerTischplan_departments_departments_component__["a" /* DepartmentsComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_29__guards_auth_guard__["a" /* AuthGuard */]] },
-    { path: 'register', component: __WEBPACK_IMPORTED_MODULE_27__components_digitalerTischplan_register_register_component__["a" /* RegisterComponent */] },
-    { path: 'profile', component: __WEBPACK_IMPORTED_MODULE_28__components_digitalerTischplan_profile_profile_component__["a" /* ProfileComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_29__guards_auth_guard__["a" /* AuthGuard */]] }
+    { path: '', component: login_component_1.LoginComponent },
+    { path: 'login', component: login_component_1.LoginComponent },
+    { path: 'dashboard', component: tischplan_component_1.TischplanComponent, canActivate: [auth_guard_1.AuthGuard] },
+    { path: 'dashboard', component: departments_component_1.DepartmentsComponent, canActivate: [auth_guard_1.AuthGuard] },
+    { path: 'register', component: register_component_1.RegisterComponent },
+    { path: 'profile', component: profile_component_1.ProfileComponent, canActivate: [auth_guard_1.AuthGuard] }
 ];
 var AppModule = (function () {
     function AppModule() {
@@ -157,45 +122,45 @@ var AppModule = (function () {
     return AppModule;
 }());
 AppModule = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
+    core_1.NgModule({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */],
-            __WEBPACK_IMPORTED_MODULE_5__components_digitalerTischplan_tischplan_component__["a" /* TischplanComponent */],
-            __WEBPACK_IMPORTED_MODULE_6__components_digitalerTischplan_print_print_component__["a" /* PrintComponent */],
-            __WEBPACK_IMPORTED_MODULE_11__components_digitalerTischplan_departments_andreas_saal_andreas_saal_component__["a" /* AndreasSaalComponent */],
-            __WEBPACK_IMPORTED_MODULE_12__components_digitalerTischplan_departments_blauer_salon_blauer_salon_component__["a" /* BlauerSalonComponent */],
-            __WEBPACK_IMPORTED_MODULE_13__components_digitalerTischplan_departments_panorama_panorama_component__["a" /* PanoramaComponent */],
-            __WEBPACK_IMPORTED_MODULE_14__components_digitalerTischplan_departments_roter_salon_roter_salon_component__["a" /* RoterSalonComponent */],
-            __WEBPACK_IMPORTED_MODULE_15__components_digitalerTischplan_departments_turm_turm_component__["a" /* TurmComponent */],
-            __WEBPACK_IMPORTED_MODULE_16__components_digitalerTischplan_navigation_navigation_component__["a" /* NavigationComponent */],
-            __WEBPACK_IMPORTED_MODULE_17__components_digitalerTischplan_form_form_component__["a" /* FormComponent */],
-            __WEBPACK_IMPORTED_MODULE_18__components_digitalerTischplan_tableplan_tableplan_component__["a" /* TableplanComponent */],
-            __WEBPACK_IMPORTED_MODULE_19__components_digitalerTischplan_departmentmenu_departmentmenu_component__["a" /* DepartmentmenuComponent */],
-            __WEBPACK_IMPORTED_MODULE_20__components_digitalerTischplan_im_haus_liste_im_haus_liste_component__["a" /* ImHausListeComponent */],
-            __WEBPACK_IMPORTED_MODULE_21__components_digitalerTischplan_departments_departments_component__["a" /* DepartmentsComponent */],
-            __WEBPACK_IMPORTED_MODULE_22__components_digitalerTischplan_departments_alle_alle_component__["a" /* AlleComponent */],
-            __WEBPACK_IMPORTED_MODULE_26__components_digitalerTischplan_login_login_component__["a" /* LoginComponent */],
-            __WEBPACK_IMPORTED_MODULE_27__components_digitalerTischplan_register_register_component__["a" /* RegisterComponent */],
-            __WEBPACK_IMPORTED_MODULE_28__components_digitalerTischplan_profile_profile_component__["a" /* ProfileComponent */]
+            app_component_1.AppComponent,
+            tischplan_component_1.TischplanComponent,
+            print_component_1.PrintComponent,
+            andreas_saal_component_1.AndreasSaalComponent,
+            blauer_salon_component_1.BlauerSalonComponent,
+            panorama_component_1.PanoramaComponent,
+            roter_salon_component_1.RoterSalonComponent,
+            turm_component_1.TurmComponent,
+            navigation_component_1.NavigationComponent,
+            form_component_1.FormComponent,
+            tableplan_component_1.TableplanComponent,
+            departmentmenu_component_1.DepartmentmenuComponent,
+            im_haus_liste_component_1.ImHausListeComponent,
+            departments_component_1.DepartmentsComponent,
+            alle_component_1.AlleComponent,
+            login_component_1.LoginComponent,
+            register_component_1.RegisterComponent,
+            profile_component_1.ProfileComponent
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
-            __WEBPACK_IMPORTED_MODULE_3__angular_http__["HttpModule"],
-            __WEBPACK_IMPORTED_MODULE_8_angular2_flash_messages__["FlashMessagesModule"],
-            __WEBPACK_IMPORTED_MODULE_9_ng2_dragula__["DragulaModule"],
-            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* ReactiveFormsModule */],
-            __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-            __WEBPACK_IMPORTED_MODULE_10_ngx_bootstrap_dropdown__["a" /* BsDropdownModule */].forRoot(),
-            __WEBPACK_IMPORTED_MODULE_23_ng2_search_filter__["Ng2SearchPipeModule"],
-            __WEBPACK_IMPORTED_MODULE_24__angular_common__["CommonModule"],
-            __WEBPACK_IMPORTED_MODULE_25__angular_router__["b" /* RouterModule */].forRoot(appRoutes),
-            __WEBPACK_IMPORTED_MODULE_25__angular_router__["b" /* RouterModule */].forChild(appRoutes)
+            forms_1.FormsModule,
+            http_1.HttpModule,
+            angular2_flash_messages_1.FlashMessagesModule,
+            ng2_dragula_1.DragulaModule,
+            forms_1.ReactiveFormsModule,
+            platform_browser_1.BrowserModule,
+            dropdown_1.BsDropdownModule.forRoot(),
+            ng2_search_filter_1.Ng2SearchPipeModule,
+            common_1.CommonModule,
+            router_1.RouterModule.forRoot(appRoutes),
+            router_1.RouterModule.forChild(appRoutes)
         ],
-        providers: [__WEBPACK_IMPORTED_MODULE_7__services_tables_service__["a" /* NavService */], __WEBPACK_IMPORTED_MODULE_30__services_validate_service__["a" /* ValidateService */], __WEBPACK_IMPORTED_MODULE_31__services_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_29__guards_auth_guard__["a" /* AuthGuard */]],
-        bootstrap: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */]]
+        providers: [tables_service_1.NavService, validate_service_1.ValidateService, auth_service_1.AuthService, auth_guard_1.AuthGuard],
+        bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);
-
+exports.AppModule = AppModule;
 //# sourceMappingURL=app.module.js.map
 
 /***/ }),
@@ -215,11 +180,10 @@ module.exports = "<div class=\"row4\">\n  <div class=\"col-md-3 col-xs-3\">\n  <
 /***/ }),
 
 /***/ "./src/app/components/digitalerTischplan/departmentmenu/departmentmenu.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DepartmentmenuComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -229,18 +193,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
 var DepartmentmenuComponent = (function () {
     function DepartmentmenuComponent() {
-        this.showRoterSalonBoolChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.showPanoramaBoolChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.showBlauerSalonBoolChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.showTurmBoolChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.showAlleBoolChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.showAndreasSaalBoolChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.showNotizFormBoolChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.showInfoFormBoolChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.showTablePlanBoolChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.showRoterSalonBoolChange = new core_1.EventEmitter();
+        this.showPanoramaBoolChange = new core_1.EventEmitter();
+        this.showBlauerSalonBoolChange = new core_1.EventEmitter();
+        this.showTurmBoolChange = new core_1.EventEmitter();
+        this.showAlleBoolChange = new core_1.EventEmitter();
+        this.showAndreasSaalBoolChange = new core_1.EventEmitter();
+        this.showNotizFormBoolChange = new core_1.EventEmitter();
+        this.showInfoFormBoolChange = new core_1.EventEmitter();
+        this.showTablePlanBoolChange = new core_1.EventEmitter();
         this.showAbteilungen = true;
         this.buttonBgColorShowTablePlan = "0a7a74";
         this.buttonBgColorInfoForm = "0a7a74";
@@ -728,158 +693,158 @@ var DepartmentmenuComponent = (function () {
     return DepartmentmenuComponent;
 }());
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('buttonBgColor1'),
+    core_1.Input('buttonBgColor1'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "buttonBgColor1", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('buttonBgColor2'),
+    core_1.Input('buttonBgColor2'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "buttonBgColor2", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('buttonBgColor3'),
+    core_1.Input('buttonBgColor3'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "buttonBgColor3", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('buttonBgColor4'),
+    core_1.Input('buttonBgColor4'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "buttonBgColor4", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('buttonBgColor5'),
+    core_1.Input('buttonBgColor5'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "buttonBgColor5", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('buttonBgColor6'),
+    core_1.Input('buttonBgColor6'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "buttonBgColor6", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('fontColor1'),
+    core_1.Input('fontColor1'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "fontColor1", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('fontColor2'),
+    core_1.Input('fontColor2'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "fontColor2", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('fontColor3'),
+    core_1.Input('fontColor3'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "fontColor3", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('fontColor4'),
+    core_1.Input('fontColor4'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "fontColor4", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('fontColor5'),
+    core_1.Input('fontColor5'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "fontColor5", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('fontColor6'),
+    core_1.Input('fontColor6'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "fontColor6", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showPanoramaBool'),
+    core_1.Input('showPanoramaBool'),
     __metadata("design:type", Boolean)
 ], DepartmentmenuComponent.prototype, "showPanoramaBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showBlauerSalonBool'),
+    core_1.Input('showBlauerSalonBool'),
     __metadata("design:type", Boolean)
 ], DepartmentmenuComponent.prototype, "showBlauerSalonBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showRoterSalonBool'),
+    core_1.Input('showRoterSalonBool'),
     __metadata("design:type", Boolean)
 ], DepartmentmenuComponent.prototype, "showRoterSalonBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showTurmBool'),
+    core_1.Input('showTurmBool'),
     __metadata("design:type", Boolean)
 ], DepartmentmenuComponent.prototype, "showTurmBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showAndreasSaalBool'),
+    core_1.Input('showAndreasSaalBool'),
     __metadata("design:type", Boolean)
 ], DepartmentmenuComponent.prototype, "showAndreasSaalBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showAlleBool'),
+    core_1.Input('showAlleBool'),
     __metadata("design:type", Boolean)
 ], DepartmentmenuComponent.prototype, "showAlleBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _a || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_a = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _a || Object)
 ], DepartmentmenuComponent.prototype, "showRoterSalonBoolChange", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _b || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_b = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _b || Object)
 ], DepartmentmenuComponent.prototype, "showPanoramaBoolChange", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _c || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_c = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _c || Object)
 ], DepartmentmenuComponent.prototype, "showBlauerSalonBoolChange", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _d || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_d = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _d || Object)
 ], DepartmentmenuComponent.prototype, "showTurmBoolChange", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _e || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_e = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _e || Object)
 ], DepartmentmenuComponent.prototype, "showAlleBoolChange", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _f || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_f = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _f || Object)
 ], DepartmentmenuComponent.prototype, "showAndreasSaalBoolChange", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('buttonBgColorInfoForm'),
+    core_1.Input('buttonBgColorInfoForm'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "buttonBgColorInfoForm", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('fontColorInfoForm'),
+    core_1.Input('fontColorInfoForm'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "fontColorInfoForm", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('fontColorNotizForm'),
+    core_1.Input('fontColorNotizForm'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "fontColorNotizForm", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('buttonBgColorNotizForm'),
+    core_1.Input('buttonBgColorNotizForm'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "buttonBgColorNotizForm", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('buttonBgColorShowTablePlan'),
+    core_1.Input('buttonBgColorShowTablePlan'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "buttonBgColorShowTablePlan", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('fontColorShowTablePlan'),
+    core_1.Input('fontColorShowTablePlan'),
     __metadata("design:type", String)
 ], DepartmentmenuComponent.prototype, "fontColorShowTablePlan", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showNotizFormBool'),
+    core_1.Input('showNotizFormBool'),
     __metadata("design:type", Boolean)
 ], DepartmentmenuComponent.prototype, "showNotizFormBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showInfoFormBool'),
+    core_1.Input('showInfoFormBool'),
     __metadata("design:type", Boolean)
 ], DepartmentmenuComponent.prototype, "showInfoFormBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showTablePlanBool'),
+    core_1.Input('showTablePlanBool'),
     __metadata("design:type", Boolean)
 ], DepartmentmenuComponent.prototype, "showTablePlanBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _g || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_g = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _g || Object)
 ], DepartmentmenuComponent.prototype, "showNotizFormBoolChange", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _h || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_h = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _h || Object)
 ], DepartmentmenuComponent.prototype, "showInfoFormBoolChange", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_j = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _j || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_j = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _j || Object)
 ], DepartmentmenuComponent.prototype, "showTablePlanBoolChange", void 0);
 DepartmentmenuComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    core_1.Component({
         selector: 'app-departmentmenu',
         template: __webpack_require__("./src/app/components/digitalerTischplan/departmentmenu/departmentmenu.component.html"),
         styles: [__webpack_require__("./src/app/components/digitalerTischplan/departmentmenu/departmentmenu.component.css")]
     }),
     __metadata("design:paramtypes", [])
 ], DepartmentmenuComponent);
-
+exports.DepartmentmenuComponent = DepartmentmenuComponent;
 var _a, _b, _c, _d, _e, _f, _g, _h, _j;
 //# sourceMappingURL=departmentmenu.component.js.map
 
@@ -893,11 +858,10 @@ module.exports = "<div *ngIf=\"showAlleBool\">\n  <div *ngFor=\"let table of tab
 /***/ }),
 
 /***/ "./src/app/components/digitalerTischplan/departments/alle/alle.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AlleComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -907,11 +871,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+var core_2 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
 var AlleComponent = (function () {
     function AlleComponent() {
-        this.occupied = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.occupied = new core_1.EventEmitter();
         console.log("this.tables in allecomponent");
         //console.log(this.tables);
         console.log("this.tablesTempAbreise in allecomponent");
@@ -959,37 +924,37 @@ var AlleComponent = (function () {
     return AlleComponent;
 }());
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showAlleBool'),
+    core_1.Input('showAlleBool'),
     __metadata("design:type", Boolean)
 ], AlleComponent.prototype, "showAlleBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('term'),
+    core_1.Input('term'),
     __metadata("design:type", String)
 ], AlleComponent.prototype, "term", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tables'),
+    core_1.Input('tables'),
     __metadata("design:type", Object)
 ], AlleComponent.prototype, "tables", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesTempAbreise'),
+    core_1.Input('tablesTempAbreise'),
     __metadata("design:type", Object)
 ], AlleComponent.prototype, "tablesTempAbreise", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _a || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_a = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _a || Object)
 ], AlleComponent.prototype, "occupied", void 0);
 AlleComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"])({
+    core_2.Pipe({
         name: 'filter',
     }),
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    core_1.Component({
         selector: 'app-alle',
         template: __webpack_require__("./src/app/components/digitalerTischplan/departments/alle/alle.component.html"),
         styles: [__webpack_require__("./src/app/components/digitalerTischplan/tischplan.component.css")]
     }),
     __metadata("design:paramtypes", [])
 ], AlleComponent);
-
+exports.AlleComponent = AlleComponent;
 var _a;
 //# sourceMappingURL=alle.component.js.map
 
@@ -1003,11 +968,10 @@ module.exports = "<div *ngIf=\"showAndreasSaalBool\">\n  <div *ngFor=\"let table
 /***/ }),
 
 /***/ "./src/app/components/digitalerTischplan/departments/andreas-saal/andreas-saal.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AndreasSaalComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1017,10 +981,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
 var AndreasSaalComponent = (function () {
     function AndreasSaalComponent() {
-        this.occupied = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.occupied = new core_1.EventEmitter();
     }
     AndreasSaalComponent.prototype.ngOnInit = function () {
     };
@@ -1088,30 +1053,30 @@ var AndreasSaalComponent = (function () {
     return AndreasSaalComponent;
 }());
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesAndreasSaal'),
+    core_1.Input('tablesAndreasSaal'),
     __metadata("design:type", Array)
 ], AndreasSaalComponent.prototype, "tablesAndreasSaal", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showAndreasSaalBool'),
+    core_1.Input('showAndreasSaalBool'),
     __metadata("design:type", Boolean)
 ], AndreasSaalComponent.prototype, "showAndreasSaalBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('term'),
+    core_1.Input('term'),
     __metadata("design:type", String)
 ], AndreasSaalComponent.prototype, "term", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _a || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_a = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _a || Object)
 ], AndreasSaalComponent.prototype, "occupied", void 0);
 AndreasSaalComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    core_1.Component({
         selector: 'app-andreas-saal',
         template: __webpack_require__("./src/app/components/digitalerTischplan/departments/andreas-saal/andreas-saal.component.html"),
         styles: [__webpack_require__("./src/app/components/digitalerTischplan/tischplan.component.css")]
     }),
     __metadata("design:paramtypes", [])
 ], AndreasSaalComponent);
-
+exports.AndreasSaalComponent = AndreasSaalComponent;
 var _a;
 //# sourceMappingURL=andreas-saal.component.js.map
 
@@ -1125,11 +1090,10 @@ module.exports = "<div *ngIf=\"showBlauerSalonBool\">\n  <div *ngFor=\"let table
 /***/ }),
 
 /***/ "./src/app/components/digitalerTischplan/departments/blauer-salon/blauer-salon.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BlauerSalonComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1139,10 +1103,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
 var BlauerSalonComponent = (function () {
     function BlauerSalonComponent() {
-        this.occupied = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.occupied = new core_1.EventEmitter();
         this.dateGenerated = new Date();
     }
     BlauerSalonComponent.prototype.ngOnInit = function () {
@@ -1211,30 +1176,30 @@ var BlauerSalonComponent = (function () {
     return BlauerSalonComponent;
 }());
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesBlauerSalon'),
+    core_1.Input('tablesBlauerSalon'),
     __metadata("design:type", Array)
 ], BlauerSalonComponent.prototype, "tablesBlauerSalon", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showBlauerSalonBool'),
+    core_1.Input('showBlauerSalonBool'),
     __metadata("design:type", Boolean)
 ], BlauerSalonComponent.prototype, "showBlauerSalonBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('term'),
+    core_1.Input('term'),
     __metadata("design:type", String)
 ], BlauerSalonComponent.prototype, "term", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _a || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_a = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _a || Object)
 ], BlauerSalonComponent.prototype, "occupied", void 0);
 BlauerSalonComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    core_1.Component({
         selector: 'app-blauer-salon',
         template: __webpack_require__("./src/app/components/digitalerTischplan/departments/blauer-salon/blauer-salon.component.html"),
         styles: [__webpack_require__("./src/app/components/digitalerTischplan/tischplan.component.css")]
     }),
     __metadata("design:paramtypes", [])
 ], BlauerSalonComponent);
-
+exports.BlauerSalonComponent = BlauerSalonComponent;
 var _a;
 //# sourceMappingURL=blauer-salon.component.js.map
 
@@ -1248,18 +1213,10 @@ module.exports = "<app-blauer-salon [term]=\"term\" [tablesBlauerSalon]=\"tables
 /***/ }),
 
 /***/ "./src/app/components/digitalerTischplan/departments/departments.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DepartmentsComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__ = __webpack_require__("./src/app/services/tischplan.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__turm_turm_component__ = __webpack_require__("./src/app/components/digitalerTischplan/departments/turm/turm.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__alle_alle_component__ = __webpack_require__("./src/app/components/digitalerTischplan/departments/alle/alle.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__panorama_panorama_component__ = __webpack_require__("./src/app/components/digitalerTischplan/departments/panorama/panorama.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__roter_salon_roter_salon_component__ = __webpack_require__("./src/app/components/digitalerTischplan/departments/roter-salon/roter-salon.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__blauer_salon_blauer_salon_component__ = __webpack_require__("./src/app/components/digitalerTischplan/departments/blauer-salon/blauer-salon.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__andreas_saal_andreas_saal_component__ = __webpack_require__("./src/app/components/digitalerTischplan/departments/andreas-saal/andreas-saal.component.ts");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1269,24 +1226,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
-
-
-
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+var tischplan_service_1 = __webpack_require__("./src/app/services/tischplan.service.ts");
+var turm_component_1 = __webpack_require__("./src/app/components/digitalerTischplan/departments/turm/turm.component.ts");
+var alle_component_1 = __webpack_require__("./src/app/components/digitalerTischplan/departments/alle/alle.component.ts");
+var panorama_component_1 = __webpack_require__("./src/app/components/digitalerTischplan/departments/panorama/panorama.component.ts");
+var roter_salon_component_1 = __webpack_require__("./src/app/components/digitalerTischplan/departments/roter-salon/roter-salon.component.ts");
+var blauer_salon_component_1 = __webpack_require__("./src/app/components/digitalerTischplan/departments/blauer-salon/blauer-salon.component.ts");
+var andreas_saal_component_1 = __webpack_require__("./src/app/components/digitalerTischplan/departments/andreas-saal/andreas-saal.component.ts");
 var DepartmentsComponent = (function () {
     function DepartmentsComponent(tischplanService) {
         this.tischplanService = tischplanService;
-        this.dispensedBlauerSalon = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.dispensedAndreasSaal = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.dispensedRoterSalon = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.dispensedTurm = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.dispensedPanorama = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.updateAzList = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.updateImHausListeElement = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.dispensedBlauerSalon = new core_1.EventEmitter();
+        this.dispensedAndreasSaal = new core_1.EventEmitter();
+        this.dispensedRoterSalon = new core_1.EventEmitter();
+        this.dispensedTurm = new core_1.EventEmitter();
+        this.dispensedPanorama = new core_1.EventEmitter();
+        this.updateAzList = new core_1.EventEmitter();
+        this.updateImHausListeElement = new core_1.EventEmitter();
         this.parts = [];
         this.date = [];
         this.parsedDate = [];
@@ -1536,122 +1494,122 @@ var DepartmentsComponent = (function () {
     return DepartmentsComponent;
 }());
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesTurm'),
+    core_1.Input('tablesTurm'),
     __metadata("design:type", Array)
 ], DepartmentsComponent.prototype, "tablesTurm", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showTurmBool'),
+    core_1.Input('showTurmBool'),
     __metadata("design:type", Boolean)
 ], DepartmentsComponent.prototype, "showTurmBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesAndreasSaal'),
+    core_1.Input('tablesAndreasSaal'),
     __metadata("design:type", Array)
 ], DepartmentsComponent.prototype, "tablesAndreasSaal", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showAndreasSaalBool'),
+    core_1.Input('showAndreasSaalBool'),
     __metadata("design:type", Boolean)
 ], DepartmentsComponent.prototype, "showAndreasSaalBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesBlauerSalon'),
+    core_1.Input('tablesBlauerSalon'),
     __metadata("design:type", Array)
 ], DepartmentsComponent.prototype, "tablesBlauerSalon", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showBlauerSalonBool'),
+    core_1.Input('showBlauerSalonBool'),
     __metadata("design:type", Boolean)
 ], DepartmentsComponent.prototype, "showBlauerSalonBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    core_1.Input(),
     __metadata("design:type", Array)
 ], DepartmentsComponent.prototype, "tablesPanorama", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tables'),
+    core_1.Input('tables'),
     __metadata("design:type", Object)
 ], DepartmentsComponent.prototype, "tables", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showPanoramaBool'),
+    core_1.Input('showPanoramaBool'),
     __metadata("design:type", Boolean)
 ], DepartmentsComponent.prototype, "showPanoramaBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesRoterSalon'),
+    core_1.Input('tablesRoterSalon'),
     __metadata("design:type", Array)
 ], DepartmentsComponent.prototype, "tablesRoterSalon", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showRoterSalonBool'),
+    core_1.Input('showRoterSalonBool'),
     __metadata("design:type", Boolean)
 ], DepartmentsComponent.prototype, "showRoterSalonBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showAlleBool'),
+    core_1.Input('showAlleBool'),
     __metadata("design:type", Boolean)
 ], DepartmentsComponent.prototype, "showAlleBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    core_1.Input(),
     __metadata("design:type", Object)
 ], DepartmentsComponent.prototype, "tablesTempAbreise", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('term'),
+    core_1.Input('term'),
     __metadata("design:type", String)
 ], DepartmentsComponent.prototype, "term", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_3__alle_alle_component__["a" /* AlleComponent */]),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__alle_alle_component__["a" /* AlleComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__alle_alle_component__["a" /* AlleComponent */]) === "function" && _a || Object)
+    core_1.ViewChild(alle_component_1.AlleComponent),
+    __metadata("design:type", typeof (_a = typeof alle_component_1.AlleComponent !== "undefined" && alle_component_1.AlleComponent) === "function" && _a || Object)
 ], DepartmentsComponent.prototype, "alleComponent", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_4__panorama_panorama_component__["a" /* PanoramaComponent */]),
-    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__panorama_panorama_component__["a" /* PanoramaComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__panorama_panorama_component__["a" /* PanoramaComponent */]) === "function" && _b || Object)
+    core_1.ViewChild(panorama_component_1.PanoramaComponent),
+    __metadata("design:type", typeof (_b = typeof panorama_component_1.PanoramaComponent !== "undefined" && panorama_component_1.PanoramaComponent) === "function" && _b || Object)
 ], DepartmentsComponent.prototype, "panoramaComponent", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_5__roter_salon_roter_salon_component__["a" /* RoterSalonComponent */]),
-    __metadata("design:type", typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_5__roter_salon_roter_salon_component__["a" /* RoterSalonComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__roter_salon_roter_salon_component__["a" /* RoterSalonComponent */]) === "function" && _c || Object)
+    core_1.ViewChild(roter_salon_component_1.RoterSalonComponent),
+    __metadata("design:type", typeof (_c = typeof roter_salon_component_1.RoterSalonComponent !== "undefined" && roter_salon_component_1.RoterSalonComponent) === "function" && _c || Object)
 ], DepartmentsComponent.prototype, "roterSalonComponent", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_2__turm_turm_component__["a" /* TurmComponent */]),
-    __metadata("design:type", typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__turm_turm_component__["a" /* TurmComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__turm_turm_component__["a" /* TurmComponent */]) === "function" && _d || Object)
+    core_1.ViewChild(turm_component_1.TurmComponent),
+    __metadata("design:type", typeof (_d = typeof turm_component_1.TurmComponent !== "undefined" && turm_component_1.TurmComponent) === "function" && _d || Object)
 ], DepartmentsComponent.prototype, "turmComponent", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_6__blauer_salon_blauer_salon_component__["a" /* BlauerSalonComponent */]),
-    __metadata("design:type", typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_6__blauer_salon_blauer_salon_component__["a" /* BlauerSalonComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__blauer_salon_blauer_salon_component__["a" /* BlauerSalonComponent */]) === "function" && _e || Object)
+    core_1.ViewChild(blauer_salon_component_1.BlauerSalonComponent),
+    __metadata("design:type", typeof (_e = typeof blauer_salon_component_1.BlauerSalonComponent !== "undefined" && blauer_salon_component_1.BlauerSalonComponent) === "function" && _e || Object)
 ], DepartmentsComponent.prototype, "blauerSalonComponent", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_7__andreas_saal_andreas_saal_component__["a" /* AndreasSaalComponent */]),
-    __metadata("design:type", typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_7__andreas_saal_andreas_saal_component__["a" /* AndreasSaalComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_7__andreas_saal_andreas_saal_component__["a" /* AndreasSaalComponent */]) === "function" && _f || Object)
+    core_1.ViewChild(andreas_saal_component_1.AndreasSaalComponent),
+    __metadata("design:type", typeof (_f = typeof andreas_saal_component_1.AndreasSaalComponent !== "undefined" && andreas_saal_component_1.AndreasSaalComponent) === "function" && _f || Object)
 ], DepartmentsComponent.prototype, "andreasSaalComponent", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _g || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_g = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _g || Object)
 ], DepartmentsComponent.prototype, "dispensedBlauerSalon", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _h || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_h = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _h || Object)
 ], DepartmentsComponent.prototype, "dispensedAndreasSaal", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_j = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _j || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_j = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _j || Object)
 ], DepartmentsComponent.prototype, "dispensedRoterSalon", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_k = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _k || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_k = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _k || Object)
 ], DepartmentsComponent.prototype, "dispensedTurm", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_l = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _l || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_l = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _l || Object)
 ], DepartmentsComponent.prototype, "dispensedPanorama", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_m = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _m || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_m = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _m || Object)
 ], DepartmentsComponent.prototype, "updateAzList", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_o = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _o || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_o = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _o || Object)
 ], DepartmentsComponent.prototype, "updateImHausListeElement", void 0);
 DepartmentsComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    core_1.Component({
         selector: 'app-departments',
         template: __webpack_require__("./src/app/components/digitalerTischplan/departments/departments.component.html"),
         styles: [__webpack_require__("./src/app/components/digitalerTischplan/tischplan.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_p = typeof __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */]) === "function" && _p || Object])
+    __metadata("design:paramtypes", [typeof (_p = typeof tischplan_service_1.TischplanService !== "undefined" && tischplan_service_1.TischplanService) === "function" && _p || Object])
 ], DepartmentsComponent);
-
+exports.DepartmentsComponent = DepartmentsComponent;
 var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p;
 //# sourceMappingURL=departments.component.js.map
 
@@ -1665,11 +1623,10 @@ module.exports = "<div *ngIf=\"showPanoramaBool\">\n  <div *ngFor=\"let tablePan
 /***/ }),
 
 /***/ "./src/app/components/digitalerTischplan/departments/panorama/panorama.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PanoramaComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1679,10 +1636,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
 var PanoramaComponent = (function () {
     function PanoramaComponent() {
-        this.occupied = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.occupied = new core_1.EventEmitter();
         this.dateGenerated = new Date();
     }
     PanoramaComponent.prototype.ngOnInit = function () {
@@ -1752,30 +1710,30 @@ var PanoramaComponent = (function () {
     return PanoramaComponent;
 }());
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesPanorama'),
+    core_1.Input('tablesPanorama'),
     __metadata("design:type", Array)
 ], PanoramaComponent.prototype, "tablesPanorama", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showPanoramaBool'),
+    core_1.Input('showPanoramaBool'),
     __metadata("design:type", Boolean)
 ], PanoramaComponent.prototype, "showPanoramaBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('term'),
+    core_1.Input('term'),
     __metadata("design:type", String)
 ], PanoramaComponent.prototype, "term", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _a || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_a = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _a || Object)
 ], PanoramaComponent.prototype, "occupied", void 0);
 PanoramaComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    core_1.Component({
         selector: 'app-panorama',
         template: __webpack_require__("./src/app/components/digitalerTischplan/departments/panorama/panorama.component.html"),
         styles: [__webpack_require__("./src/app/components/digitalerTischplan/tischplan.component.css")]
     }),
     __metadata("design:paramtypes", [])
 ], PanoramaComponent);
-
+exports.PanoramaComponent = PanoramaComponent;
 var _a;
 //# sourceMappingURL=panorama.component.js.map
 
@@ -1789,11 +1747,10 @@ module.exports = "<div *ngIf=\"showRoterSalonBool\">\n  <div *ngFor=\"let tableR
 /***/ }),
 
 /***/ "./src/app/components/digitalerTischplan/departments/roter-salon/roter-salon.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RoterSalonComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1803,10 +1760,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
 var RoterSalonComponent = (function () {
     function RoterSalonComponent() {
-        this.occupied = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.occupied = new core_1.EventEmitter();
     }
     RoterSalonComponent.prototype.ngOnInit = function () {
     };
@@ -1874,30 +1832,30 @@ var RoterSalonComponent = (function () {
     return RoterSalonComponent;
 }());
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesRoterSalon'),
+    core_1.Input('tablesRoterSalon'),
     __metadata("design:type", Array)
 ], RoterSalonComponent.prototype, "tablesRoterSalon", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showRoterSalonBool'),
+    core_1.Input('showRoterSalonBool'),
     __metadata("design:type", Boolean)
 ], RoterSalonComponent.prototype, "showRoterSalonBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('term'),
+    core_1.Input('term'),
     __metadata("design:type", String)
 ], RoterSalonComponent.prototype, "term", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _a || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_a = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _a || Object)
 ], RoterSalonComponent.prototype, "occupied", void 0);
 RoterSalonComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    core_1.Component({
         selector: 'app-roter-salon',
         template: __webpack_require__("./src/app/components/digitalerTischplan/departments/roter-salon/roter-salon.component.html"),
         styles: [__webpack_require__("./src/app/components/digitalerTischplan/tischplan.component.css")]
     }),
     __metadata("design:paramtypes", [])
 ], RoterSalonComponent);
-
+exports.RoterSalonComponent = RoterSalonComponent;
 var _a;
 //# sourceMappingURL=roter-salon.component.js.map
 
@@ -1911,11 +1869,10 @@ module.exports = "<div *ngIf=\"showTurmBool\">\n  <div *ngFor=\"let tableTurm of
 /***/ }),
 
 /***/ "./src/app/components/digitalerTischplan/departments/turm/turm.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TurmComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1925,10 +1882,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
 var TurmComponent = (function () {
     function TurmComponent() {
-        this.occupied = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.occupied = new core_1.EventEmitter();
         this.dateGenerated = new Date();
     }
     TurmComponent.prototype.ngOnInit = function () {
@@ -1998,30 +1956,30 @@ var TurmComponent = (function () {
     return TurmComponent;
 }());
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesTurm'),
+    core_1.Input('tablesTurm'),
     __metadata("design:type", Array)
 ], TurmComponent.prototype, "tablesTurm", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showTurmBool'),
+    core_1.Input('showTurmBool'),
     __metadata("design:type", Boolean)
 ], TurmComponent.prototype, "showTurmBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('term'),
+    core_1.Input('term'),
     __metadata("design:type", String)
 ], TurmComponent.prototype, "term", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _a || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_a = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _a || Object)
 ], TurmComponent.prototype, "occupied", void 0);
 TurmComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    core_1.Component({
         selector: 'app-turm',
         template: __webpack_require__("./src/app/components/digitalerTischplan/departments/turm/turm.component.html"),
         styles: [__webpack_require__("./src/app/components/digitalerTischplan/tischplan.component.css")]
     }),
     __metadata("design:paramtypes", [])
 ], TurmComponent);
-
+exports.TurmComponent = TurmComponent;
 var _a;
 //# sourceMappingURL=turm.component.js.map
 
@@ -2035,14 +1993,10 @@ module.exports = "<div *ngIf=\"showNotizFormBool\">\n  <div *ngIf=\"showAlleBool
 /***/ }),
 
 /***/ "./src/app/components/digitalerTischplan/form/form.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FormComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__ = __webpack_require__("./src/app/services/tischplan.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__ = __webpack_require__("./node_modules/angular2-flash-messages/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__);
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2052,16 +2006,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+var tischplan_service_1 = __webpack_require__("./src/app/services/tischplan.service.ts");
+var angular2_flash_messages_1 = __webpack_require__("./node_modules/angular2-flash-messages/index.js");
 var FormComponent = (function () {
     function FormComponent(tischplanService, _flashMessagesService) {
         this.tischplanService = tischplanService;
         this._flashMessagesService = _flashMessagesService;
         this.newInformationElements = [];
-        this.notizResponse = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.changeColorIfAnreiseExport = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.notizResponse = new core_1.EventEmitter();
+        this.changeColorIfAnreiseExport = new core_1.EventEmitter();
         this.parts = [];
         this.departments = [];
         this.employees = [];
@@ -2185,106 +2140,106 @@ var FormComponent = (function () {
     return FormComponent;
 }());
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('newInformationElements'),
+    core_1.Input('newInformationElements'),
     __metadata("design:type", Array)
 ], FormComponent.prototype, "newInformationElements", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('dateGenerated'),
+    core_1.Input('dateGenerated'),
     __metadata("design:type", Object)
 ], FormComponent.prototype, "dateGenerated", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('title'),
+    core_1.Input('title'),
     __metadata("design:type", String)
 ], FormComponent.prototype, "title", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('roomNumber'),
+    core_1.Input('roomNumber'),
     __metadata("design:type", String)
 ], FormComponent.prototype, "roomNumber", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tableNumber'),
+    core_1.Input('tableNumber'),
     __metadata("design:type", String)
 ], FormComponent.prototype, "tableNumber", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('nameTraceInput'),
+    core_1.Input('nameTraceInput'),
     __metadata("design:type", String)
 ], FormComponent.prototype, "nameTraceInput", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('employee'),
+    core_1.Input('employee'),
     __metadata("design:type", String)
 ], FormComponent.prototype, "employee", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesTurm'),
+    core_1.Input('tablesTurm'),
     __metadata("design:type", Array)
 ], FormComponent.prototype, "tablesTurm", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesPanorama'),
+    core_1.Input('tablesPanorama'),
     __metadata("design:type", Array)
 ], FormComponent.prototype, "tablesPanorama", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesRoterSalon'),
+    core_1.Input('tablesRoterSalon'),
     __metadata("design:type", Array)
 ], FormComponent.prototype, "tablesRoterSalon", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesBlauerSalon'),
+    core_1.Input('tablesBlauerSalon'),
     __metadata("design:type", Array)
 ], FormComponent.prototype, "tablesBlauerSalon", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesAndreasSaal'),
+    core_1.Input('tablesAndreasSaal'),
     __metadata("design:type", Array)
 ], FormComponent.prototype, "tablesAndreasSaal", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showInfoFormBool'),
+    core_1.Input('showInfoFormBool'),
     __metadata("design:type", Boolean)
 ], FormComponent.prototype, "showInfoFormBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showNotizFormBool'),
+    core_1.Input('showNotizFormBool'),
     __metadata("design:type", Boolean)
 ], FormComponent.prototype, "showNotizFormBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('notizElements'),
+    core_1.Input('notizElements'),
     __metadata("design:type", Object)
 ], FormComponent.prototype, "notizElements", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showRoterSalonBool'),
+    core_1.Input('showRoterSalonBool'),
     __metadata("design:type", Boolean)
 ], FormComponent.prototype, "showRoterSalonBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showBlauerSalonBool'),
+    core_1.Input('showBlauerSalonBool'),
     __metadata("design:type", Boolean)
 ], FormComponent.prototype, "showBlauerSalonBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showPanoramaBool'),
+    core_1.Input('showPanoramaBool'),
     __metadata("design:type", Boolean)
 ], FormComponent.prototype, "showPanoramaBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showTurmBool'),
+    core_1.Input('showTurmBool'),
     __metadata("design:type", Boolean)
 ], FormComponent.prototype, "showTurmBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showAndreasSaalBool'),
+    core_1.Input('showAndreasSaalBool'),
     __metadata("design:type", Boolean)
 ], FormComponent.prototype, "showAndreasSaalBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showAlleBool'),
+    core_1.Input('showAlleBool'),
     __metadata("design:type", Boolean)
 ], FormComponent.prototype, "showAlleBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _a || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_a = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _a || Object)
 ], FormComponent.prototype, "notizResponse", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _b || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_b = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _b || Object)
 ], FormComponent.prototype, "changeColorIfAnreiseExport", void 0);
 FormComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    core_1.Component({
         selector: 'app-form',
         template: __webpack_require__("./src/app/components/digitalerTischplan/form/form.component.html"),
         styles: [__webpack_require__("./src/app/components/digitalerTischplan/tischplan.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__["FlashMessagesService"]) === "function" && _d || Object])
+    __metadata("design:paramtypes", [typeof (_c = typeof tischplan_service_1.TischplanService !== "undefined" && tischplan_service_1.TischplanService) === "function" && _c || Object, typeof (_d = typeof angular2_flash_messages_1.FlashMessagesService !== "undefined" && angular2_flash_messages_1.FlashMessagesService) === "function" && _d || Object])
 ], FormComponent);
-
+exports.FormComponent = FormComponent;
 var _a, _b, _c, _d;
 //# sourceMappingURL=form.component.js.map
 
@@ -2298,12 +2253,10 @@ module.exports = "<h3 style=\"margin-top: 0;margin-bottom: 0;color: #0a7a74;\">I
 /***/ }),
 
 /***/ "./src/app/components/digitalerTischplan/im-haus-liste/im-haus-liste.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ImHausListeComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__ = __webpack_require__("./src/app/services/tischplan.service.ts");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2313,8 +2266,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+var tischplan_service_1 = __webpack_require__("./src/app/services/tischplan.service.ts");
 var ImHausListeComponent = (function () {
     function ImHausListeComponent(tischplanService) {
         this.tischplanService = tischplanService;
@@ -2427,18 +2381,18 @@ var ImHausListeComponent = (function () {
     return ImHausListeComponent;
 }());
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('imHausListeElemente'),
+    core_1.Input('imHausListeElemente'),
     __metadata("design:type", Array)
 ], ImHausListeComponent.prototype, "imHausListeElemente", void 0);
 ImHausListeComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    core_1.Component({
         selector: 'app-im-haus-liste',
         template: __webpack_require__("./src/app/components/digitalerTischplan/im-haus-liste/im-haus-liste.component.html"),
         styles: [__webpack_require__("./src/app/components/digitalerTischplan/tischplan.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof tischplan_service_1.TischplanService !== "undefined" && tischplan_service_1.TischplanService) === "function" && _a || Object])
 ], ImHausListeComponent);
-
+exports.ImHausListeComponent = ImHausListeComponent;
 var _a;
 //# sourceMappingURL=im-haus-liste.component.js.map
 
@@ -2459,13 +2413,10 @@ module.exports = "<html>\n<head>\n  <link rel=\"stylesheet\" href=\"https://maxc
 /***/ }),
 
 /***/ "./src/app/components/digitalerTischplan/login/login.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service__ = __webpack_require__("./src/app/services/auth.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("./node_modules/@angular/router/@angular/router.es5.js");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2475,9 +2426,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+var auth_service_1 = __webpack_require__("./src/app/services/auth.service.ts");
+var router_1 = __webpack_require__("./node_modules/@angular/router/@angular/router.es5.js");
 //import {FlashMessagesService} from 'angular2-flash-messages';
 var LoginComponent = (function () {
     function LoginComponent(authService, router) {
@@ -2512,14 +2464,14 @@ var LoginComponent = (function () {
     return LoginComponent;
 }());
 LoginComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    core_1.Component({
         selector: 'app-login',
         template: __webpack_require__("./src/app/components/digitalerTischplan/login/login.component.html"),
         styles: [__webpack_require__("./src/app/components/digitalerTischplan/login/login.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof auth_service_1.AuthService !== "undefined" && auth_service_1.AuthService) === "function" && _a || Object, typeof (_b = typeof router_1.Router !== "undefined" && router_1.Router) === "function" && _b || Object])
 ], LoginComponent);
-
+exports.LoginComponent = LoginComponent;
 var _a, _b;
 //# sourceMappingURL=login.component.js.map
 
@@ -2540,17 +2492,10 @@ module.exports = "<nav class=\"navbar navbar-inverse navbar-fixed-top\">\n  <div
 /***/ }),
 
 /***/ "./src/app/components/digitalerTischplan/navigation/navigation.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NavigationComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__ = __webpack_require__("./src/app/services/tischplan.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__("./node_modules/@angular/http/@angular/http.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__ = __webpack_require__("./node_modules/angular2-flash-messages/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_auth_service__ = __webpack_require__("./src/app/services/auth.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_router__ = __webpack_require__("./node_modules/@angular/router/@angular/router.es5.js");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2560,12 +2505,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
-
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+var tischplan_service_1 = __webpack_require__("./src/app/services/tischplan.service.ts");
+var http_1 = __webpack_require__("./node_modules/@angular/http/@angular/http.es5.js");
+var angular2_flash_messages_1 = __webpack_require__("./node_modules/angular2-flash-messages/index.js");
+var auth_service_1 = __webpack_require__("./src/app/services/auth.service.ts");
+var router_1 = __webpack_require__("./node_modules/@angular/router/@angular/router.es5.js");
 var NavigationComponent = (function () {
     function NavigationComponent(tischplanService, http, _flashMessagesService, authService, router) {
         this.tischplanService = tischplanService;
@@ -2577,12 +2523,12 @@ var NavigationComponent = (function () {
         this.newInformationElements = [];
         this.newInformationEmployees = [];
         this.tablesTempAbreise = [];
-        this.umsetzenExport = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.abreisenExportExport = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.termExport = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.getTablesExport = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.reloadLists = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.transformExport = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.umsetzenExport = new core_1.EventEmitter();
+        this.abreisenExportExport = new core_1.EventEmitter();
+        this.termExport = new core_1.EventEmitter();
+        this.getTablesExport = new core_1.EventEmitter();
+        this.reloadLists = new core_1.EventEmitter();
+        this.transformExport = new core_1.EventEmitter();
         this.date = [];
         this.parts = [];
         this.parsedDate = [];
@@ -2921,54 +2867,54 @@ var NavigationComponent = (function () {
     return NavigationComponent;
 }());
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('newInformationElements'),
+    core_1.Input('newInformationElements'),
     __metadata("design:type", Array)
 ], NavigationComponent.prototype, "newInformationElements", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('newInformationEmployees'),
+    core_1.Input('newInformationEmployees'),
     __metadata("design:type", Array)
 ], NavigationComponent.prototype, "newInformationEmployees", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesOccupied'),
+    core_1.Input('tablesOccupied'),
     __metadata("design:type", Number)
 ], NavigationComponent.prototype, "tablesOccupied", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesTempAbreise'),
+    core_1.Input('tablesTempAbreise'),
     __metadata("design:type", Array)
 ], NavigationComponent.prototype, "tablesTempAbreise", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _a || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_a = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _a || Object)
 ], NavigationComponent.prototype, "umsetzenExport", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _b || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_b = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _b || Object)
 ], NavigationComponent.prototype, "abreisenExportExport", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _c || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_c = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _c || Object)
 ], NavigationComponent.prototype, "termExport", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _d || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_d = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _d || Object)
 ], NavigationComponent.prototype, "getTablesExport", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _e || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_e = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _e || Object)
 ], NavigationComponent.prototype, "reloadLists", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _f || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_f = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _f || Object)
 ], NavigationComponent.prototype, "transformExport", void 0);
 NavigationComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    core_1.Component({
         selector: 'app-navigation',
         template: __webpack_require__("./src/app/components/digitalerTischplan/navigation/navigation.component.html"),
         styles: [__webpack_require__("./src/app/components/digitalerTischplan/navigation/navigation.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */]) === "function" && _g || Object, typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["Http"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["Http"]) === "function" && _h || Object, typeof (_j = typeof __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"]) === "function" && _j || Object, typeof (_k = typeof __WEBPACK_IMPORTED_MODULE_4__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_auth_service__["a" /* AuthService */]) === "function" && _k || Object, typeof (_l = typeof __WEBPACK_IMPORTED_MODULE_5__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__angular_router__["a" /* Router */]) === "function" && _l || Object])
+    __metadata("design:paramtypes", [typeof (_g = typeof tischplan_service_1.TischplanService !== "undefined" && tischplan_service_1.TischplanService) === "function" && _g || Object, typeof (_h = typeof http_1.Http !== "undefined" && http_1.Http) === "function" && _h || Object, typeof (_j = typeof angular2_flash_messages_1.FlashMessagesService !== "undefined" && angular2_flash_messages_1.FlashMessagesService) === "function" && _j || Object, typeof (_k = typeof auth_service_1.AuthService !== "undefined" && auth_service_1.AuthService) === "function" && _k || Object, typeof (_l = typeof router_1.Router !== "undefined" && router_1.Router) === "function" && _l || Object])
 ], NavigationComponent);
-
+exports.NavigationComponent = NavigationComponent;
 var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l;
 //# sourceMappingURL=navigation.component.js.map
 
@@ -2982,11 +2928,10 @@ module.exports = "<div id=\"printSectionId3\" class=\"section3\">\n  <table styl
 /***/ }),
 
 /***/ "./src/app/components/digitalerTischplan/print/print.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PrintComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2996,11 +2941,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
 var PrintComponent = (function () {
     function PrintComponent() {
-        this.getTablesOccupied = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.getTablesforAzListe = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.getTablesOccupied = new core_1.EventEmitter();
+        this.getTablesforAzListe = new core_1.EventEmitter();
         this.tempTablesArray = [];
         this.tempTablesArray2 = [];
         this.tempTablesArray1 = [];
@@ -3261,110 +3207,110 @@ var PrintComponent = (function () {
     return PrintComponent;
 }());
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tables'),
+    core_1.Input('tables'),
     __metadata("design:type", Array)
 ], PrintComponent.prototype, "tables", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('dateGeneratedListe'),
+    core_1.Input('dateGeneratedListe'),
     __metadata("design:type", String)
 ], PrintComponent.prototype, "dateGeneratedListe", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesPanorama'),
+    core_1.Input('tablesPanorama'),
     __metadata("design:type", String)
 ], PrintComponent.prototype, "tablesPanorama", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showPanoramaBool'),
+    core_1.Input('showPanoramaBool'),
     __metadata("design:type", String)
 ], PrintComponent.prototype, "showPanoramaBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesAndreasSaal'),
+    core_1.Input('tablesAndreasSaal'),
     __metadata("design:type", String)
 ], PrintComponent.prototype, "tablesAndreasSaal", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showAndreasSaalBool'),
+    core_1.Input('showAndreasSaalBool'),
     __metadata("design:type", String)
 ], PrintComponent.prototype, "showAndreasSaalBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showRoterSalonBool'),
+    core_1.Input('showRoterSalonBool'),
     __metadata("design:type", String)
 ], PrintComponent.prototype, "showRoterSalonBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesRoterSalon'),
+    core_1.Input('tablesRoterSalon'),
     __metadata("design:type", String)
 ], PrintComponent.prototype, "tablesRoterSalon", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showBlauerSalonBool'),
+    core_1.Input('showBlauerSalonBool'),
     __metadata("design:type", String)
 ], PrintComponent.prototype, "showBlauerSalonBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesBlauerSalon'),
+    core_1.Input('tablesBlauerSalon'),
     __metadata("design:type", String)
 ], PrintComponent.prototype, "tablesBlauerSalon", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showTurmBool'),
+    core_1.Input('showTurmBool'),
     __metadata("design:type", String)
 ], PrintComponent.prototype, "showTurmBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesTurm'),
+    core_1.Input('tablesTurm'),
     __metadata("design:type", String)
 ], PrintComponent.prototype, "tablesTurm", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('erwPanorama'),
+    core_1.Input('erwPanorama'),
     __metadata("design:type", String)
 ], PrintComponent.prototype, "erwPanorama", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('erwRoterSalon'),
+    core_1.Input('erwRoterSalon'),
     __metadata("design:type", String)
 ], PrintComponent.prototype, "erwRoterSalon", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('erwBlauerSalon'),
+    core_1.Input('erwBlauerSalon'),
     __metadata("design:type", String)
 ], PrintComponent.prototype, "erwBlauerSalon", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('erwTurm'),
+    core_1.Input('erwTurm'),
     __metadata("design:type", String)
 ], PrintComponent.prototype, "erwTurm", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('erwAndreasSaal'),
+    core_1.Input('erwAndreasSaal'),
     __metadata("design:type", String)
 ], PrintComponent.prototype, "erwAndreasSaal", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('kiPanorama'),
+    core_1.Input('kiPanorama'),
     __metadata("design:type", String)
 ], PrintComponent.prototype, "kiPanorama", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('kiRoterSalon'),
+    core_1.Input('kiRoterSalon'),
     __metadata("design:type", String)
 ], PrintComponent.prototype, "kiRoterSalon", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('kiBlauerSalon'),
+    core_1.Input('kiBlauerSalon'),
     __metadata("design:type", String)
 ], PrintComponent.prototype, "kiBlauerSalon", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('kiTurm'),
+    core_1.Input('kiTurm'),
     __metadata("design:type", String)
 ], PrintComponent.prototype, "kiTurm", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('kiAndreasSaal'),
+    core_1.Input('kiAndreasSaal'),
     __metadata("design:type", String)
 ], PrintComponent.prototype, "kiAndreasSaal", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _a || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_a = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _a || Object)
 ], PrintComponent.prototype, "getTablesOccupied", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _b || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_b = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _b || Object)
 ], PrintComponent.prototype, "getTablesforAzListe", void 0);
 PrintComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    core_1.Component({
         selector: 'app-print',
         template: __webpack_require__("./src/app/components/digitalerTischplan/print/print.component.html"),
         styles: [__webpack_require__("./src/app/components/digitalerTischplan/tischplan.component.css")]
     }),
     __metadata("design:paramtypes", [])
 ], PrintComponent);
-
+exports.PrintComponent = PrintComponent;
 var _a, _b;
 //# sourceMappingURL=print.component.js.map
 
@@ -3378,13 +3324,10 @@ module.exports = "<div *ngIf=\"user\">\n  <h2 class=\"page-header\">{{user.name}
 /***/ }),
 
 /***/ "./src/app/components/digitalerTischplan/profile/profile.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfileComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service__ = __webpack_require__("./src/app/services/auth.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("./node_modules/@angular/router/@angular/router.es5.js");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3394,9 +3337,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+var auth_service_1 = __webpack_require__("./src/app/services/auth.service.ts");
+var router_1 = __webpack_require__("./node_modules/@angular/router/@angular/router.es5.js");
 var ProfileComponent = (function () {
     function ProfileComponent(authService, router) {
         this.authService = authService;
@@ -3414,14 +3358,14 @@ var ProfileComponent = (function () {
     return ProfileComponent;
 }());
 ProfileComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    core_1.Component({
         selector: 'app-profile',
         template: __webpack_require__("./src/app/components/digitalerTischplan/profile/profile.component.html"),
         styles: [__webpack_require__("./src/app/components/digitalerTischplan/tischplan.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof auth_service_1.AuthService !== "undefined" && auth_service_1.AuthService) === "function" && _a || Object, typeof (_b = typeof router_1.Router !== "undefined" && router_1.Router) === "function" && _b || Object])
 ], ProfileComponent);
-
+exports.ProfileComponent = ProfileComponent;
 var _a, _b;
 //# sourceMappingURL=profile.component.js.map
 
@@ -3435,16 +3379,10 @@ module.exports = "<h2 class=\"page-header\">Register</h2>\n<form (submit)=\"onRe
 /***/ }),
 
 /***/ "./src/app/components/digitalerTischplan/register/register.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_validate_service__ = __webpack_require__("./src/app/services/validate.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_auth_service__ = __webpack_require__("./src/app/services/auth.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__ = __webpack_require__("./node_modules/angular2-flash-messages/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__("./node_modules/@angular/router/@angular/router.es5.js");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3454,11 +3392,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+var validate_service_1 = __webpack_require__("./src/app/services/validate.service.ts");
+var auth_service_1 = __webpack_require__("./src/app/services/auth.service.ts");
+var angular2_flash_messages_1 = __webpack_require__("./node_modules/angular2-flash-messages/index.js");
+var router_1 = __webpack_require__("./node_modules/@angular/router/@angular/router.es5.js");
 var RegisterComponent = (function () {
     function RegisterComponent(validateService, flashMessage, authService, router) {
         this.validateService = validateService;
@@ -3501,14 +3440,14 @@ var RegisterComponent = (function () {
     return RegisterComponent;
 }());
 RegisterComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    core_1.Component({
         selector: 'app-register',
         template: __webpack_require__("./src/app/components/digitalerTischplan/register/register.component.html"),
         styles: [__webpack_require__("./src/app/components/digitalerTischplan/tischplan.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_validate_service__["a" /* ValidateService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_validate_service__["a" /* ValidateService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_router__["a" /* Router */]) === "function" && _d || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof validate_service_1.ValidateService !== "undefined" && validate_service_1.ValidateService) === "function" && _a || Object, typeof (_b = typeof angular2_flash_messages_1.FlashMessagesService !== "undefined" && angular2_flash_messages_1.FlashMessagesService) === "function" && _b || Object, typeof (_c = typeof auth_service_1.AuthService !== "undefined" && auth_service_1.AuthService) === "function" && _c || Object, typeof (_d = typeof router_1.Router !== "undefined" && router_1.Router) === "function" && _d || Object])
 ], RegisterComponent);
-
+exports.RegisterComponent = RegisterComponent;
 var _a, _b, _c, _d;
 //# sourceMappingURL=register.component.js.map
 
@@ -3517,18 +3456,15 @@ var _a, _b, _c, _d;
 /***/ "./src/app/components/digitalerTischplan/tableplan/tableplan.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"showTablePlanBool\">\n  <div class=\"col-xs-12 printTwo\">\n    <div class=\"row\" style=\" border-left: 5px solid #0a7a74; border-right: 5px solid #0a7a74;\">\n      <div *ngIf=\"showAndreasSaalBool\">\n        <div *ngFor=\"let tableAndreasSaal of tablesAndreasSaal; let j = index;\">\n          <div dropdownToggle type=\"button\" class=\"t{{tableAndreasSaal.number}} table-item\" [ngStyle]=\"{'top': tableAndreasSaal.topValue + 'px', 'left': tableAndreasSaal.leftValue + 'px', 'background-color': + tableAndreasSaal.bgColor, 'height': + tableAndreasSaal.height + 'px', 'width': + tableAndreasSaal.width + 'px', 'border': + tableAndreasSaal.border}\" [style.border]=\"getStyle(tablesAndreasSaal[j].groups)\" dropdown>\n            <div *ngIf=\"tablesAndreasSaal[j] !== tablesAndreasSaal[j+1]\">\n              <p><b>{{tableAndreasSaal.number}} <br>{{erwAndreasSaal[j]}}/{{kiAndreasSaal[j]}}</b></p>\n            </div>\n            <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">\n              <div dropdownToggle type=\"button\" style=\"color: white; padding: 10px;\" (mouseenter)=\"mouseEnterMoveTableButton()\"  (mouseleave)=\"mouseLeaveMoveTableButton()\" [ngStyle]=\"{'background-color': '#' + buttonMoveTable}\" (click)=\"none($event)\" class=\"dropdownMoveTable\" dropdown><b>Tisch verschieben</b>\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\" style=\"max-height: 240px; margin: 0px;  padding: 0px; overflow: auto\">\n                  <li class=\"dropdown-item\" (click)=\"addTable(tableAndreasSaal, j)\" style=\"color: black; padding: 10px;\" (mouseenter)=\"mouseEnterHinzufuegenButton()\"  (mouseleave)=\"mouseLeaveHinzufuegenButton()\" [ngStyle]=\"{'background-color': '#' + buttonHinzufuegen}\" ><b>Tisch hinzufügen</b></li>\n                  <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0; margin: 0; \"></li>\n                  <li class=\"dropdown-item\" (click)=\"removeTable(tableAndreasSaal, j)\" (mouseenter)=\"mouseEnterEntfernenButton()\"  (mouseleave)=\"mouseLeaveEntfernenButton()\" [ngStyle]=\"{'background-color': '#' + buttonEntfernen}\" style=\"color: black; padding: 10px\"><b>Tisch entfernen</b></li>\n                </div>\n              </div>\n              <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0; margin: 0;\"></li>\n              <div dropdownToggle type=\"button\" (click)=\"none($event)\" style=\"padding: 10px; \" (mouseenter)=\"mouseEnterInfoButton()\"  (mouseleave)=\"mouseLeaveInfoButton()\" [ngStyle]=\"{'background-color': '#' + buttonInfo}\" class=\"dropdownShowinfo\"  dropdown><b>Infos anzeigen</b>\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\" style=\"max-height: 240px; padding: 10px; overflow: auto\">\n                  <div *ngFor=\"let group of tableAndreasSaal.groups\">\n                    <div *ngIf=\"group.nameValue\">\n                      <div class=\"dropdown-item\" [style.border]=\"getStyleTrace(group.traceValue)\"><b>Name:</b> {{group.nameValue}}<br><b>Nation:</b> {{group.nationValue}}<br><b>Sprache:</b> {{group.spracheValue}}<br><b>Zimmer Nummer: </b>{{group.zimmernummerValue}}<br><b>Preistyp: </b>{{group.preistypValue}}<br><b>Anreise: </b>{{group.anreiseValue}}<br><b>Abreise:</b> {{group.abreiseValue}}<br><b>Personen Anzahl:</b>{{group.personenAnzahlValue}}<br><b>Kategorie: </b>{{group.kategorieValue}}<br><b>Reisebüro: </b>{{group.reisebueroValue}}<br><b>Notiz1:</b> {{group.notiz1Value}}<br><b>Notiz2:</b> {{group.notiz2Value}}<br><b>Bemerkung:</b> {{group.bemerkungValue}}<br><b>Trace:</b> {{group.traceValue}}</div>\n                      <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0\"></li>\n                    </div>\n                    <div *ngIf=\"group.newTraceText\">\n                      <div class=\"dropdown-item\"  style=\"background-color: #FFFFFF; border: solid 3px red\">\n                        <b> Zimmernummer: </b>{{group.newTraceRoomNumber}}<br> <b> Neuer Trace: </b>{{group.newTraceText}} <br> <b> Tischnummer: </b>{{group.newTraceTableNumber}} <br> <b> Mitarbeiter: </b>{{group.newTraceEmployee}} <br> <b> Name: </b>{{group.newTraceName}} <br> <b> Datum: </b>{{group.newTraceDate}}\n                      </div>\n                    </div>\n                  </div>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n      <div *ngIf=\"showPanoramaBool\">\n        <div *ngFor=\"let tablePanorama of tablesPanorama; let j = index;\">\n          <div dropdownToggle type=\"button\" class=\"t{{tablePanorama.number}} table-item\" [ngStyle]=\"{'top': tablePanorama.topValue + 'px', 'left': tablePanorama.leftValue + 'px', 'background-color': + tablePanorama.bgColor, 'height': + tablePanorama.height + 'px', 'width': + tablePanorama.width + 'px', 'border': + tablePanorama.border, 'border-radius': + tablePanorama.borderRadius}\" [style.border]=\"getStyle(tablesPanorama[j].groups)\" dropdown>\n            <div *ngIf=\"tablesPanorama[j] !== tablesPanorama[j+1]\">\n              <p><b>{{tablePanorama.number}} <br>{{erwPanorama[j]}}/{{kiPanorama[j]}}</b></p>\n            </div>\n            <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">\n              <div dropdownToggle type=\"button\" style=\"color: white; padding: 10px;\" (mouseenter)=\"mouseEnterMoveTableButton()\"  (mouseleave)=\"mouseLeaveMoveTableButton()\" [ngStyle]=\"{'background-color': '#' + buttonMoveTable}\" (click)=\"none($event)\" class=\"dropdownMoveTable\" dropdown><b>Tisch verschieben</b>\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\" style=\"max-height: 240px; margin: 0px;  padding: 0px; overflow: auto\">\n                  <li class=\"dropdown-item\" (click)=\"addTable(tablePanorama, j)\" style=\"color: black; padding: 10px;\" (mouseenter)=\"mouseEnterHinzufuegenButton()\"  (mouseleave)=\"mouseLeaveHinzufuegenButton()\" [ngStyle]=\"{'background-color': '#' + buttonHinzufuegen}\" ><b>Tisch hinzufügen</b></li>\n                  <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0; margin: 0; \"></li>\n                  <li class=\"dropdown-item\" (click)=\"removeTable(tablePanorama, j)\" (mouseenter)=\"mouseEnterEntfernenButton()\"  (mouseleave)=\"mouseLeaveEntfernenButton()\" [ngStyle]=\"{'background-color': '#' + buttonEntfernen}\" style=\"color: black; padding: 10px\"><b>Tisch entfernen</b></li>\n                </div>\n              </div>\n              <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0; margin: 0;\"></li>\n              <div dropdownToggle type=\"button\" (click)=\"none($event)\" style=\"padding: 10px; \" (mouseenter)=\"mouseEnterInfoButton()\"  (mouseleave)=\"mouseLeaveInfoButton()\" [ngStyle]=\"{'background-color': '#' + buttonInfo}\" class=\"dropdownShowinfo\"  class=\"dropdownShowinfo\" dropdown><b>Infos anzeigen</b>\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\" style=\"max-height: 240px; padding: 10px; overflow: auto\">\n                  <div *ngFor=\"let group of tablePanorama.groups\">\n                    <div *ngIf=\"group.nameValue\">\n                      <div class=\"dropdown-item\" [style.border]=\"getStyleTrace(group.traceValue)\"><b>Name:</b> {{group.nameValue}}<br><b>Nation:</b> {{group.nationValue}}<br><b>Sprache:</b> {{group.spracheValue}}<br><b>Zimmer Nummer: </b>{{group.zimmernummerValue}}<br><b>Preistyp: </b>{{group.preistypValue}}<br><b>Anreise: </b>{{group.anreiseValue}}<br><b>Abreise:</b> {{group.abreiseValue}}<br><b>Personen Anzahl:</b>{{group.personenAnzahlValue}}<br><b>Kategorie: </b>{{group.kategorieValue}}<br><b>Reisebüro: </b>{{group.reisebueroValue}}<br><b>Notiz1:</b> {{group.notiz1Value}}<br><b>Notiz2:</b> {{group.notiz2Value}}<br><b>Bemerkung:</b> {{group.bemerkungValue}}<br><b>Trace:</b> {{group.traceValue}}</div>\n                      <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0\"></li>\n                    </div>\n                    <div *ngIf=\"group.newTraceText\">\n                      <div class=\"dropdown-item\"  style=\"background-color: #FFFFFF; border: solid 3px red\">\n                        <b> Zimmernummer: </b>{{group.newTraceRoomNumber}}<br> <b> Neuer Trace: </b>{{group.newTraceText}} <br> <b> Tischnummer: </b>{{group.newTraceTableNumber}} <br> <b> Mitarbeiter: </b>{{group.newTraceEmployee}} <br> <b> Name: </b>{{group.newTraceName}} <br> <b> Datum: </b>{{group.newTraceDate}}\n                      </div>\n                    </div>\n                  </div>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n      <div *ngIf=\"showBlauerSalonBool\">\n        <div *ngFor=\"let tableBlauerSalon of tablesBlauerSalon; let j = index;\">\n          <div dropdownToggle type=\"button\" class=\"t{{tableBlauerSalon.number}} table-item\" [ngStyle]=\"{'top': tableBlauerSalon.topValue + 'px', 'left': tableBlauerSalon.leftValue + 'px', 'background-color': + tableBlauerSalon.bgColor, 'height': + tableBlauerSalon.height + 'px', 'width': + tableBlauerSalon.width + 'px', 'border': + tableBlauerSalon.border}\" [style.border]=\"getStyle(tablesBlauerSalon[j].groups)\" dropdown>\n            <div *ngIf=\"tablesBlauerSalon[j] !== tablesBlauerSalon[j+1]\">\n              <p><b>{{tableBlauerSalon.number}} <br>{{erwBlauerSalon[j]}}/{{kiBlauerSalon[j]}}</b></p>\n            </div>\n            <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">\n              <div dropdownToggle type=\"button\" style=\"color: white; padding: 10px;\" (mouseenter)=\"mouseEnterMoveTableButton()\"  (mouseleave)=\"mouseLeaveMoveTableButton()\" [ngStyle]=\"{'background-color': '#' + buttonMoveTable}\" (click)=\"none($event)\" class=\"dropdownMoveTable\" dropdown><b>Tisch verschieben</b>\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\" style=\"max-height: 240px; margin: 0px;  padding: 0px; overflow: auto\">\n                  <li class=\"dropdown-item\" (click)=\"addTable(tableBlauerSalon, j)\" style=\"color: black; padding: 10px;\" (mouseenter)=\"mouseEnterHinzufuegenButton()\"  (mouseleave)=\"mouseLeaveHinzufuegenButton()\" [ngStyle]=\"{'background-color': '#' + buttonHinzufuegen}\" ><b>Tisch hinzufügen</b></li>\n                  <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0; margin: 0; \"></li>\n                  <li class=\"dropdown-item\" (click)=\"removeTable(tableBlauerSalon, j)\" (mouseenter)=\"mouseEnterEntfernenButton()\"  (mouseleave)=\"mouseLeaveEntfernenButton()\" [ngStyle]=\"{'background-color': '#' + buttonEntfernen}\" style=\"color: black; padding: 10px\"><b>Tisch entfernen</b></li>\n                </div>\n              </div>\n              <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0; margin: 0;\"></li>\n              <div dropdownToggle type=\"button\" (click)=\"none($event)\" style=\"padding: 10px; \" (mouseenter)=\"mouseEnterInfoButton()\"  (mouseleave)=\"mouseLeaveInfoButton()\" [ngStyle]=\"{'background-color': '#' + buttonInfo}\" class=\"dropdownShowinfo\"  class=\"dropdownShowinfo\" dropdown><b>Infos anzeigen</b>\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\" style=\"max-height: 240px; padding: 10px; overflow: auto\">\n                  <div *ngFor=\"let group of tableBlauerSalon.groups\">\n                    <div *ngIf=\"group.nameValue\">\n                      <div class=\"dropdown-item\" [style.border]=\"getStyleTrace(group.traceValue)\"><b>Name:</b> {{group.nameValue}}<br><b>Nation:</b> {{group.nationValue}}<br><b>Sprache:</b> {{group.spracheValue}}<br><b>Zimmer Nummer: </b>{{group.zimmernummerValue}}<br><b>Preistyp: </b>{{group.preistypValue}}<br><b>Anreise: </b>{{group.anreiseValue}}<br><b>Abreise:</b> {{group.abreiseValue}}<br><b>Personen Anzahl:</b>{{group.personenAnzahlValue}}<br><b>Kategorie: </b>{{group.kategorieValue}}<br><b>Reisebüro: </b>{{group.reisebueroValue}}<br><b>Notiz1:</b> {{group.notiz1Value}}<br><b>Notiz2:</b> {{group.notiz2Value}}<br><b>Bemerkung:</b> {{group.bemerkungValue}}<br><b>Trace:</b> {{group.traceValue}}</div>\n                      <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0\"></li>\n                    </div>\n                    <div *ngIf=\"group.newTraceText\">\n                      <div class=\"dropdown-item\"  style=\"background-color: #FFFFFF; border: solid 3px red\">\n                        <b> Zimmernummer: </b>{{group.newTraceRoomNumber}}<br> <b> Neuer Trace: </b>{{group.newTraceText}} <br> <b> Tischnummer: </b>{{group.newTraceTableNumber}} <br> <b> Mitarbeiter: </b>{{group.newTraceEmployee}} <br> <b> Name: </b>{{group.newTraceName}} <br> <b> Datum: </b>{{group.newTraceDate}}\n                      </div>\n                    </div>\n                  </div>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n      <div *ngIf=\"showRoterSalonBool\">\n        <div *ngFor=\"let tableRoterSalon of tablesRoterSalon; let j = index;\">\n          <div dropdownToggle type=\"button\" class=\"t{{tableRoterSalon.number}} table-item\" [ngStyle]=\"{'top': tableRoterSalon.topValue + 'px', 'left': tableRoterSalon.leftValue + 'px', 'background-color': + tableRoterSalon.bgColor, 'height': + tableRoterSalon.height + 'px', 'width': + tableRoterSalon.width + 'px', 'border': + tableRoterSalon.border, 'border-radius': + tableRoterSalon.borderRadius, 'transform':  + tableRoterSalon.transformValue}\" [style.border]=\"getStyle(tablesRoterSalon[j].groups)\" dropdown>\n            <div *ngIf=\"tablesRoterSalon[j] !== tablesRoterSalon[j+1]\">\n              <p><b>{{tableRoterSalon.number}} <br>{{erwRoterSalon[j]}}/{{kiRoterSalon[j]}}</b></p>\n            </div>\n            <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">\n              <div dropdownToggle type=\"button\" style=\"color: white; padding: 10px;\" (mouseenter)=\"mouseEnterMoveTableButton()\"  (mouseleave)=\"mouseLeaveMoveTableButton()\" [ngStyle]=\"{'background-color': '#' + buttonMoveTable}\" (click)=\"none($event)\" class=\"dropdownMoveTable\" dropdown><b>Tisch verschieben</b>\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\" style=\"max-height: 240px; margin: 0px;  padding: 0px; overflow: auto\">\n                  <li class=\"dropdown-item\" (click)=\"addTable(tableRoterSalon, j)\" style=\"color: black; padding: 10px;\" (mouseenter)=\"mouseEnterHinzufuegenButton()\"  (mouseleave)=\"mouseLeaveHinzufuegenButton()\" [ngStyle]=\"{'background-color': '#' + buttonHinzufuegen}\" ><b>Tisch hinzufügen</b></li>\n                  <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0; margin: 0; \"></li>\n                  <li class=\"dropdown-item\" (click)=\"removeTable(tableRoterSalon, j)\" (mouseenter)=\"mouseEnterEntfernenButton()\"  (mouseleave)=\"mouseLeaveEntfernenButton()\" [ngStyle]=\"{'background-color': '#' + buttonEntfernen}\" style=\"color: black; padding: 10px\"><b>Tisch entfernen</b></li>\n                </div>\n              </div>\n              <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0; margin: 0;\"></li>\n              <div dropdownToggle type=\"button\" (click)=\"none($event)\" style=\"padding: 10px; \" (mouseenter)=\"mouseEnterInfoButton()\"  (mouseleave)=\"mouseLeaveInfoButton()\" [ngStyle]=\"{'background-color': '#' + buttonInfo}\" class=\"dropdownShowinfo\"  class=\"dropdownShowinfo\" dropdown><b>Infos anzeigen</b>\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\" style=\"max-height: 240px; padding: 10px; overflow: auto\">\n                  <div *ngFor=\"let group of tableRoterSalon.groups\">\n                    <div *ngIf=\"group.nameValue\">\n                      <div class=\"dropdown-item\" [style.border]=\"getStyleTrace(group.traceValue)\"><b>Name:</b> {{group.nameValue}}<br><b>Nation:</b> {{group.nationValue}}<br><b>Sprache:</b> {{group.spracheValue}}<br><b>Zimmer Nummer: </b>{{group.zimmernummerValue}}<br><b>Preistyp: </b>{{group.preistypValue}}<br><b>Anreise: </b>{{group.anreiseValue}}<br><b>Abreise:</b> {{group.abreiseValue}}<br><b>Personen Anzahl:</b>{{group.personenAnzahlValue}}<br><b>Kategorie: </b>{{group.kategorieValue}}<br><b>Reisebüro: </b>{{group.reisebueroValue}}<br><b>Notiz1:</b> {{group.notiz1Value}}<br><b>Notiz2:</b> {{group.notiz2Value}}<br><b>Bemerkung:</b> {{group.bemerkungValue}}<br><b>Trace:</b> {{group.traceValue}}</div>\n                      <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0\"></li>\n                    </div>\n                    <div *ngIf=\"group.newTraceText\">\n                      <div class=\"dropdown-item\"  style=\"background-color: #FFFFFF; border: solid 3px red\">\n                        <b> Zimmernummer: </b>{{group.newTraceRoomNumber}}<br> <b> Neuer Trace: </b>{{group.newTraceText}} <br> <b> Tischnummer: </b>{{group.newTraceTableNumber}} <br> <b> Mitarbeiter: </b>{{group.newTraceEmployee}} <br> <b> Name: </b>{{group.newTraceName}} <br> <b> Datum: </b>{{group.newTraceDate}}\n                      </div>\n                    </div>\n                  </div>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n      <div *ngIf=\"showTurmBool\">\n        <div *ngFor=\"let tableTurm of tablesTurm; let j = index;\">\n          <div dropdownToggle type=\"button\" class=\"t{{tableTurm.number}} table-item\" [ngStyle]=\"{'top': tableTurm.topValue + 'px', 'left': tableTurm.leftValue + 'px', 'background-color': + tableTurm.bgColor, 'height': + tableTurm.height + 'px', 'width': + tableTurm.width + 'px', 'border': + tableTurm.border, 'border-radius': + tableTurm.borderRadius, 'transform':  + tableTurm.transformValue}\" [style.border]=\"getStyle(tablesTurm[j].groups)\" dropdown>\n            <div *ngIf=\"tablesTurm[j] !== tablesTurm[j+1]\">\n              <p><b>{{tableTurm.number}} <br>{{erwTurm[j]}}/{{kiTurm[j]}}</b></p>\n            </div>\n            <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">\n              <div dropdownToggle type=\"button\" style=\"color: white; padding: 10px;\" (mouseenter)=\"mouseEnterMoveTableButton()\"  (mouseleave)=\"mouseLeaveMoveTableButton()\" [ngStyle]=\"{'background-color': '#' + buttonMoveTable}\" (click)=\"none($event)\" class=\"dropdownMoveTable\" dropdown><b>Tisch verschieben</b>\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\" style=\"max-height: 240px; margin: 0px;  padding: 0px; overflow: auto\">\n                  <li class=\"dropdown-item\" (click)=\"addTable(tableTurm, j)\" style=\"color: black; padding: 10px;\" (mouseenter)=\"mouseEnterHinzufuegenButton()\"  (mouseleave)=\"mouseLeaveHinzufuegenButton()\" [ngStyle]=\"{'background-color': '#' + buttonHinzufuegen}\" ><b>Tisch hinzufügen</b></li>\n                  <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0; margin: 0; \"></li>\n                  <li class=\"dropdown-item\" (click)=\"removeTable(tableTurm, j)\" (mouseenter)=\"mouseEnterEntfernenButton()\"  (mouseleave)=\"mouseLeaveEntfernenButton()\" [ngStyle]=\"{'background-color': '#' + buttonEntfernen}\" style=\"color: black; padding: 10px\"><b>Tisch entfernen</b></li>\n                </div>\n              </div>\n              <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0; margin: 0;\"></li>\n              <div dropdownToggle type=\"button\" (click)=\"none($event)\" style=\"padding: 10px; \" (mouseenter)=\"mouseEnterInfoButton()\"  (mouseleave)=\"mouseLeaveInfoButton()\" [ngStyle]=\"{'background-color': '#' + buttonInfo}\" class=\"dropdownShowinfo\"  class=\"dropdownShowinfo\" dropdown><b>Infos anzeigen</b>\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\" style=\"max-height: 240px; padding: 10px; overflow: auto\">\n                  <div *ngFor=\"let group of tableTurm.groups\">\n                    <div *ngIf=\"group.nameValue\">\n                      <div class=\"dropdown-item\" [style.border]=\"getStyleTrace(group.traceValue)\"><b>Name:</b> {{group.nameValue}}<br><b>Nation:</b> {{group.nationValue}}<br><b>Sprache:</b> {{group.spracheValue}}<br><b>Zimmer Nummer: </b>{{group.zimmernummerValue}}<br><b>Preistyp: </b>{{group.preistypValue}}<br><b>Anreise: </b>{{group.anreiseValue}}<br><b>Abreise:</b> {{group.abreiseValue}}<br><b>Personen Anzahl:</b>{{group.personenAnzahlValue}}<br><b>Kategorie: </b>{{group.kategorieValue}}<br><b>Reisebüro: </b>{{group.reisebueroValue}}<br><b>Notiz1:</b> {{group.notiz1Value}}<br><b>Notiz2:</b> {{group.notiz2Value}}<br><b>Bemerkung:</b> {{group.bemerkungValue}}<br><b>Trace:</b> {{group.traceValue}}</div>\n                      <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0\"></li>\n                    </div>\n                    <div *ngIf=\"group.newTraceText\">\n                      <div class=\"dropdown-item\"  style=\"background-color: #FFFFFF; border: solid 3px red\">\n                        <b> Zimmernummer: </b>{{group.newTraceRoomNumber}}<br> <b> Neuer Trace: </b>{{group.newTraceText}} <br> <b> Tischnummer: </b>{{group.newTraceTableNumber}} <br> <b> Mitarbeiter: </b>{{group.newTraceEmployee}} <br> <b> Name: </b>{{group.newTraceName}} <br> <b> Datum: </b>{{group.newTraceDate}}\n                      </div>\n                    </div>\n                  </div>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n      <div *ngIf=\"showAlleBool\">\n        <br>\n        <br>\n        <br>\n        <h1 style=\"color: white; margin-top: 200px\">Perfekt um eine Suche zu starten ;-)</h1>\n      </div>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div *ngIf=\"showTablePlanBool\" >\n  <div class=\"col-xs-12 printTwo\" >\n    <div class=\"row\" style=\" border-left: 5px solid #0a7a74; border-right: 5px solid #0a7a74;\">\n      <div *ngIf=\"showAndreasSaalBool\" (dblclick)=\"isZoomed = !isZoomed;\" [style.transform]=\"zoom()\" style=\"margin-left: 300px\">\n        <div *ngFor=\"let tableAndreasSaal of tablesAndreasSaal; let j = index;\">\n          <div dropdownToggle type=\"button\" class=\"t{{tableAndreasSaal.number}} table-item\" [ngStyle]=\"{'top': tableAndreasSaal.topValue + 'px', 'left': tableAndreasSaal.leftValue + 'px', 'background-color': + tableAndreasSaal.bgColor, 'height': + tableAndreasSaal.height + 'px', 'width': + tableAndreasSaal.width + 'px', 'border': + tableAndreasSaal.border}\" [style.border]=\"getStyle(tablesAndreasSaal[j].groups)\" dropdown>\n            <div *ngIf=\"tablesAndreasSaal[j] !== tablesAndreasSaal[j+1]\">\n              <p style=\"font-size:5pt;\"><b>{{tableAndreasSaal.number}} - {{erwAndreasSaal[j]}}/{{kiAndreasSaal[j]}}</b></p>\n              <p style=\"font-size:5pt;\" *ngFor=\"let group of tableAndreasSaal.groups\">\n                {{group.nameValue}} | {{group.zimmernummerValue}} | {{group.preisTypValue}}<br>\n              </p>\n            </div>\n            <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">\n              <div dropdownToggle type=\"button\" style=\"color: white; padding: 10px;\" (mouseenter)=\"mouseEnterMoveTableButton()\"  (mouseleave)=\"mouseLeaveMoveTableButton()\" [ngStyle]=\"{'background-color': '#' + buttonMoveTable}\" (click)=\"none($event)\" class=\"dropdownMoveTable\" dropdown><b>Tisch verschieben</b>\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\" style=\"max-height: 240px; margin: 0px;  padding: 0px; overflow: auto\">\n                  <li class=\"dropdown-item\" (click)=\"addTable(tableAndreasSaal, j)\" style=\"color: black; padding: 10px;\" (mouseenter)=\"mouseEnterHinzufuegenButton()\"  (mouseleave)=\"mouseLeaveHinzufuegenButton()\" [ngStyle]=\"{'background-color': '#' + buttonHinzufuegen}\" ><b>Tisch hinzufügen</b></li>\n                  <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0; margin: 0; \"></li>\n                  <li class=\"dropdown-item\" (click)=\"removeTable(tableAndreasSaal, j)\" (mouseenter)=\"mouseEnterEntfernenButton()\"  (mouseleave)=\"mouseLeaveEntfernenButton()\" [ngStyle]=\"{'background-color': '#' + buttonEntfernen}\" style=\"color: black; padding: 10px\"><b>Tisch entfernen</b></li>\n                </div>\n              </div>\n              <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0; margin: 0;\"></li>\n              <div dropdownToggle type=\"button\" (click)=\"none($event)\" style=\"padding: 10px; \" (mouseenter)=\"mouseEnterInfoButton()\"  (mouseleave)=\"mouseLeaveInfoButton()\" [ngStyle]=\"{'background-color': '#' + buttonInfo}\" class=\"dropdownShowinfo\"  dropdown><b>Infos anzeigen</b>\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\" style=\"max-height: 240px; padding: 10px; overflow: auto\">\n                  <div *ngFor=\"let group of tableAndreasSaal.groups\">\n                    <div *ngIf=\"group.nameValue\">\n                      <div class=\"dropdown-item\" [style.border]=\"getStyleTrace(group.traceValue)\"><b>Name:</b> {{group.nameValue}}<br><b>Nation:</b> {{group.nationValue}}<br><b>Sprache:</b> {{group.spracheValue}}<br><b>Zimmer Nummer: </b>{{group.zimmernummerValue}}<br><b>Preistyp: </b>{{group.preistypValue}}<br><b>Anreise: </b>{{group.anreiseValue}}<br><b>Abreise:</b> {{group.abreiseValue}}<br><b>Personen Anzahl:</b>{{group.personenAnzahlValue}}<br><b>Kategorie: </b>{{group.kategorieValue}}<br><b>Reisebüro: </b>{{group.reisebueroValue}}<br><b>Notiz1:</b> {{group.notiz1Value}}<br><b>Notiz2:</b> {{group.notiz2Value}}<br><b>Bemerkung:</b> {{group.bemerkungValue}}<br><b>Trace:</b> {{group.traceValue}}</div>\n                      <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0\"></li>\n                    </div>\n                    <div *ngIf=\"group.newTraceText\">\n                      <div class=\"dropdown-item\"  style=\"background-color: #FFFFFF; border: solid 3px red\">\n                        <b> Zimmernummer: </b>{{group.newTraceRoomNumber}}<br> <b> Neuer Trace: </b>{{group.newTraceText}} <br> <b> Tischnummer: </b>{{group.newTraceTableNumber}} <br> <b> Mitarbeiter: </b>{{group.newTraceEmployee}} <br> <b> Name: </b>{{group.newTraceName}} <br> <b> Datum: </b>{{group.newTraceDate}}\n                      </div>\n                    </div>\n                  </div>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n      <div *ngIf=\"showPanoramaBool\" (dblclick)=\"isZoomed = !isZoomed;\" [style.transform]=\"zoom()\" style=\"margin-left: 300px\">\n        <div *ngFor=\"let tablePanorama of tablesPanorama; let j = index;\" >\n          <div dropdownToggle type=\"button\" class=\"t{{tablePanorama.number}} table-item\" [ngStyle]=\"{'top': tablePanorama.topValue + 'px', 'left': tablePanorama.leftValue + 'px', 'background-color': + tablePanorama.bgColor, 'height': + tablePanorama.height + 'px', 'width': + tablePanorama.width + 'px', 'border': + tablePanorama.border, 'border-radius': + tablePanorama.borderRadius}\" [style.border]=\"getStyle(tablesPanorama[j].groups)\" dropdown>\n            <div *ngIf=\"tablesPanorama[j] !== tablesPanorama[j+1]\">\n              <p style=\"font-size:5pt;\"><b>{{tablePanorama.number}} - {{erwPanorama[j]}}/{{kiPanorama[j]}}</b></p>\n              <p style=\"font-size:5pt;\" *ngFor=\"let group of tablePanorama.groups\">\n                {{group.nameValue}} | {{group.zimmernummerValue}} | {{group.preisTypValue}}<br>\n              </p>\n            </div>\n            <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">\n              <div dropdownToggle type=\"button\" style=\"color: white; padding: 10px;\" (mouseenter)=\"mouseEnterMoveTableButton()\"  (mouseleave)=\"mouseLeaveMoveTableButton()\" [ngStyle]=\"{'background-color': '#' + buttonMoveTable}\"  class=\"dropdownMoveTable\" dropdown><b>Tisch verschieben</b>\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\" style=\"max-height: 240px; margin: 0px;  padding: 0px; overflow: auto\">\n                  <li class=\"dropdown-item\" (click)=\"addTable(tablePanorama, j)\" style=\"color: black; padding: 10px;\" (mouseenter)=\"mouseEnterHinzufuegenButton()\"  (mouseleave)=\"mouseLeaveHinzufuegenButton()\" [ngStyle]=\"{'background-color': '#' + buttonHinzufuegen}\" ><b>Tisch hinzufügen</b></li>\n                  <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0; margin: 0; \"></li>\n                  <li class=\"dropdown-item\" (click)=\"removeTable(tablePanorama, j)\" (mouseenter)=\"mouseEnterEntfernenButton()\"  (mouseleave)=\"mouseLeaveEntfernenButton()\" [ngStyle]=\"{'background-color': '#' + buttonEntfernen}\" style=\"color: black; padding: 10px\"><b>Tisch entfernen</b></li>\n                </div>\n              </div>\n              <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0; margin: 0;\"></li>\n              <div dropdownToggle type=\"button\" (click)=\"none($event)\" style=\"padding: 10px; \" (mouseenter)=\"mouseEnterInfoButton()\"  (mouseleave)=\"mouseLeaveInfoButton()\" [ngStyle]=\"{'background-color': '#' + buttonInfo}\" class=\"dropdownShowinfo\"  class=\"dropdownShowinfo\" dropdown><b>Infos anzeigen</b>\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\" style=\"max-height: 240px; padding: 10px; overflow: auto\">\n                  <div *ngFor=\"let group of tablePanorama.groups\">\n                    <div *ngIf=\"group.nameValue\">\n                      <div class=\"dropdown-item\" [style.border]=\"getStyleTrace(group.traceValue)\"><b>Name:</b> {{group.nameValue}}<br><b>Nation:</b> {{group.nationValue}}<br><b>Sprache:</b> {{group.spracheValue}}<br><b>Zimmer Nummer: </b>{{group.zimmernummerValue}}<br><b>Preistyp: </b>{{group.preistypValue}}<br><b>Anreise: </b>{{group.anreiseValue}}<br><b>Abreise:</b> {{group.abreiseValue}}<br><b>Personen Anzahl:</b>{{group.personenAnzahlValue}}<br><b>Kategorie: </b>{{group.kategorieValue}}<br><b>Reisebüro: </b>{{group.reisebueroValue}}<br><b>Notiz1:</b> {{group.notiz1Value}}<br><b>Notiz2:</b> {{group.notiz2Value}}<br><b>Bemerkung:</b> {{group.bemerkungValue}}<br><b>Trace:</b> {{group.traceValue}}</div>\n                      <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0\"></li>\n                    </div>\n                    <div *ngIf=\"group.newTraceText\">\n                      <div class=\"dropdown-item\"  style=\"background-color: #FFFFFF; border: solid 3px red\">\n                        <b> Zimmernummer: </b>{{group.newTraceRoomNumber}}<br> <b> Neuer Trace: </b>{{group.newTraceText}} <br> <b> Tischnummer: </b>{{group.newTraceTableNumber}} <br> <b> Mitarbeiter: </b>{{group.newTraceEmployee}} <br> <b> Name: </b>{{group.newTraceName}} <br> <b> Datum: </b>{{group.newTraceDate}}\n                      </div>\n                    </div>\n                  </div>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n      <div *ngIf=\"showBlauerSalonBool\" (dblclick)=\"isZoomed = !isZoomed;\" [style.transform]=\"zoom()\" style=\"margin-left: 300px\">\n        <div *ngFor=\"let tableBlauerSalon of tablesBlauerSalon; let j = index;\">\n          <div dropdownToggle type=\"button\" class=\"t{{tableBlauerSalon.number}} table-item\" [ngStyle]=\"{'top': tableBlauerSalon.topValue + 'px', 'left': tableBlauerSalon.leftValue + 'px', 'background-color': + tableBlauerSalon.bgColor, 'height': + tableBlauerSalon.height + 'px', 'width': + tableBlauerSalon.width + 'px', 'border': + tableBlauerSalon.border}\" [style.border]=\"getStyle(tablesBlauerSalon[j].groups)\" dropdown>\n            <div *ngIf=\"tablesBlauerSalon[j] !== tablesBlauerSalon[j+1]\">\n              <p style=\"font-size:5pt;\"><b>{{tableBlauerSalon.number}} - {{erwBlauerSalon[j]}}/{{kiBlauerSalon[j]}}</b></p>\n              <p style=\"font-size:5pt;\" *ngFor=\"let group of tableBlauerSalon.groups\">\n                {{group.nameValue}} | {{group.zimmernummerValue}} | {{group.preisTypValue}}<br>\n              </p>\n            </div>\n            <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">\n              <div dropdownToggle type=\"button\" style=\"color: white; padding: 10px;\" (mouseenter)=\"mouseEnterMoveTableButton()\"  (mouseleave)=\"mouseLeaveMoveTableButton()\" [ngStyle]=\"{'background-color': '#' + buttonMoveTable}\" (click)=\"none($event)\" class=\"dropdownMoveTable\" dropdown><b>Tisch verschieben</b>\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\" style=\"max-height: 240px; margin: 0px;  padding: 0px; overflow: auto\">\n                  <li class=\"dropdown-item\" (click)=\"addTable(tableBlauerSalon, j)\" style=\"color: black; padding: 10px;\" (mouseenter)=\"mouseEnterHinzufuegenButton()\"  (mouseleave)=\"mouseLeaveHinzufuegenButton()\" [ngStyle]=\"{'background-color': '#' + buttonHinzufuegen}\" ><b>Tisch hinzufügen</b></li>\n                  <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0; margin: 0; \"></li>\n                  <li class=\"dropdown-item\" (click)=\"removeTable(tableBlauerSalon, j)\" (mouseenter)=\"mouseEnterEntfernenButton()\"  (mouseleave)=\"mouseLeaveEntfernenButton()\" [ngStyle]=\"{'background-color': '#' + buttonEntfernen}\" style=\"color: black; padding: 10px\"><b>Tisch entfernen</b></li>\n                </div>\n              </div>\n              <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0; margin: 0;\"></li>\n              <div dropdownToggle type=\"button\" (click)=\"none($event)\" style=\"padding: 10px; \" (mouseenter)=\"mouseEnterInfoButton()\"  (mouseleave)=\"mouseLeaveInfoButton()\" [ngStyle]=\"{'background-color': '#' + buttonInfo}\" class=\"dropdownShowinfo\"  class=\"dropdownShowinfo\" dropdown><b>Infos anzeigen</b>\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\" style=\"max-height: 240px; padding: 10px; overflow: auto\">\n                  <div *ngFor=\"let group of tableBlauerSalon.groups\">\n                    <div *ngIf=\"group.nameValue\">\n                      <div class=\"dropdown-item\" [style.border]=\"getStyleTrace(group.traceValue)\"><b>Name:</b> {{group.nameValue}}<br><b>Nation:</b> {{group.nationValue}}<br><b>Sprache:</b> {{group.spracheValue}}<br><b>Zimmer Nummer: </b>{{group.zimmernummerValue}}<br><b>Preistyp: </b>{{group.preistypValue}}<br><b>Anreise: </b>{{group.anreiseValue}}<br><b>Abreise:</b> {{group.abreiseValue}}<br><b>Personen Anzahl:</b>{{group.personenAnzahlValue}}<br><b>Kategorie: </b>{{group.kategorieValue}}<br><b>Reisebüro: </b>{{group.reisebueroValue}}<br><b>Notiz1:</b> {{group.notiz1Value}}<br><b>Notiz2:</b> {{group.notiz2Value}}<br><b>Bemerkung:</b> {{group.bemerkungValue}}<br><b>Trace:</b> {{group.traceValue}}</div>\n                      <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0\"></li>\n                    </div>\n                    <div *ngIf=\"group.newTraceText\">\n                      <div class=\"dropdown-item\"  style=\"background-color: #FFFFFF; border: solid 3px red\">\n                        <b> Zimmernummer: </b>{{group.newTraceRoomNumber}}<br> <b> Neuer Trace: </b>{{group.newTraceText}} <br> <b> Tischnummer: </b>{{group.newTraceTableNumber}} <br> <b> Mitarbeiter: </b>{{group.newTraceEmployee}} <br> <b> Name: </b>{{group.newTraceName}} <br> <b> Datum: </b>{{group.newTraceDate}}\n                      </div>\n                    </div>\n                  </div>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n      <div *ngIf=\"showRoterSalonBool\" (dblclick)=\"isZoomed = !isZoomed;\" [style.transform]=\"zoom()\" style=\"margin-left: 300px\">\n        <div *ngFor=\"let tableRoterSalon of tablesRoterSalon; let j = index;\">\n          <div dropdownToggle type=\"button\" class=\"t{{tableRoterSalon.number}} table-item\" [ngStyle]=\"{'top': tableRoterSalon.topValue + 'px', 'left': tableRoterSalon.leftValue + 'px', 'background-color': + tableRoterSalon.bgColor, 'height': + tableRoterSalon.height + 'px', 'width': + tableRoterSalon.width + 'px', 'border': + tableRoterSalon.border, 'border-radius': + tableRoterSalon.borderRadius, 'transform':  + tableRoterSalon.transformValue}\" [style.border]=\"getStyle(tablesRoterSalon[j].groups)\" dropdown>\n            <div *ngIf=\"tablesRoterSalon[j] !== tablesRoterSalon[j+1]\">\n              <p style=\"font-size:5pt;\"><b>{{tableRoterSalon.number}} - {{erwRoterSalon[j]}}/{{kiRoterSalon[j]}}</b></p>\n              <p style=\"font-size:5pt;\" *ngFor=\"let group of tableRoterSalon.groups\">\n                {{group.nameValue}} | {{group.zimmernummerValue}} | {{group.preisTypValue}}<br>\n              </p>\n            </div>\n            <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">\n              <div dropdownToggle type=\"button\" style=\"color: white; padding: 10px;\" (mouseenter)=\"mouseEnterMoveTableButton()\"  (mouseleave)=\"mouseLeaveMoveTableButton()\" [ngStyle]=\"{'background-color': '#' + buttonMoveTable}\" (click)=\"none($event)\" class=\"dropdownMoveTable\" dropdown><b>Tisch verschieben</b>\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\" style=\"max-height: 240px; margin: 0px;  padding: 0px; overflow: auto\">\n                  <li class=\"dropdown-item\" (click)=\"addTable(tableRoterSalon, j)\" style=\"color: black; padding: 10px;\" (mouseenter)=\"mouseEnterHinzufuegenButton()\"  (mouseleave)=\"mouseLeaveHinzufuegenButton()\" [ngStyle]=\"{'background-color': '#' + buttonHinzufuegen}\" ><b>Tisch hinzufügen</b></li>\n                  <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0; margin: 0; \"></li>\n                  <li class=\"dropdown-item\" (click)=\"removeTable(tableRoterSalon, j)\" (mouseenter)=\"mouseEnterEntfernenButton()\"  (mouseleave)=\"mouseLeaveEntfernenButton()\" [ngStyle]=\"{'background-color': '#' + buttonEntfernen}\" style=\"color: black; padding: 10px\"><b>Tisch entfernen</b></li>\n                </div>\n              </div>\n              <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0; margin: 0;\"></li>\n              <div dropdownToggle type=\"button\" (click)=\"none($event)\" style=\"padding: 10px; \" (mouseenter)=\"mouseEnterInfoButton()\"  (mouseleave)=\"mouseLeaveInfoButton()\" [ngStyle]=\"{'background-color': '#' + buttonInfo}\" class=\"dropdownShowinfo\"  class=\"dropdownShowinfo\" dropdown><b>Infos anzeigen</b>\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\" style=\"max-height: 240px; padding: 10px; overflow: auto\">\n                  <div *ngFor=\"let group of tableRoterSalon.groups\">\n                    <div *ngIf=\"group.nameValue\">\n                      <div class=\"dropdown-item\" [style.border]=\"getStyleTrace(group.traceValue)\"><b>Name:</b> {{group.nameValue}}<br><b>Nation:</b> {{group.nationValue}}<br><b>Sprache:</b> {{group.spracheValue}}<br><b>Zimmer Nummer: </b>{{group.zimmernummerValue}}<br><b>Preistyp: </b>{{group.preistypValue}}<br><b>Anreise: </b>{{group.anreiseValue}}<br><b>Abreise:</b> {{group.abreiseValue}}<br><b>Personen Anzahl:</b>{{group.personenAnzahlValue}}<br><b>Kategorie: </b>{{group.kategorieValue}}<br><b>Reisebüro: </b>{{group.reisebueroValue}}<br><b>Notiz1:</b> {{group.notiz1Value}}<br><b>Notiz2:</b> {{group.notiz2Value}}<br><b>Bemerkung:</b> {{group.bemerkungValue}}<br><b>Trace:</b> {{group.traceValue}}</div>\n                      <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0\"></li>\n                    </div>\n                    <div *ngIf=\"group.newTraceText\">\n                      <div class=\"dropdown-item\"  style=\"background-color: #FFFFFF; border: solid 3px red\">\n                        <b> Zimmernummer: </b>{{group.newTraceRoomNumber}}<br> <b> Neuer Trace: </b>{{group.newTraceText}} <br> <b> Tischnummer: </b>{{group.newTraceTableNumber}} <br> <b> Mitarbeiter: </b>{{group.newTraceEmployee}} <br> <b> Name: </b>{{group.newTraceName}} <br> <b> Datum: </b>{{group.newTraceDate}}\n                      </div>\n                    </div>\n                  </div>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n      <div *ngIf=\"showTurmBool\" (dblclick)=\"isZoomed = !isZoomed;\" [style.transform]=\"zoom()\" style=\"margin-left: 300px\">\n        <div *ngFor=\"let tableTurm of tablesTurm; let j = index;\">\n          <div dropdownToggle type=\"button\" class=\"t{{tableTurm.number}} table-item\" [ngStyle]=\"{'top': tableTurm.topValue + 'px', 'left': tableTurm.leftValue + 'px', 'background-color': + tableTurm.bgColor, 'height': + tableTurm.height + 'px', 'width': + tableTurm.width + 'px', 'border': + tableTurm.border, 'border-radius': + tableTurm.borderRadius, 'transform':  + tableTurm.transformValue}\" [style.border]=\"getStyle(tablesTurm[j].groups)\" dropdown>\n            <div *ngIf=\"tablesTurm[j] !== tablesTurm[j+1]\">\n              <p style=\"font-size:5pt;\"><b>{{tableTurm.number}} - {{erwTurm[j]}}/{{kiTurm[j]}}</b></p>\n              <p style=\"font-size:5pt;\" *ngFor=\"let group of tableTurm.groups\">\n                {{group.nameValue}} | {{group.zimmernummerValue}} | {{group.preisTypValue}}<br>\n              </p>\n            </div>\n            <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">\n              <div dropdownToggle type=\"button\" style=\"color: white; padding: 10px;\" (mouseenter)=\"mouseEnterMoveTableButton()\"  (mouseleave)=\"mouseLeaveMoveTableButton()\" [ngStyle]=\"{'background-color': '#' + buttonMoveTable}\" (click)=\"none($event)\" class=\"dropdownMoveTable\" dropdown><b>Tisch verschieben</b>\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\" style=\"max-height: 240px; margin: 0px;  padding: 0px; overflow: auto\">\n                  <li class=\"dropdown-item\" (click)=\"addTable(tableTurm, j)\" style=\"color: black; padding: 10px;\" (mouseenter)=\"mouseEnterHinzufuegenButton()\"  (mouseleave)=\"mouseLeaveHinzufuegenButton()\" [ngStyle]=\"{'background-color': '#' + buttonHinzufuegen}\" ><b>Tisch hinzufügen</b></li>\n                  <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0; margin: 0; \"></li>\n                  <li class=\"dropdown-item\" (click)=\"removeTable(tableTurm, j)\" (mouseenter)=\"mouseEnterEntfernenButton()\"  (mouseleave)=\"mouseLeaveEntfernenButton()\" [ngStyle]=\"{'background-color': '#' + buttonEntfernen}\" style=\"color: black; padding: 10px\"><b>Tisch entfernen</b></li>\n                </div>\n              </div>\n              <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0; margin: 0;\"></li>\n              <div dropdownToggle type=\"button\" (click)=\"none($event)\" style=\"padding: 10px; \" (mouseenter)=\"mouseEnterInfoButton()\"  (mouseleave)=\"mouseLeaveInfoButton()\" [ngStyle]=\"{'background-color': '#' + buttonInfo}\" class=\"dropdownShowinfo\"  class=\"dropdownShowinfo\" dropdown><b>Infos anzeigen</b>\n                <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\" style=\"max-height: 240px; padding: 10px; overflow: auto\">\n                  <div *ngFor=\"let group of tableTurm.groups\">\n                    <div *ngIf=\"group.nameValue\">\n                      <div class=\"dropdown-item\" [style.border]=\"getStyleTrace(group.traceValue)\"><b>Name:</b> {{group.nameValue}}<br><b>Nation:</b> {{group.nationValue}}<br><b>Sprache:</b> {{group.spracheValue}}<br><b>Zimmer Nummer: </b>{{group.zimmernummerValue}}<br><b>Preistyp: </b>{{group.preistypValue}}<br><b>Anreise: </b>{{group.anreiseValue}}<br><b>Abreise:</b> {{group.abreiseValue}}<br><b>Personen Anzahl:</b>{{group.personenAnzahlValue}}<br><b>Kategorie: </b>{{group.kategorieValue}}<br><b>Reisebüro: </b>{{group.reisebueroValue}}<br><b>Notiz1:</b> {{group.notiz1Value}}<br><b>Notiz2:</b> {{group.notiz2Value}}<br><b>Bemerkung:</b> {{group.bemerkungValue}}<br><b>Trace:</b> {{group.traceValue}}</div>\n                      <li class=\"divider dropdown-divider\" style=\"padding: 0 0 0 0\"></li>\n                    </div>\n                    <div *ngIf=\"group.newTraceText\">\n                      <div class=\"dropdown-item\"  style=\"background-color: #FFFFFF; border: solid 3px red\">\n                        <b> Zimmernummer: </b>{{group.newTraceRoomNumber}}<br> <b> Neuer Trace: </b>{{group.newTraceText}} <br> <b> Tischnummer: </b>{{group.newTraceTableNumber}} <br> <b> Mitarbeiter: </b>{{group.newTraceEmployee}} <br> <b> Name: </b>{{group.newTraceName}} <br> <b> Datum: </b>{{group.newTraceDate}}\n                      </div>\n                    </div>\n                  </div>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n      <div *ngIf=\"showAlleBool\">\n        <br>\n        <br>\n        <br>\n        <h1 style=\"color: white; margin-top: 200px\">Perfekt um eine Suche zu starten ;-)</h1>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
 /***/ "./src/app/components/digitalerTischplan/tableplan/tableplan.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TableplanComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__ = __webpack_require__("./src/app/services/tischplan.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_tables_service__ = __webpack_require__("./src/app/services/tables.service.ts");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3538,29 +3474,32 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+var tischplan_service_1 = __webpack_require__("./src/app/services/tischplan.service.ts");
+var tables_service_1 = __webpack_require__("./src/app/services/tables.service.ts");
 var TableplanComponent = (function () {
-    function TableplanComponent(tischplanService, _navService) {
+    function TableplanComponent(tischplanService, _navService, el, renderer) {
         this.tischplanService = tischplanService;
         this._navService = _navService;
-        this.movedTurm = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.movedBlauerSalon = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.movedRoterSalon = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.movedPanorama = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.movedAndreasSaal = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.changeBgColorIfAnreise = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.kiRoterSalonExport = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.erwRoterSalonExport = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.erwBlauerSalonExport = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.kiBlauerSalonExport = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.erwPanoramaExport = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.kiPanoramaExport = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.erwTurmExport = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.kiTurmExport = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.erwAndreasSaalExport = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.kiAndreasSaalExport = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.el = el;
+        this.renderer = renderer;
+        this.movedTurm = new core_1.EventEmitter();
+        this.movedBlauerSalon = new core_1.EventEmitter();
+        this.movedRoterSalon = new core_1.EventEmitter();
+        this.movedPanorama = new core_1.EventEmitter();
+        this.movedAndreasSaal = new core_1.EventEmitter();
+        this.changeBgColorIfAnreise = new core_1.EventEmitter();
+        this.kiRoterSalonExport = new core_1.EventEmitter();
+        this.erwRoterSalonExport = new core_1.EventEmitter();
+        this.erwBlauerSalonExport = new core_1.EventEmitter();
+        this.kiBlauerSalonExport = new core_1.EventEmitter();
+        this.erwPanoramaExport = new core_1.EventEmitter();
+        this.kiPanoramaExport = new core_1.EventEmitter();
+        this.erwTurmExport = new core_1.EventEmitter();
+        this.kiTurmExport = new core_1.EventEmitter();
+        this.erwAndreasSaalExport = new core_1.EventEmitter();
+        this.kiAndreasSaalExport = new core_1.EventEmitter();
         this.erwTurm = [];
         this.kiTurm = [];
         this.erwPanorama = [];
@@ -3576,7 +3515,19 @@ var TableplanComponent = (function () {
         this.buttonHinzufuegen = "ffffff";
         this.buttonEntfernen = "ffffff";
         this.trace = false;
+        this.timer = 0;
+        this.delay = 200;
+        this.prevent = false;
+        this.isZoomed = false;
     }
+    TableplanComponent.prototype.zoom = function () {
+        if (this.isZoomed) {
+            return "scale(2)";
+        }
+        else {
+            return "scale(1)";
+        }
+    };
     TableplanComponent.prototype.ngAfterViewInit = function () {
     };
     TableplanComponent.prototype.addTable = function (table, j) {
@@ -3892,127 +3843,127 @@ var TableplanComponent = (function () {
     return TableplanComponent;
 }());
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesAndreasSaal'),
+    core_1.Input('tablesAndreasSaal'),
     __metadata("design:type", Array)
 ], TableplanComponent.prototype, "tablesAndreasSaal", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showAndreasSaalBool'),
+    core_1.Input('showAndreasSaalBool'),
     __metadata("design:type", Boolean)
 ], TableplanComponent.prototype, "showAndreasSaalBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesRoterSalon'),
+    core_1.Input('tablesRoterSalon'),
     __metadata("design:type", Array)
 ], TableplanComponent.prototype, "tablesRoterSalon", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showRoterSalonBool'),
+    core_1.Input('showRoterSalonBool'),
     __metadata("design:type", Boolean)
 ], TableplanComponent.prototype, "showRoterSalonBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesTurm'),
+    core_1.Input('tablesTurm'),
     __metadata("design:type", Array)
 ], TableplanComponent.prototype, "tablesTurm", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showTurmBool'),
+    core_1.Input('showTurmBool'),
     __metadata("design:type", Boolean)
 ], TableplanComponent.prototype, "showTurmBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesPanorama'),
+    core_1.Input('tablesPanorama'),
     __metadata("design:type", Array)
 ], TableplanComponent.prototype, "tablesPanorama", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showPanoramaBool'),
+    core_1.Input('showPanoramaBool'),
     __metadata("design:type", Boolean)
 ], TableplanComponent.prototype, "showPanoramaBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('tablesBlauerSalon'),
+    core_1.Input('tablesBlauerSalon'),
     __metadata("design:type", Array)
 ], TableplanComponent.prototype, "tablesBlauerSalon", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showBlauerSalonBool'),
+    core_1.Input('showBlauerSalonBool'),
     __metadata("design:type", Boolean)
 ], TableplanComponent.prototype, "showBlauerSalonBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showAlleBool'),
+    core_1.Input('showAlleBool'),
     __metadata("design:type", Boolean)
 ], TableplanComponent.prototype, "showAlleBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('showTablePlanBool'),
+    core_1.Input('showTablePlanBool'),
     __metadata("design:type", Boolean)
 ], TableplanComponent.prototype, "showTablePlanBool", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _a || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_a = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _a || Object)
 ], TableplanComponent.prototype, "movedTurm", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _b || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_b = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _b || Object)
 ], TableplanComponent.prototype, "movedBlauerSalon", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _c || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_c = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _c || Object)
 ], TableplanComponent.prototype, "movedRoterSalon", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _d || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_d = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _d || Object)
 ], TableplanComponent.prototype, "movedPanorama", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _e || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_e = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _e || Object)
 ], TableplanComponent.prototype, "movedAndreasSaal", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _f || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_f = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _f || Object)
 ], TableplanComponent.prototype, "changeBgColorIfAnreise", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _g || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_g = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _g || Object)
 ], TableplanComponent.prototype, "kiRoterSalonExport", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _h || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_h = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _h || Object)
 ], TableplanComponent.prototype, "erwRoterSalonExport", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_j = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _j || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_j = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _j || Object)
 ], TableplanComponent.prototype, "erwBlauerSalonExport", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_k = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _k || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_k = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _k || Object)
 ], TableplanComponent.prototype, "kiBlauerSalonExport", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_l = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _l || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_l = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _l || Object)
 ], TableplanComponent.prototype, "erwPanoramaExport", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_m = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _m || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_m = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _m || Object)
 ], TableplanComponent.prototype, "kiPanoramaExport", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_o = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _o || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_o = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _o || Object)
 ], TableplanComponent.prototype, "erwTurmExport", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_p = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _p || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_p = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _p || Object)
 ], TableplanComponent.prototype, "kiTurmExport", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_q = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _q || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_q = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _q || Object)
 ], TableplanComponent.prototype, "erwAndreasSaalExport", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", typeof (_r = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _r || Object)
+    core_1.Output(),
+    __metadata("design:type", typeof (_r = typeof core_1.EventEmitter !== "undefined" && core_1.EventEmitter) === "function" && _r || Object)
 ], TableplanComponent.prototype, "kiAndreasSaalExport", void 0);
 TableplanComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    core_1.Component({
         selector: 'app-tableplan',
         template: __webpack_require__("./src/app/components/digitalerTischplan/tableplan/tableplan.component.html"),
         styles: [__webpack_require__("./src/app/components/digitalerTischplan/tischplan.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_s = typeof __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */]) === "function" && _s || Object, typeof (_t = typeof __WEBPACK_IMPORTED_MODULE_2__services_tables_service__["a" /* NavService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_tables_service__["a" /* NavService */]) === "function" && _t || Object])
+    __metadata("design:paramtypes", [typeof (_s = typeof tischplan_service_1.TischplanService !== "undefined" && tischplan_service_1.TischplanService) === "function" && _s || Object, typeof (_t = typeof tables_service_1.NavService !== "undefined" && tables_service_1.NavService) === "function" && _t || Object, typeof (_u = typeof core_1.ElementRef !== "undefined" && core_1.ElementRef) === "function" && _u || Object, typeof (_v = typeof core_1.Renderer2 !== "undefined" && core_1.Renderer2) === "function" && _v || Object])
 ], TableplanComponent);
-
-var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s, _t;
+exports.TableplanComponent = TableplanComponent;
+var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s, _t, _u, _v;
 //# sourceMappingURL=tableplan.component.js.map
 
 /***/ }),
@@ -4032,21 +3983,10 @@ module.exports = "<router-outlet></router-outlet>\n<html>\n<head>\n  <title>Dash
 /***/ }),
 
 /***/ "./src/app/components/digitalerTischplan/tischplan.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TischplanComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__ = __webpack_require__("./src/app/services/tischplan.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ng2_dragula__ = __webpack_require__("./node_modules/ng2-dragula/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ng2_dragula___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_ng2_dragula__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__print_print_component__ = __webpack_require__("./src/app/components/digitalerTischplan/print/print.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__departmentmenu_departmentmenu_component__ = __webpack_require__("./src/app/components/digitalerTischplan/departmentmenu/departmentmenu.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__form_form_component__ = __webpack_require__("./src/app/components/digitalerTischplan/form/form.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__im_haus_liste_im_haus_liste_component__ = __webpack_require__("./src/app/components/digitalerTischplan/im-haus-liste/im-haus-liste.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__navigation_navigation_component__ = __webpack_require__("./src/app/components/digitalerTischplan/navigation/navigation.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__tableplan_tableplan_component__ = __webpack_require__("./src/app/components/digitalerTischplan/tableplan/tableplan.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__departments_departments_component__ = __webpack_require__("./src/app/components/digitalerTischplan/departments/departments.component.ts");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4056,16 +3996,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
-
-
-
-
-
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+var tischplan_service_1 = __webpack_require__("./src/app/services/tischplan.service.ts");
+var ng2_dragula_1 = __webpack_require__("./node_modules/ng2-dragula/index.js");
+var print_component_1 = __webpack_require__("./src/app/components/digitalerTischplan/print/print.component.ts");
+var departmentmenu_component_1 = __webpack_require__("./src/app/components/digitalerTischplan/departmentmenu/departmentmenu.component.ts");
+var form_component_1 = __webpack_require__("./src/app/components/digitalerTischplan/form/form.component.ts");
+var im_haus_liste_component_1 = __webpack_require__("./src/app/components/digitalerTischplan/im-haus-liste/im-haus-liste.component.ts");
+var navigation_component_1 = __webpack_require__("./src/app/components/digitalerTischplan/navigation/navigation.component.ts");
+var tableplan_component_1 = __webpack_require__("./src/app/components/digitalerTischplan/tableplan/tableplan.component.ts");
+var departments_component_1 = __webpack_require__("./src/app/components/digitalerTischplan/departments/departments.component.ts");
 var TischplanComponent = (function () {
     function TischplanComponent(tischplanService, dragulaService) {
         var _this = this;
@@ -4375,55 +4316,52 @@ var TischplanComponent = (function () {
     return TischplanComponent;
 }());
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_3__print_print_component__["a" /* PrintComponent */]),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__print_print_component__["a" /* PrintComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__print_print_component__["a" /* PrintComponent */]) === "function" && _a || Object)
+    core_1.ViewChild(print_component_1.PrintComponent),
+    __metadata("design:type", typeof (_a = typeof print_component_1.PrintComponent !== "undefined" && print_component_1.PrintComponent) === "function" && _a || Object)
 ], TischplanComponent.prototype, "printComponent", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_4__departmentmenu_departmentmenu_component__["a" /* DepartmentmenuComponent */]),
-    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__departmentmenu_departmentmenu_component__["a" /* DepartmentmenuComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__departmentmenu_departmentmenu_component__["a" /* DepartmentmenuComponent */]) === "function" && _b || Object)
+    core_1.ViewChild(departmentmenu_component_1.DepartmentmenuComponent),
+    __metadata("design:type", typeof (_b = typeof departmentmenu_component_1.DepartmentmenuComponent !== "undefined" && departmentmenu_component_1.DepartmentmenuComponent) === "function" && _b || Object)
 ], TischplanComponent.prototype, "departmentmenuComponent", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_5__form_form_component__["a" /* FormComponent */]),
-    __metadata("design:type", typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_5__form_form_component__["a" /* FormComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__form_form_component__["a" /* FormComponent */]) === "function" && _c || Object)
+    core_1.ViewChild(form_component_1.FormComponent),
+    __metadata("design:type", typeof (_c = typeof form_component_1.FormComponent !== "undefined" && form_component_1.FormComponent) === "function" && _c || Object)
 ], TischplanComponent.prototype, "formComponent", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_9__departments_departments_component__["a" /* DepartmentsComponent */]),
-    __metadata("design:type", typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_9__departments_departments_component__["a" /* DepartmentsComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_9__departments_departments_component__["a" /* DepartmentsComponent */]) === "function" && _d || Object)
+    core_1.ViewChild(departments_component_1.DepartmentsComponent),
+    __metadata("design:type", typeof (_d = typeof departments_component_1.DepartmentsComponent !== "undefined" && departments_component_1.DepartmentsComponent) === "function" && _d || Object)
 ], TischplanComponent.prototype, "departmentsComponent", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_6__im_haus_liste_im_haus_liste_component__["a" /* ImHausListeComponent */]),
-    __metadata("design:type", typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_6__im_haus_liste_im_haus_liste_component__["a" /* ImHausListeComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__im_haus_liste_im_haus_liste_component__["a" /* ImHausListeComponent */]) === "function" && _e || Object)
+    core_1.ViewChild(im_haus_liste_component_1.ImHausListeComponent),
+    __metadata("design:type", typeof (_e = typeof im_haus_liste_component_1.ImHausListeComponent !== "undefined" && im_haus_liste_component_1.ImHausListeComponent) === "function" && _e || Object)
 ], TischplanComponent.prototype, "imHausListeComponent", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_7__navigation_navigation_component__["a" /* NavigationComponent */]),
-    __metadata("design:type", typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_7__navigation_navigation_component__["a" /* NavigationComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_7__navigation_navigation_component__["a" /* NavigationComponent */]) === "function" && _f || Object)
+    core_1.ViewChild(navigation_component_1.NavigationComponent),
+    __metadata("design:type", typeof (_f = typeof navigation_component_1.NavigationComponent !== "undefined" && navigation_component_1.NavigationComponent) === "function" && _f || Object)
 ], TischplanComponent.prototype, "navigationComponent", void 0);
 __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_8__tableplan_tableplan_component__["a" /* TableplanComponent */]),
-    __metadata("design:type", typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_8__tableplan_tableplan_component__["a" /* TableplanComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_8__tableplan_tableplan_component__["a" /* TableplanComponent */]) === "function" && _g || Object)
+    core_1.ViewChild(tableplan_component_1.TableplanComponent),
+    __metadata("design:type", typeof (_g = typeof tableplan_component_1.TableplanComponent !== "undefined" && tableplan_component_1.TableplanComponent) === "function" && _g || Object)
 ], TischplanComponent.prototype, "tableplanComponent", void 0);
 TischplanComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+    core_1.Component({
         selector: 'tischplan',
         template: __webpack_require__("./src/app/components/digitalerTischplan/tischplan.component.html"),
         styles: [__webpack_require__("./src/app/components/digitalerTischplan/tischplan.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_tischplan_service__["a" /* TischplanService */]) === "function" && _h || Object, typeof (_j = typeof __WEBPACK_IMPORTED_MODULE_2_ng2_dragula__["DragulaService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ng2_dragula__["DragulaService"]) === "function" && _j || Object])
+    __metadata("design:paramtypes", [typeof (_h = typeof tischplan_service_1.TischplanService !== "undefined" && tischplan_service_1.TischplanService) === "function" && _h || Object, typeof (_j = typeof ng2_dragula_1.DragulaService !== "undefined" && ng2_dragula_1.DragulaService) === "function" && _j || Object])
 ], TischplanComponent);
-
+exports.TischplanComponent = TischplanComponent;
 var _a, _b, _c, _d, _e, _f, _g, _h, _j;
 //# sourceMappingURL=tischplan.component.js.map
 
 /***/ }),
 
 /***/ "./src/app/guards/auth.guard.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthGuard; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("./node_modules/@angular/router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_auth_service__ = __webpack_require__("./src/app/services/auth.service.ts");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4433,9 +4371,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+var router_1 = __webpack_require__("./node_modules/@angular/router/@angular/router.es5.js");
+var auth_service_1 = __webpack_require__("./src/app/services/auth.service.ts");
 var AuthGuard = (function () {
     function AuthGuard(authService, router) {
         this.authService = authService;
@@ -4455,25 +4394,20 @@ var AuthGuard = (function () {
     return AuthGuard;
 }());
 AuthGuard = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === "function" && _b || Object])
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [typeof (_a = typeof auth_service_1.AuthService !== "undefined" && auth_service_1.AuthService) === "function" && _a || Object, typeof (_b = typeof router_1.Router !== "undefined" && router_1.Router) === "function" && _b || Object])
 ], AuthGuard);
-
+exports.AuthGuard = AuthGuard;
 var _a, _b;
 //# sourceMappingURL=auth.guard.js.map
 
 /***/ }),
 
 /***/ "./src/app/services/auth.service.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("./node_modules/@angular/http/@angular/http.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/map.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_jwt__ = __webpack_require__("./node_modules/angular2-jwt/angular2-jwt.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_jwt___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_jwt__);
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4483,17 +4417,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+var http_1 = __webpack_require__("./node_modules/@angular/http/@angular/http.es5.js");
+__webpack_require__("./node_modules/rxjs/_esm5/add/operator/map.js");
+var angular2_jwt_1 = __webpack_require__("./node_modules/angular2-jwt/angular2-jwt.js");
 var AuthService = (function () {
     function AuthService(http) {
         this.http = http;
         this.isDev = true; // Change to false before deployment
     }
     AuthService.prototype.registerUser = function (user) {
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        var headers = new http_1.Headers();
         headers.append('Content-Type', 'application/json');
         var ep = this.prepEndpoint('register');
         return this.http.post(ep, user, { headers: headers })
@@ -4502,14 +4437,14 @@ var AuthService = (function () {
     // Gets called from submit login form
     AuthService.prototype.authenticateUser = function (user) {
         console.log("Check1");
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        var headers = new http_1.Headers();
         headers.append('Content-Type', 'application/json');
         var ep = this.prepEndpoint('authenticate');
         return this.http.post(ep, user, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     AuthService.prototype.getProfile = function () {
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        var headers = new http_1.Headers();
         this.loadToken();
         headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
@@ -4530,7 +4465,7 @@ var AuthService = (function () {
         this.authToken = token;
     };
     AuthService.prototype.loggedIn = function () {
-        return Object(__WEBPACK_IMPORTED_MODULE_3_angular2_jwt__["tokenNotExpired"])('id_token');
+        return angular2_jwt_1.tokenNotExpired('id_token');
     };
     AuthService.prototype.logout = function () {
         this.authToken = null;
@@ -4548,34 +4483,33 @@ var AuthService = (function () {
     return AuthService;
 }());
 AuthService = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"]) === "function" && _a || Object])
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [typeof (_a = typeof http_1.Http !== "undefined" && http_1.Http) === "function" && _a || Object])
 ], AuthService);
-
+exports.AuthService = AuthService;
 var _a;
 //# sourceMappingURL=auth.service.js.map
 
 /***/ }),
 
 /***/ "./src/app/services/tables.service.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NavService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_BehaviorSubject__ = __webpack_require__("./node_modules/rxjs/_esm5/BehaviorSubject.js");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+var BehaviorSubject_1 = __webpack_require__("./node_modules/rxjs/_esm5/BehaviorSubject.js");
 var NavService = (function () {
     function NavService() {
         // Observable navItem source
-        this._navItemSource = new __WEBPACK_IMPORTED_MODULE_1_rxjs_BehaviorSubject__["a" /* BehaviorSubject */](0);
+        this._navItemSource = new BehaviorSubject_1.BehaviorSubject(0);
         // Observable navItem stream
         this.navItem$ = this._navItemSource.asObservable();
     }
@@ -4588,21 +4522,18 @@ var NavService = (function () {
     return NavService;
 }());
 NavService = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])()
+    core_1.Injectable()
 ], NavService);
-
+exports.NavService = NavService;
 //# sourceMappingURL=tables.service.js.map
 
 /***/ }),
 
 /***/ "./src/app/services/tischplan.service.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TischplanService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("./node_modules/@angular/http/@angular/http.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/map.js");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4612,9 +4543,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+var http_1 = __webpack_require__("./node_modules/@angular/http/@angular/http.es5.js");
+__webpack_require__("./node_modules/rxjs/_esm5/add/operator/map.js");
 var TischplanService = (function () {
     function TischplanService(http) {
         this.http = http;
@@ -4645,91 +4577,91 @@ var TischplanService = (function () {
             .map(function (res) { return res.json(); });
     };
     TischplanService.prototype.occupyTable = function (dataString) {
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        var headers = new http_1.Headers();
         headers.append('Content-Type', 'application/json');
         return this.http.post('occupyTable', dataString, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     TischplanService.prototype.removeTable = function (dataString) {
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        var headers = new http_1.Headers();
         headers.append('Content-Type', 'application/json');
         return this.http.post('removeTable', dataString, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     TischplanService.prototype.addTable = function (dataString) {
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        var headers = new http_1.Headers();
         headers.append('Content-Type', 'application/json');
         return this.http.post('addTable', dataString, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     TischplanService.prototype.dispenseTable = function (tableSonnbergZirbn) {
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        var headers = new http_1.Headers();
         headers.append('Content-Type', 'application/json');
         return this.http.post('dispenseTable', tableSonnbergZirbn, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     TischplanService.prototype.removePlaceholder = function (dataString) {
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        var headers = new http_1.Headers();
         headers.append('Content-Type', 'application/json');
         return this.http.post('removePlaceholder', dataString, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     TischplanService.prototype.addPlaceholder = function (tableSonnbergZirbn) {
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        var headers = new http_1.Headers();
         headers.append('Content-Type', 'application/json');
         return this.http.post('addPlaceholder', tableSonnbergZirbn, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     TischplanService.prototype.addInformationToTable = function (dataString) {
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        var headers = new http_1.Headers();
         headers.append('Content-Type', 'application/json');
         return this.http.post('addInformationToTable', dataString, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     TischplanService.prototype.sendInformation = function (newInformation) {
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        var headers = new http_1.Headers();
         headers.append('Content-Type', 'application/json');
         console.log(headers);
         return this.http.post('newInformationToTables', newInformation, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     TischplanService.prototype.sendInformationToBox = function (newInformation) {
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        var headers = new http_1.Headers();
         headers.append('Content-Type', 'application/json');
         console.log(headers);
         return this.http.post('newInformationToBox', newInformation, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     TischplanService.prototype.deleteInformationElement = function (informationElement) {
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        var headers = new http_1.Headers();
         headers.append('Content-Type', 'application/json');
         console.log(headers);
         return this.http.post('deleteInformationElement', informationElement, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     TischplanService.prototype.updateImHausListeElement = function (informationElements2) {
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        var headers = new http_1.Headers();
         headers.append('Content-Type', 'application/json');
         console.log(headers);
         return this.http.post('updateImHausListeElement', informationElements2, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     TischplanService.prototype.updateAnreiseListeElement = function (informationElements2) {
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        var headers = new http_1.Headers();
         headers.append('Content-Type', 'application/json');
         console.log(headers);
         return this.http.post('updateAnreiseListeElement', informationElements2, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     TischplanService.prototype.updateTracesListeElement = function (informationElements2) {
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        var headers = new http_1.Headers();
         headers.append('Content-Type', 'application/json');
         console.log(headers);
         return this.http.post('updateTracesListeElement', informationElements2, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     TischplanService.prototype.sendInformationToNotizBlock = function (newInformation) {
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        var headers = new http_1.Headers();
         headers.append('Content-Type', 'application/json');
         console.log(headers);
         return this.http.post('newNotiz', newInformation, { headers: headers })
@@ -4742,21 +4674,20 @@ var TischplanService = (function () {
     return TischplanService;
 }());
 TischplanService = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"]) === "function" && _a || Object])
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [typeof (_a = typeof http_1.Http !== "undefined" && http_1.Http) === "function" && _a || Object])
 ], TischplanService);
-
+exports.TischplanService = TischplanService;
 var _a;
 //# sourceMappingURL=tischplan.service.js.map
 
 /***/ }),
 
 /***/ "./src/app/services/validate.service.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ValidateService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4766,7 +4697,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
 var ValidateService = (function () {
     function ValidateService() {
     }
@@ -4785,25 +4717,25 @@ var ValidateService = (function () {
     return ValidateService;
 }());
 ValidateService = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    core_1.Injectable(),
     __metadata("design:paramtypes", [])
 ], ValidateService);
-
+exports.ValidateService = ValidateService;
 //# sourceMappingURL=validate.service.js.map
 
 /***/ }),
 
 /***/ "./src/environments/environment.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
+
 // The file contents for the current environment will overwrite these during build.
 // The build system defaults to the dev environment which uses `environment.ts`, but if you do
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
 // The list of which env maps to which file can be found in `.angular-cli.json`.
-// The file contents for the current environment will overwrite these during build.
-var environment = {
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.environment = {
     production: false
 };
 //# sourceMappingURL=environment.js.map
@@ -4811,22 +4743,19 @@ var environment = {
 /***/ }),
 
 /***/ "./src/main.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__("./node_modules/@angular/platform-browser-dynamic/@angular/platform-browser-dynamic.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__("./src/app/app.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__("./src/environments/environment.ts");
 
-
-
-
-if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["enableProdMode"])();
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+var platform_browser_dynamic_1 = __webpack_require__("./node_modules/@angular/platform-browser-dynamic/@angular/platform-browser-dynamic.es5.js");
+var app_module_1 = __webpack_require__("./src/app/app.module.ts");
+var environment_1 = __webpack_require__("./src/environments/environment.ts");
+if (environment_1.environment.production) {
+    core_1.enableProdMode();
 }
-Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */]);
+platform_browser_dynamic_1.platformBrowserDynamic().bootstrapModule(app_module_1.AppModule);
 //# sourceMappingURL=main.js.map
 
 /***/ }),

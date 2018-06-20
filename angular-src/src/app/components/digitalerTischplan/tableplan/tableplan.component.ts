@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter, AfterViewChecked, AfterViewInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, AfterViewChecked, AfterViewInit, ElementRef, Renderer2 } from '@angular/core';
 import { Table } from '../../../../../Table';
 import { TischplanService } from '../../../services/tischplan.service';
 import { NavService }   from '../../../services/tables.service';
@@ -70,13 +70,30 @@ export class TableplanComponent implements AfterViewInit {
   kiRoterSalon: any[] = [];
   erwAndreasSaal: any[] = [];
   kiAndreasSaal: any[] = [];
+  timer: any;
+  delay: any;
+  prevent: boolean;
+  isZoomed: boolean;
 
-  constructor(private tischplanService: TischplanService, private _navService: NavService) {
+
+  constructor(private tischplanService: TischplanService, private _navService: NavService, private el: ElementRef, public renderer: Renderer2) {
     this.buttonMoveTable = "ff0000";
     this.buttonInfo = "ffffff";
     this.buttonHinzufuegen = "ffffff";
     this.buttonEntfernen = "ffffff";
     this.trace = false;
+    this.timer = 0;
+    this.delay = 200;
+    this.prevent = false;
+    this.isZoomed = false;
+  }
+
+  zoom(){
+    if(this.isZoomed) {
+      return "scale(2)";
+    } else {
+      return "scale(1)";
+    }
   }
 
   ngAfterViewInit() {
