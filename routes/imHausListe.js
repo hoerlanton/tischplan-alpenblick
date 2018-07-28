@@ -51,16 +51,18 @@ module.exports = {
             //console.log(accessorNameC);
 
             if (imHausListeData.data["A" + (row -1)]) {
-                if (imHausListeData.data["A" + (row -1)].w === "Traces:" && imHausListeData.data["H" + (row -1)] == null) {
+                console.log(imHausListeData.data["A" + (row -1)]);
+                console.log(imHausListeData.data["G" + (row -1)]);
+                if (imHausListeData.data["A" + (row -1)].w === "Traces:" && imHausListeData.data["G" + (row -1)] === null) {
                     console.log(row + "continue");
                     //console.log(imHausListeData.data[accessorNameA].w);
-                    //console.log(imHausListeData.data[accessorNameH]);
+                    console.log(imHausListeData.data[accessorNameG]);
                     continue;
-                } else if (imHausListeData.data["A" + (row -1)] && imHausListeData.data["H" + (row -1)]) {
-                    if (imHausListeData.data["A" + (row - 1)].w === "Traces:" && imHausListeData.data["H" + (row - 1)]) {
-                        //console.log(imHausListeData.data["H" + (row - 1)]);
+                } else if (imHausListeData.data["A" + (row -1)] && imHausListeData.data["G" + (row -1)]) {
+                    if (imHausListeData.data["A" + (row - 1)].w === "Traces:" && imHausListeData.data["G" + (row - 1)].w === "o") {
+                        console.log(imHausListeData.data["I" + (row - 1)]);
                         //console.log(imHausListeData.data["A" + (row - 1)].w);
-                        trace[counter - 1] = imHausListeData.data["H" + (row - 1)].w;
+                        trace[counter - 1] = imHausListeData.data["I" + (row - 1)].w;
                         //console.log("imHausListeData.data[H + (row -1)]].w");
                         //console.log(imHausListeData.data["H" + (row - 1)].w);
                         //console.log("imHausListeData.data[H + (row -1)]");
@@ -68,34 +70,76 @@ module.exports = {
                         //console.log("imHausListeData.data[A + (row -1)]");
                         //console.log(imHausListeData.data["A" + (row - 1)]);
                     }
-                    if (imHausListeData.data["H" + (row)] != null && imHausListeData.data["A" + (row)] == null) {
-                        trace[counter - 1] += ", " + imHausListeData.data["H" + (row)].w;
-                        row++;
-                        if (imHausListeData.data["H" + (row)] != null && imHausListeData.data["A" + (row)] == null) {
-                            trace[counter - 1] += ", " + imHausListeData.data["H" + (row)].w;
+                    if (imHausListeData.data["A" + (row - 1)].w === "Traces:" && imHausListeData.data["G" + (row - 1)].w === "þ ") {
+                        //console.log(imHausListeData.data["H" + (row - 1)]);
+                        //console.log(imHausListeData.data["A" + (row - 1)].w);
+                        trace[counter - 1] = imHausListeData.data["H" + (row - 1)].w;
+                        console.log("imHausListeData.data[H + (row -1)]].w");
+                        console.log(imHausListeData.data["H" + (row - 1)].w);
+                        //console.log("imHausListeData.data[H + (row -1)]");
+                        //console.log(imHausListeData.data["H" + (row - 1)]);
+                        //console.log("imHausListeData.data[A + (row -1)]");
+                        //console.log(imHausListeData.data["A" + (row - 1)]);
+                    }
+                    if (imHausListeData.data["G" + (row)] && imHausListeData.data["A" + (row)] == null) {
+                        if (imHausListeData.data["G" + (row)].w === "o" && imHausListeData.data["A" + (row)] == null) {
+                            trace[counter - 1] += ", " + imHausListeData.data["I" + (row)].w;
                             row++;
+                            if (imHausListeData.data["I" + (row)] != null && imHausListeData.data["A" + (row)] == null) {
+                                trace[counter - 1] += ", " + imHausListeData.data["H" + (row)].w;
+                                row++;
+                            }
+                            if (imHausListeData.data["D" + (row)] != null && imHausListeData.data["A" + (row)] == null && imHausListeData.data["I" + (row)] == null) {
+                                trace[counter - 1] += ", " + imHausListeData.data["D" + (row)].w;
+                                row++;
+                            }
+                            if (imHausListeData.data["I" + (row)] != null && imHausListeData.data["A" + (row)] == null) {
+                                trace[counter - 1] += ", " + imHausListeData.data["H" + (row)].w;
+                                row++;
+                            }
+                            if (imHausListeData.data["D" + (row)] != null && imHausListeData.data["A" + (row)] == null && imHausListeData.data["I" + (row)] == null) {
+                                trace[counter - 1] += ", " + imHausListeData.data["D" + (row)].w;
+                                row++;
+                            }
+                            if (imHausListeData.data["I" + (row)] != null && imHausListeData.data["A" + (row)] == null) {
+                                trace[counter - 1] += ", " + imHausListeData.data["H" + (row)].w;
+                                row++;
+                            }
+                            if (imHausListeData.data["D" + (row)] != null && imHausListeData.data["A" + (row)] == null && imHausListeData.data["I" + (row)] == null) {
+                                trace[counter - 1] += ", " + imHausListeData.data["D" + (row)].w;
+                                row++;
+                            }
+                            row--;
                         }
-                        if (imHausListeData.data["D" + (row)] != null && imHausListeData.data["A" + (row)] == null && imHausListeData.data["H" + (row)] == null) {
-                            trace[counter - 1] += ", " + imHausListeData.data["D" + (row)].w;
+                        if (imHausListeData.data["G" + (row)].w === "þ " && imHausListeData.data["A" + (row)] == null) {
+                            trace[counter - 1] += ", " + imHausListeData.data["I" + (row)].w;
                             row++;
+                            if (imHausListeData.data["H" + (row)] != null && imHausListeData.data["A" + (row)] == null) {
+                                trace[counter - 1] += ", " + imHausListeData.data["H" + (row)].w;
+                                row++;
+                            }
+                            if (imHausListeData.data["D" + (row)] != null && imHausListeData.data["A" + (row)] == null && imHausListeData.data["H" + (row)] == null) {
+                                trace[counter - 1] += ", " + imHausListeData.data["D" + (row)].w;
+                                row++;
+                            }
+                            if (imHausListeData.data["H" + (row)] != null && imHausListeData.data["A" + (row)] == null) {
+                                trace[counter - 1] += ", " + imHausListeData.data["H" + (row)].w;
+                                row++;
+                            }
+                            if (imHausListeData.data["D" + (row)] != null && imHausListeData.data["A" + (row)] == null && imHausListeData.data["H" + (row)] == null) {
+                                trace[counter - 1] += ", " + imHausListeData.data["D" + (row)].w;
+                                row++;
+                            }
+                            if (imHausListeData.data["H" + (row)] != null && imHausListeData.data["A" + (row)] == null) {
+                                trace[counter - 1] += ", " + imHausListeData.data["H" + (row)].w;
+                                row++;
+                            }
+                            if (imHausListeData.data["D" + (row)] != null && imHausListeData.data["A" + (row)] == null && imHausListeData.data["H" + (row)] == null) {
+                                trace[counter - 1] += ", " + imHausListeData.data["D" + (row)].w;
+                                row++;
+                            }
+                            row--;
                         }
-                        if (imHausListeData.data["H" + (row)] != null && imHausListeData.data["A" + (row)] == null) {
-                            trace[counter - 1] += ", " + imHausListeData.data["H" + (row)].w;
-                            row++;
-                        }
-                        if (imHausListeData.data["D" + (row)] != null && imHausListeData.data["A" + (row)] == null && imHausListeData.data["H" + (row)] == null) {
-                            trace[counter - 1] += ", " + imHausListeData.data["D" + (row)].w;
-                            row++;
-                        }
-                        if (imHausListeData.data["H" + (row)] != null && imHausListeData.data["A" + (row)] == null) {
-                            trace[counter - 1] += ", " + imHausListeData.data["H" + (row)].w;
-                            row++;
-                        }
-                        if (imHausListeData.data["D" + (row)] != null && imHausListeData.data["A" + (row)] == null && imHausListeData.data["H" + (row)] == null) {
-                            trace[counter - 1] += ", " + imHausListeData.data["D" + (row)].w;
-                            row++;
-                        }
-                        row--;
                     }
                     continue;
                 }
