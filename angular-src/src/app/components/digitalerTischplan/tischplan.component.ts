@@ -344,12 +344,12 @@ export class TischplanComponent {
           //console.log("tables[3].tables");
           //console.log(JSON.parse(tables[3].tables));
           for (let x = 0; x < tables.length; x++){
-            //console.log("tables[x].department");
-            //console.log(tables[x].department);
-            if (tables[x].department === "AndreasSaal") {
+            console.log("tables[x].department");
+            console.log(tables[x].department);
+            if (tables[x].department === "andreas-saal") {
               tables[x].tables.sort(function (a, b) {
-                //console.log(a.number);
-                //console.log(b.number);
+                console.log(a.number);
+                console.log(b.number);
                 if (Number(a.number) < Number(b.number))
                   return -1;
                 if (Number(a.number) > Number(b.number))
