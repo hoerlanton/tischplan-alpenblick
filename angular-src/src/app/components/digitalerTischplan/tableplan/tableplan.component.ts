@@ -90,7 +90,7 @@ export class TableplanComponent implements AfterViewInit {
 
   zoom(){
     if(this.isZoomed) {
-      return "scale(2)";
+      return "scale(3)";
     } else {
       return "scale(1)";
     }

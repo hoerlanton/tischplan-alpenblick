@@ -6,7 +6,7 @@
           <div dropdownToggle type="button" class="t{{tableAndreasSaal.number}} table-item" [ngStyle]="{'top': tableAndreasSaal.topValue + 'px', 'left': tableAndreasSaal.leftValue + 'px', 'background-color': + tableAndreasSaal.bgColor, 'height': + tableAndreasSaal.height + 'px', 'width': + tableAndreasSaal.width + 'px', 'border': + tableAndreasSaal.border}" [style.border]="getStyle(tablesAndreasSaal[j].groups)" dropdown>
             <div *ngIf="tablesAndreasSaal[j] !== tablesAndreasSaal[j+1]">
               <p style="font-size:5pt;"><b>{{tableAndreasSaal.number}} - {{erwAndreasSaal[j]}}/{{kiAndreasSaal[j]}}</b></p>
-              <p style="font-size:5pt;" *ngFor="let group of tableAndreasSaal.groups">
+              <p style="font-size:2pt;" *ngFor="let group of tableAndreasSaal.groups">
                 {{group.nameValue}} | {{group.zimmernummerValue}} | {{group.preisTypValue}}<br>
                 {{group.anreiseValue}} | {{group.abreiseValue}}
               </p>
@@ -44,7 +44,7 @@
           <div dropdownToggle type="button" class="t{{tablePanorama.number}} table-item" [ngStyle]="{'top': tablePanorama.topValue + 'px', 'left': tablePanorama.leftValue + 'px', 'background-color': + tablePanorama.bgColor, 'height': + tablePanorama.height + 'px', 'width': + tablePanorama.width + 'px', 'border': + tablePanorama.border, 'border-radius': + tablePanorama.borderRadius}" [style.border]="getStyle(tablesPanorama[j].groups)" dropdown>
             <div *ngIf="tablesPanorama[j] !== tablesPanorama[j+1]">
               <p style="font-size:5pt;"><b>{{tablePanorama.number}} - {{erwPanorama[j]}}/{{kiPanorama[j]}}</b></p>
-              <p style="font-size:5pt;" *ngFor="let group of tablePanorama.groups">
+              <p style="font-size:2pt;" *ngFor="let group of tablePanorama.groups">
                 {{group.nameValue}} | {{group.zimmernummerValue}} | {{group.preisTypValue}}<br>
                 {{group.anreiseValue}} | {{group.abreiseValue}}
               </p>
@@ -82,7 +82,7 @@
           <div dropdownToggle type="button" class="t{{tableBlauerSalon.number}} table-item" [ngStyle]="{'top': tableBlauerSalon.topValue + 'px', 'left': tableBlauerSalon.leftValue + 'px', 'background-color': + tableBlauerSalon.bgColor, 'height': + tableBlauerSalon.height + 'px', 'width': + tableBlauerSalon.width + 'px', 'border': + tableBlauerSalon.border}" [style.border]="getStyle(tablesBlauerSalon[j].groups)" dropdown>
             <div *ngIf="tablesBlauerSalon[j] !== tablesBlauerSalon[j+1]">
               <p style="font-size:5pt;"><b>{{tableBlauerSalon.number}} - {{erwBlauerSalon[j]}}/{{kiBlauerSalon[j]}}</b></p>
-              <p style="font-size:5pt;" *ngFor="let group of tableBlauerSalon.groups">
+              <p style="font-size:2pt;" *ngFor="let group of tableBlauerSalon.groups">
                 {{group.nameValue}} | {{group.zimmernummerValue}} | {{group.preisTypValue}}<br>
                 {{group.anreiseValue}} | {{group.abreiseValue}}
               </p>
@@ -120,7 +120,7 @@
           <div dropdownToggle type="button" class="t{{tableRoterSalon.number}} table-item" [ngStyle]="{'top': tableRoterSalon.topValue + 'px', 'left': tableRoterSalon.leftValue + 'px', 'background-color': + tableRoterSalon.bgColor, 'height': + tableRoterSalon.height + 'px', 'width': + tableRoterSalon.width + 'px', 'border': + tableRoterSalon.border, 'border-radius': + tableRoterSalon.borderRadius, 'transform':  + tableRoterSalon.transformValue}" [style.border]="getStyle(tablesRoterSalon[j].groups)" dropdown>
             <div *ngIf="tablesRoterSalon[j] !== tablesRoterSalon[j+1]">
               <p style="font-size:5pt;"><b>{{tableRoterSalon.number}} - {{erwRoterSalon[j]}}/{{kiRoterSalon[j]}}</b></p>
-              <p style="font-size:5pt;" *ngFor="let group of tableRoterSalon.groups">
+              <p style="font-size:2pt;" *ngFor="let group of tableRoterSalon.groups">
                 {{group.nameValue}} | {{group.zimmernummerValue}} | {{group.preisTypValue}}<br>
                 {{group.anreiseValue}} | {{group.abreiseValue}}
               </p>
@@ -158,7 +158,7 @@
           <div dropdownToggle type="button" class="t{{tableTurm.number}} table-item" [ngStyle]="{'top': tableTurm.topValue + 'px', 'left': tableTurm.leftValue + 'px', 'background-color': + tableTurm.bgColor, 'height': + tableTurm.height + 'px', 'width': + tableTurm.width + 'px', 'border': + tableTurm.border, 'border-radius': + tableTurm.borderRadius, 'transform':  + tableTurm.transformValue}" [style.border]="getStyle(tablesTurm[j].groups)" dropdown>
             <div *ngIf="tablesTurm[j] !== tablesTurm[j+1]">
               <p style="font-size:5pt;"><b>{{tableTurm.number}} - {{erwTurm[j]}}/{{kiTurm[j]}}</b></p>
-              <p style="font-size:5pt;" *ngFor="let group of tableTurm.groups">
+              <p style="font-size:2pt;" *ngFor="let group of tableTurm.groups">
                 {{group.nameValue}} | {{group.zimmernummerValue}} | {{group.preisTypValue}}<br>
                 {{group.anreiseValue}} | {{group.abreiseValue}}
               </p>
